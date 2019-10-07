@@ -1,0 +1,53 @@
+/*=================================================
+
+content関連
+
+div.c-gridbox.c-grid-match
+	div
+
+.c-grid-matchは並べたい要素の高さをマッチしたいときに使用
+==================================================*/
+
+.c-gridBox {
+	display: flex;
+	flex-wrap: wrap;
+	/* margin: 0; */
+	margin-right: 0;
+	/* margin-left:0; */
+	padding: 0;
+	list-style: none;
+	margin-left: -30px;
+	> * {
+		margin-bottom: 30px;
+		padding-left: 30px;
+		@include mq(md, max) {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.c-gridBox.c-grid-small {
+	margin-left: -10px;
+	> * {
+		padding-left: 10px;
+	}
+}
+
+.c-grid-match {
+	> * {
+		display: flex;
+		flex-wrap: wrap;
+		> :not([class*='u-width']) {
+			width: 100%;
+			flex: auto;
+		}
+		@include mq(md) {
+			// display: flex;
+			// flex-wrap: wrap;
+			// > &:not([class*='u-width']) {
+			// 	width: 100%;
+			// 	flex: auto;
+			// }
+		}
+	}
+}

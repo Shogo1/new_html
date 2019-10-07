@@ -1,0 +1,51 @@
+/*==========================================
+
+デフォルトのチェックボックスを非表示にし、
+チェックボックスのチェックをsvgでカスタマイズ
+
+***labelにforを使う際はinputに同名のidを振ること
+
+<label>
+<input type="checkbox>
+<span>ここにチェックボックス名<span>
+</label>
+
+label>input:checkbox>span
+
+============================================*/
+input[type='checkbox'] {
+	opacity: 0;
+	-webkit-appearance: none;
+	appearance: none;
+	position: absolute;
+	// width: 1em;
+	// height: 1em;
+	+ span {
+		// display: flex;
+		// align-items: center;
+		&::before {
+			position: relative;
+			top: 0.1em;
+			display: inline-block;
+			content: '';
+			width: 1em;
+			height: 1em;
+			border: 2px solid #ccc;
+			border-radius: 5px;
+			margin-right: 0.5rem;
+		}
+	}
+	&:checked {
+		+ span::before {
+			content: '';
+			background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpolyline fill='none' stroke='%230bd' stroke-width='3' points='2,7.3 7.3,12.7 18,2 '/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-position: 0 2px;
+		}
+	}
+	&:focus {
+		+ span::before {
+			border-color: #0bd;
+		}
+	}
+}

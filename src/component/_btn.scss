@@ -1,0 +1,241 @@
+/*=================================================
+
+div.u-block--md>button.c-navBurger>span*3
+
+==================================================*/
+.c-navBurger {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	> span {
+		position: absolute;
+		width: 16px;
+		height: 1px;
+		background-color: #666;
+		transition: all 0.25s ease-out;
+		&:nth-child(1) {
+			top: calc(50% - 6px);
+		}
+		&:nth-child(2) {
+			top: calc(50% - 1px);
+		}
+		&:nth-child(3) {
+			top: calc(50% + 4px);
+		}
+	}
+	&.action {
+		> span {
+			&:nth-child(1) {
+				transform: rotate(45deg);
+				top: 50%;
+			}
+			&:nth-child(2) {
+				display: none;
+			}
+			&:nth-child(3) {
+				transform: rotate(-45deg);
+				top: 50%;
+			}
+		}
+	}
+	&[aria-expanded='true'] {
+		> span {
+			&:nth-child(1) {
+				transform: rotate(45deg);
+				top: 50%;
+			}
+			&:nth-child(2) {
+				display: none;
+			}
+			&:nth-child(3) {
+				transform: rotate(-45deg);
+				top: 50%;
+			}
+		}
+	}
+}
+
+/*=================================================
+
+label
+
+
+==================================================*/
+
+.c-label {
+	display: inline-block;
+	padding: 5px 10px;
+	background: #1e87f0;
+	line-height: 1.5;
+	// font-size: 12px;
+	color: #fff;
+	vertical-align: middle;
+	white-space: nowrap;
+	border-radius: 2px;
+	text-transform: uppercase;
+	&.c-label--denger {
+		background: #f0506e;
+	}
+}
+
+/*=================================================
+
+button.c-closeBtn>span*3
+
+
+==================================================*/
+.c-closeBtn {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 52px;
+	height: 52px;
+	> * {
+		position: absolute;
+		width: 16px;
+		height: 1px;
+		background-color: #666;
+		transition: all 0.25s ease-out;
+		&:nth-child(1) {
+			transform: rotate(45deg);
+			top: 50%;
+		}
+		&:nth-child(2) {
+			display: none;
+		}
+		&:nth-child(3) {
+			transform: rotate(-45deg);
+			top: 50%;
+		}
+	}
+	&.action {
+		pointer-events: auto;
+		cursor: pointer;
+	}
+}
+
+.c-btn {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	line-height: 1;
+}
+
+.c-btn--raised {
+	background-color: $PrimaryBackColor;
+	color: #fff;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+		0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	-webkit-tap-highlight-color: transparent;
+	transition: 0.2s ease-out;
+	&:hover {
+		box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
+			0 3px 1px -1px rgba(0, 0, 0, 0.2);
+		background-color: $PrimaryBackColorHover;
+	}
+}
+
+.c-btn--header > li > a {
+	color: $mainColor;
+	// width: 100px;
+	padding: 0 10px;
+	display: block;
+	// line-height: 50px;
+	/* font-weight:bold; */
+	transition: 0.2s ease-out;
+	text-align: center;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&:hover {
+		background-color: #d1d9ff;
+	}
+}
+
+.c-btn--spheader > a {
+	color: #fff;
+	/* max-width:150px; */
+	padding: 12px 0 20px;
+	/* width:100%; */
+	width: 80px;
+	height: 80px;
+	display: block;
+	font-size: 10px;
+	font-weight: bold;
+	transition: 0.2s ease-out;
+	background-color: #303f9f;
+	border-radius: 50%;
+	text-decoration: none;
+	&:hover {
+		background-color: $PrimaryBackColorHover;
+	}
+}
+
+.c-btn--01 {
+	width: 240px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.c-btn--02 {
+	width: 70px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	color: #fff;
+	font-size: 1.4rem;
+}
+
+.c-btn--web {
+	background-color: #303f9f;
+}
+
+.c-btn--dtp {
+	background-color: #339f30;
+}
+
+.c-btn--web--ec {
+	background-color: #00796b;
+}
+.c-btn--blog--tec {
+	background-color: #455a64;
+}
+.c-btn--blog--news {
+	background-color: #fbc02d;
+}
+.c-btn--blog--diary {
+	background-color: #e64a19;
+}
+
+.c-btnList {
+	a {
+		display: inline-block;
+		text-decoration: none;
+		text-align: center;
+		line-height: 1;
+		font-size: 1.2rem;
+		text-align: center;
+		width: 100%;
+		max-width: 140px;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		background-color: $PrimaryBackColor;
+		color: #fff;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+			0 3px 1px -2px rgba(0, 0, 0, 0.2);
+		-webkit-tap-highlight-color: transparent;
+		transition: 0.2s ease-out;
+		@include mq(md) {
+			font-size: 1.6rem;
+		}
+		&:hover {
+			box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14),
+				0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+			background-color: $PrimaryBackColorHover;
+		}
+	}
+}

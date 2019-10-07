@@ -1,0 +1,188 @@
+/*==========================================
+
+flex
+
+============================================*/
+
+.u-flex {
+	display: flex;
+}
+
+.u-flex-center {
+	justify-content: center;
+}
+
+.u-flex-between {
+	justify-content: space-between;
+}
+
+.u-flex-middle {
+	align-items: center;
+}
+
+.u-flexItem-bottom {
+	align-self: flex-end;
+}
+
+/*==========================================
+
+list
+
+============================================*/
+
+.u-olList[class] {
+	padding-left: 1.5em;
+	> * {
+		list-style: decimal;
+		margin-bottom: 5px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.u-ulList[class] {
+	padding-left: 1.5em;
+	> * {
+		list-style: disc;
+		margin-bottom: 5px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.u-listIndent {
+	> * {
+		padding-left: 1em;
+		text-indent: -1.3em;
+	}
+}
+
+/*==========================================
+
+text
+
+============================================*/
+
+.u-text-decNone {
+	text-decoration: none;
+}
+
+.u-fs-large {
+	font-size: calc(18px);
+	&-xl {
+		font-size: calc(24px);
+	}
+}
+
+.u-fs-normal {
+	font-size: calc(16px);
+}
+
+.u-fs-small {
+	font-size: calc(14px);
+}
+
+.u-text-center {
+	text-align: center;
+}
+.u-text-bold {
+	font-weight: bold;
+}
+
+.u-text-light {
+	font-weight: 300;
+}
+
+.u-baseLineH {
+	line-height: 1.5;
+}
+
+.u-bold {
+	font-weight: bold;
+}
+
+/*==========================================
+
+img
+
+============================================*/
+
+.u-imgfit {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	//↓IE11対策 要object-fit-images.js
+	font-family: 'object-fit:cover;';
+}
+
+/*==========================================
+
+display
+
+============================================*/
+
+.u-block {
+	display: block;
+}
+
+/*==========================================
+
+ブレイクポイント別のディスプレイ切り替え
+
+============================================*/
+/*
+毎回頭こんがらがるので覚え書き
+.u-none--○○(○○は_breakpoint.scssで使用している名称と同じ)は
+そのポイントより狭くなったときに表示が消える。～○○px以下。
+.u-block--○○は
+そのポイントより広くなったときに表示される。～○○px以上。
+*/
+
+.u-none {
+	&--md {
+		display: none;
+		@include mq(md) {
+			display: block;
+		}
+	}
+	&--lg {
+		display: none;
+		@include mq(lg) {
+			display: block;
+		}
+	}
+}
+.u-block {
+	&--md {
+		display: block;
+		@include mq(md) {
+			display: none;
+		}
+	}
+	&--lg {
+		display: block;
+		@include mq(lg) {
+			display: none;
+		}
+	}
+}
+
+/*==========================================
+
+test
+
+============================================*/
+
+.u-testBox {
+	background-color: navy;
+	color: #ddd;
+	// height: 50px;
+	padding: 50px 20px;
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+}

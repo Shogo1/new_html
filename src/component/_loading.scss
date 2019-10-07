@@ -1,0 +1,77 @@
+/*-----------------------------
+
+ローディング関連
+
+-------------------------------*/
+
+body {
+	div.mainWrapper {
+		/* display:none; */
+		/*  初回トップページローディング用 */
+	}
+}
+
+#c-loader {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	.c-cubeWrapper {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 50%;
+		transform: tranalateY(-50%);
+		.cube {
+			animation: rotateCube 5s infinite linear;
+			/* animation-fill-mode: forwards; */
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			position: relative;
+			transform: perspective(1000px);
+			transform-origin: 50% 50% -100px;
+			transform-style: preserve-3d;
+
+			@keyframes rotateCube {
+				0% {
+					/* top:0; */
+					transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+				}
+				50% {
+					/* top:calc(100% - 200px); */
+				}
+				100% {
+					/* top:calc(100% - 200px); */
+					transform: perspective(1000px) rotateX(-360deg) rotateY(-360deg);
+				}
+			}
+			> * {
+				background-color: rgba(162, 176, 206, 0.1);
+				border: 1px solid #a2b0ce;
+				width: 100px;
+				height: 100px;
+				left: 0;
+				position: absolute;
+				top: 0;
+			}
+			.front {
+				position: relative;
+			}
+			.left {
+				transform: rotateY(-90deg) translate3d(-50px, 0, 50px);
+			}
+			.right {
+				transform: rotateY(90deg) translate3d(50px, 0, 50px);
+			}
+			.back {
+				transform: translate3d(0, 0, -100px);
+			}
+			.top {
+				transform: rotateX(-90deg) translate3d(0, 50px, -50px);
+			}
+			.bottom {
+				transform: rotateX(90deg) translate3d(0, -50px, -50px);
+			}
+		}
+	}
+}

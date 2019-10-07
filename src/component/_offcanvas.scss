@@ -1,0 +1,163 @@
+/*=================================================
+
+div.c-offcanvasWrapper>div.c-offcanvasOverlay+div.c-offcanvas>ul>li
+
+off-canvas関連
+使い方
+body.l-body
+    .c-offcanvasWrapper
+        .c-offcanvasOverlay
+				.c-offcanvas
+					ul
+						li
+
+JavaScriptを使用して該当ボタンをクリックすると
+.c-offcanvasWrapperに.actionが付与される。
+
+左からではなく上や右から出したい場合は.c-headerWrapper
+にオプションクラス.c-headerWrapper-option○○を付与する。
+
+div.c-offcanvasWrapper.js-offcanvasWrap[aria-expanded="false"]>div.c-offcanvasOverlay.js-offCanvasOverlay+div.c-offcanvas>ul>(li>button.c-closeBtn.js-closeOffcanvas[aria-controls="drawer"][aria-expanded="false"]>span*3)+(li*5>a)
+
+==================================================*/
+
+$offcanvasWidth: 250px;
+$offcanvasOptionTop: 70vh;
+$offcanvasColor: #dddddd;
+
+html {
+	overflow-y: scroll;
+}
+
+html.offCanvasOpen {
+	overflow: hidden;
+}
+
+.c-headerWrapper {
+	position: relative;
+}
+
+.c-offcanvasWrapper {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	z-index: 1000;
+	width: 100%;
+	height: 100vh;
+	// pointer-events: none;
+	.c-offcanvasOverlay {
+		position: fixed;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.55);
+	}
+	.c-offcanvas {
+		background-color: $offcanvasColor;
+		position: absolute;
+		width: $offcanvasWidth;
+		padding: 1rem 2rem;
+		height: 100vh;
+		//navのリストがあふれたときよう
+		overflow: auto;
+		ul {
+			li {
+				pointer-events: auto;
+			}
+		}
+	}
+	&[aria-expanded] {
+		//aria-expanded属性が付与されている場合（falseかtrueかは関係ない）
+		transition-property: visibility;
+		transition-duration: 0.25s;
+		.c-offcanvasOverlay {
+			transition-property: opacity;
+			transition-duration: 0.25s;
+			transition-timing-function: linear;
+		}
+		.c-offcanvas {
+			transition-property: transform;
+			transition-duration: 0.25s;
+			transition-timing-function: ease;
+		}
+	}
+	&[aria-expanded='true'] {
+		//aria-expanded属性が付与され、かつその値がtrue（画面上に表示されている）の時
+		visibility: visible;
+		.c-offcanvasOverlay {
+			opacity: 1;
+		}
+		.c-offcanvas {
+			transform: translateX(0);
+		}
+	}
+	&[aria-expanded='false'] {
+		//aria-expanded属性が付与され、かつその値がfalse（画面上に表示されていない）の時
+		visibility: hidden;
+		.c-offcanvasOverlay {
+			opacity: 0;
+		}
+		.c-offcanvas {
+			transform: translateX(-100%);
+		}
+	}
+
+	//以上が標準、以下オプション
+
+	//上から出したい場合
+	&.c-offcanvasWrraper--optionTop {
+		.c-offcanvas {
+			width: 100%;
+			transform: translateY(-100%);
+		}
+		&[aria-expanded='true'] {
+			//aria-expanded属性が付与され、かつその値がtrue（画面上に表示されている）の時
+			visibility: visible;
+			.c-offcanvasOverlay {
+				opacity: 1;
+			}
+			.c-offcanvas {
+				transform: translateY(0);
+			}
+		}
+		&[aria-expanded='false'] {
+			//aria-expanded属性が付与され、かつその値がfalse（画面上に表示されていない）の時
+			visibility: hidden;
+			.c-offcanvasOverlay {
+				opacity: 0;
+			}
+			.c-offcanvas {
+				transform: translateY(-100%);
+			}
+		}
+	}
+
+	//右から出す場合
+	&.c-offcanvasWrraper--optionRight {
+		.c-offcanvas {
+			right: 0;
+		}
+		&[aria-expanded='true'] {
+			//aria-expanded属性が付与され、かつその値がtrue（画面上に表示されている）の時
+			visibility: visible;
+			.c-offcanvasOverlay {
+				opacity: 1;
+			}
+			.c-offcanvas {
+				transform: translateX(0);
+			}
+		}
+		&[aria-expanded='false'] {
+			//aria-expanded属性が付与され、かつその値がfalse（画面上に表示されていない）の時
+			visibility: hidden;
+			.c-offcanvasOverlay {
+				opacity: 0;
+			}
+			.c-offcanvas {
+				transform: translateX(100%);
+			}
+		}
+	}
+}

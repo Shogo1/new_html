@@ -1,0 +1,334 @@
+[class^='u-width'] {
+	width: 100%;
+	max-width: 100%;
+}
+.u-width-auto {
+	width: auto;
+}
+
+.u-width-expand {
+	flex: 1;
+	min-width: 1px;
+	&-md {
+		@include mq(md, max) {
+			flex: none;
+			min-width: auto;
+		}
+	}
+}
+
+.u-width-1 {
+	&-1 {
+		width: 100%;
+	}
+	&-2 {
+		width: 50%;
+	}
+	&-3 {
+		width: 33.33%;
+	}
+	&-4 {
+		width: 25%;
+	}
+	&-5 {
+		width: 20%;
+	}
+	&-6 {
+		width: 16.66%;
+	}
+}
+.u-child-width-expand {
+	//グリッドボックスでミキシング幅を使う場合、一列で収まるよう各ボックスの幅を持たせてください
+	> :not([class^='u-width']) {
+		flex: 1;
+		min-width: 1px;
+		@include mq(md, max) {
+			width: 100%;
+		}
+	}
+}
+
+.u-child-width-1 {
+	&-1 {
+		> * {
+			width: 100%;
+		}
+		&-xm {
+			@include mq(xm, max) {
+				> * {
+					width: 100%;
+				}
+			}
+		}
+		&-sm {
+			@include mq(sm, max) {
+				> * {
+					width: 100%;
+				}
+			}
+		}
+		&-md {
+			@include mq(md, max) {
+				> * {
+					width: 100%;
+				}
+			}
+		}
+		&-lg {
+			@include mq(lg, max) {
+				> * {
+					width: 100%;
+				}
+			}
+		}
+		&-xl {
+			@include mq(xl, max) {
+				> * {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&-2 {
+		> * {
+			width: 50%;
+		}
+		&-xm {
+			@include mq(xm, max) {
+				> * {
+					width: 50%;
+				}
+			}
+		}
+		&-sm {
+			@include mq(sm, max) {
+				> * {
+					width: 50%;
+				}
+			}
+		}
+		&-md {
+			@include mq(md, max) {
+				> * {
+					width: 50%;
+				}
+			}
+		}
+		&-lg {
+			@include mq(lg, max) {
+				> * {
+					width: 50%;
+				}
+			}
+		}
+		&-xl {
+			@include mq(xl, max) {
+				> * {
+					width: 50%;
+				}
+			}
+		}
+	}
+	&-3 {
+		> * {
+			width: 33.33%;
+		}
+		&-xm {
+			@include mq(xm, max) {
+				> * {
+					width: 33.33%;
+				}
+			}
+		}
+		&-sm {
+			@include mq(sm, max) {
+				> * {
+					width: 33.33%;
+				}
+			}
+		}
+		&-md {
+			@include mq(md, max) {
+				> * {
+					width: 100%;
+				}
+			}
+			@include mq(md) {
+				> * {
+					width: 33.33%;
+				}
+			}
+		}
+		&-lg {
+			@include mq(lg, max) {
+				> * {
+					width: 33.33%;
+				}
+			}
+		}
+		&-xl {
+			@include mq(xl, max) {
+				> * {
+					width: 33.33%;
+				}
+			}
+		}
+	}
+	&-4 {
+		> * {
+			width: 25%;
+		}
+		&-xm {
+			@include mq(xm, max) {
+				> * {
+					width: 25%;
+				}
+			}
+		}
+		&-sm {
+			@include mq(sm, max) {
+				> * {
+					width: 25%;
+				}
+			}
+		}
+		&-md {
+			@include mq(md, max) {
+				> * {
+					width: 25%;
+				}
+			}
+		}
+		&-lg {
+			@include mq(lg, max) {
+				> * {
+					width: 25%;
+				}
+			}
+		}
+		&-xl {
+			@include mq(xl, max) {
+				> * {
+					width: 25%;
+				}
+			}
+		}
+	}
+	&-5 {
+		> * {
+			width: 20%;
+		}
+		&-xm {
+			@include mq(xm, max) {
+				> * {
+					width: 20%;
+				}
+			}
+		}
+		&-sm {
+			@include mq(sm, max) {
+				> * {
+					width: 20%;
+				}
+			}
+		}
+		&-md {
+			@include mq(md, max) {
+				> * {
+					width: 20%;
+				}
+			}
+		}
+		&-lg {
+			@include mq(lg, max) {
+				> * {
+					width: 20%;
+				}
+			}
+		}
+		&-xl {
+			@include mq(xl, max) {
+				> * {
+					width: 20%;
+				}
+			}
+		}
+	}
+	&-6 {
+		> * {
+			width: 16.66%;
+		}
+		&-xm {
+			@include mq(xm, max) {
+				> * {
+					width: 16.66%;
+				}
+			}
+		}
+		&-sm {
+			@include mq(sm, max) {
+				> * {
+					width: 16.66%;
+				}
+			}
+		}
+		&-md {
+			@include mq(md, max) {
+				> * {
+					width: 16.66%;
+				}
+			}
+		}
+		&-lg {
+			@include mq(lg, max) {
+				> * {
+					width: 16.66%;
+				}
+			}
+		}
+		&-xl {
+			@include mq(xl, max) {
+				> * {
+					width: 16.66%;
+				}
+			}
+		}
+	}
+}
+
+// .u-child-width-1-1 {
+// 	> * {
+// 		@include mq(md, max) {
+// 			width: 100%;
+// 		}
+// 	}
+// }
+
+.u-child-width-1-4 > * {
+	width: 25%;
+}
+
+.u-child-width-1-4m > * {
+	width: 25%;
+	@include mq(md, max) {
+		width: 100%;
+	}
+}
+
+.u-child-width-1-2m > * {
+	width: 50%;
+	@include mq(md, max) {
+		width: 100%;
+	}
+}
+
+.u-child-width-1-3 > * {
+	width: 33.33%;
+}
+
+.u-child-width-1-3m > * {
+	width: 33.33%;
+	@include mq(md, max) {
+		width: 100%;
+	}
+}

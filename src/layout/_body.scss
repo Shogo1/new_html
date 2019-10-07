@@ -1,0 +1,36 @@
+/*=================================================
+
+基本構造関連
+
+<...>
+  <body class="l-body">
+  <div class="c-loadingWrapper"></div>
+  <div class="c-mainWrapper"></div>
+  <div class="c-offcanvasWrapper"></div>
+  </body>
+<...>
+
+div.c-loadingWrapper
+ローディングの記述はここ
+
+div.c-mainWrapper
+headerやfooterもここに記述
+
+div.c-offcanvasWrapper
+off-canvasの記述はここ
+
+==================================================*/
+
+.l-body {
+}
+
+.t-test {
+}
+
+.c-mainWrapper {
+	// margin-top: 50px;
+}
+
+.c-mainContent {
+	margin-top: 50px;
+}

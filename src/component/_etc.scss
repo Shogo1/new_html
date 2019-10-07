@@ -1,0 +1,59 @@
+.c-breadList {
+	display: flex;
+	font-size: 1.4rem;
+	flex-wrap: wrap;
+	> * {
+		margin-bottom: 1em;
+		&:not(:first-child) {
+			margin-left: 0.8em;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}
+
+.c-pagination .page-numbers {
+	display: flex;
+	justify-content: center;
+	> * {
+		border: 1px solid #303f9f;
+		margin-left: 1em;
+		> a {
+			color: #333;
+			padding: 0.4em 0.2em;
+			transition: 0.2s ease-out;
+			@include mq(md) {
+				padding: 0.4em;
+			}
+		}
+		> span {
+			padding: 0.4em 0.2em;
+			color: #fff;
+			background-color: #303f9f;
+			@include mq(md) {
+				padding: 0.4em;
+			}
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+		&:hover {
+			a {
+				color: #fff;
+				background-color: #303f9f;
+			}
+		}
+	}
+}
+
+.c-pagerList--detail {
+	padding-top: 40px;
+	display: flex;
+	> * {
+		padding-right: 2em;
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}

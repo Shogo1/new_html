@@ -1,0 +1,41 @@
+/*=================================================
+
+content関連
+使い方
+div.c-container
+	.c-〇〇
+
+.c-contanerクラスの中に.c-sectionなどのコンテンツを格納
+
+
+==================================================*/
+
+.c-section {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: $baseBackColor;
+}
+
+.c-container {
+	padding-left: 5%;
+	padding-right: 5%;
+	max-width: calc(1000px + 10%);
+	// padding-top: 4rem;
+	// padding-bottom: 4rem;
+	margin: 0 auto;
+}
+
+.c-containerHeader {
+	padding-left: 40px;
+	padding-right: 40px;
+	margin: 0 auto;
+	max-width: 1840px;
+	height: 50px;
+	* {
+		height: 100%;
+	}
+	@include mq(md, max) {
+		padding-left: 20px;
+		padding-right: 0px;
+	}
+}

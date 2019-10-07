@@ -1,0 +1,25 @@
+.c-navbar {
+	padding: 1rem 2rem;
+}
+
+.c-navbar-items {
+	> * {
+		padding: 0.5rem 0.75rem;
+	}
+}
+/*=================================================
+
+nav.c-stickyNav.js-sticky>ul.u-flex.u-flex-middle>li*3
+
+スティッキーナビができるよ
+
+==================================================*/
+
+.c-stickyNav {
+	&.fixed {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+	}
+}

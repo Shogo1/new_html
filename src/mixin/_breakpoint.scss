@@ -1,0 +1,49 @@
+$mq-breakpoints: (
+	'xs': 320px,
+	'sm': 600px,
+	'md': 768px,
+	'lg': 1024px,
+	'xl': 1280px
+);
+
+/* ブレイクポイントの設定 */
+@mixin mq($breakpoint: medium, $rule: min, $subtraction: false) {
+	$breakpoint: map_get($mq-breakpoints, $breakpoint);
+	@if $rule == max and $subtraction {
+		$breakpoint: $breakpoint - 1;
+	}
+	@media screen and (#{$rule}-width: $breakpoint) {
+		@content;
+	}
+}
+
+/*
+  使い方
+
+  min-widthの場合（PC→spの順で作る場合）
+
+  .elements {
+    @include mq {
+
+    }
+    @include mq(large) {
+
+    }
+  }
+
+  max-widthの場合（sp→PCの順で作る場合）
+
+  .elemets{
+    @includ mq(sm,max){
+
+    }
+    @includ mq(lg,max){
+
+    }
+  }
+
+
+
+
+
+  */

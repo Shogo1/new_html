@@ -1,0 +1,62 @@
+/*-----------------------------
+
+wp関連
+
+-------------------------------*/
+
+/*投稿画面で画像を挿入した際に画面幅100％で出したいので*/
+figure.wp-block-image {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	> img {
+		width: 100%;
+	}
+}
+
+//widgetエリアのカスタマイズ
+.c-sidebarWrap {
+	padding-top: 3em;
+	position: relative;
+	&:before {
+		content: '';
+		width: 100%;
+		height: 6px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: repeating-linear-gradient(
+			135deg,
+			transparent,
+			transparent 4px,
+			rgba(48, 79, 254, 0.4) 4px,
+			rgba(48, 79, 254, 0.4) 8px
+		);
+	}
+}
+
+aside.widget-area {
+	> * {
+		margin-bottom: 1.5em;
+		h2.widget-title {
+			margin-bottom: 0.5em;
+			font-weight: 300;
+			position: relative;
+			padding-left: 0.5em;
+			&:before {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				width: 4px;
+				height: 100%;
+				background-color: rgba(48, 79, 254, 0.4);
+			}
+		}
+		ul {
+			margin-left: 0.5em;
+			li {
+				margin-bottom: 0.4em;
+			}
+		}
+	}
+}

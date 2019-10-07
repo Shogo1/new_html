@@ -1,0 +1,38 @@
+/*=================================================
+
+基本形
+
+div.swiper-container>(div.swiper-wrapper>div.swiper-slide*3)+div.swiper-pagination+div.swiper-button-prev+div.swiper-button-next+div.swiper-scrollbar
+
+swiper-slideを使うときのカスタマイズ
+heightは適当
+
+
+==================================================*/
+
+// .swiper-slide-active {
+// 	height: 350px;
+// 	background-color: #5a2f6e;
+// }
+
+.swiper-wrapper {
+	&::before {
+		content: '';
+		display: block;
+		width: 100%;
+		padding-top: 61%;
+	}
+}
+
+.swiper-slide {
+	transition: all 0.4s 0.6s ease-in;
+	height: 200px;
+	background-color: #8a96de;
+	&-active {
+		height: 200px;
+		background-color: #5a2f6e;
+		@include mq(md) {
+			height: 350px;
+		}
+	}
+}

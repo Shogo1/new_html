@@ -1,0 +1,19 @@
+.c-footer {
+	margin-top: 38px;
+	&__wrapper {
+		background-color: #303f9f;
+		color: #fff;
+		padding: 10px 0;
+	}
+	@media screen and (min-width: 768px) {
+		margin-top: 0;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.contentWrapper {
+		max-width: calc(1000px + 10%);
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}

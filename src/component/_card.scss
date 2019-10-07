@@ -1,0 +1,16 @@
+.u-card {
+	position: relative;
+	transition: box-shadow 0.1s ease-in;
+	&.u-card-body {
+		padding: 30px 30px;
+	}
+	&.u-card-defalut {
+		background-color: #fff;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+	}
+	&.u-card-primary {
+		background: #1e87f0;
+		color: #fff;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+	}
+}

@@ -1,0 +1,65 @@
+/*=================================================
+tabUIのコンポーネント
+
+div.c-tabUI.js-tabUI>(ul.c-tabUI__tabList[role="tablist"][aria-label=""]>(li.c-tabUI__tabList__item[role="none presentation"]>button#tab-.c-tabUI__tabList__item__tab.js-tab[type="button"][role="tab"][aria-controls="panel-"][aria-selected="true"]{tab-name})+(li.c-tabUI__tabList__item[role="none presentation"]>button#tab-.c-tabUI__tabList__item__tab.js-tab[type="button"][role="tab"][aria-controls=""][aria-selected="false"][tabindex="-1"]{tab-name})*2)+div.c-tabUI__body>(div#tabPanel-.c-tabUI__body__tabPanel.js-tabPanel[role="tabpanel"][aria-labelledby="tab-"][aria-hidden="false"][tabindex="0"])+(div#panel-.c-tabUI__body__tabPanel.js-tabPanel[role=""tabpanel][aria-labelledby="tab-"][aria-hidden="true"][tabindex="0"])*2
+
+
+==================================================*/
+
+.c-tabUI {
+	//テスト用にpx指定しています。
+	width: 300px;
+	&__tabList {
+		display: flex;
+		margin: 0;
+		padding-left: 0;
+		&__item {
+			border-width: 1px 1px 0 1px;
+			border-style: solid;
+			border-color: dimgray;
+			margin-bottom: -1px;
+			&:nth-child(n + 2) {
+				margin-left: 5px;
+			}
+			&__tab {
+				display: block;
+				position: relative;
+				margin: 0;
+				border-width: 0 0 1px 0;
+				border-style: solid;
+				padding: 0.25em 0.5em;
+				width: 100%;
+				font-size: inherit;
+				font-family: inherit;
+				&[aria-selected='true'] {
+					//タブ - 選択状態
+					border-bottom-color: white;
+					background-color: white;
+					color: black;
+				}
+				&[aria-selected='false'] {
+					//タブ - 非選択状態
+					border-color: dimgray;
+					background-color: whitesmoke;
+					color: dimgray;
+					&:focus {
+						//タブ - 非選択状態 + フォーカス状態
+						color: black;
+					}
+				}
+			}
+		}
+	}
+	&__body {
+		border-width: 1px;
+		border-style: solid;
+		border-color: dimgray;
+		background-color: white;
+		&__tabPanel {
+			padding: 1em 0.5em;
+			&[aria-hidden='true'] {
+				display: none;
+			}
+		}
+	}
+}
