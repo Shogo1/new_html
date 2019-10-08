@@ -1,0 +1,11 @@
+.u-flex-order-3 {
+	@include mq(md, max) {
+		order: 2 !important;
+	}
+}
+
+.u-flex-order-2 {
+	@include mq(md, max) {
+		order: 3 !important;
+	}
+}

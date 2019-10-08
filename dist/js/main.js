@@ -457,6 +457,25 @@ const tabUI = function() {
 
 		/*===================
 
+		20191008追記
+		[aria-hidden='false']の高さを取得
+
+===================*/
+
+		// let aaa = function() {
+		// 	// let getTabElement = document.querySelector('[aria-hidden="false"]')
+		// 	// getTabElement.addEventListener('click')
+		// 	let getTestHeight = document.querySelector('[aria-hidden="false"]')
+		// 		.clientHeight
+		// 	let elem = document.querySelector('.c-tabUI__body')
+		// 	elem.style.height = getTestHeight + 'px'
+		// }
+
+		// const getTabElement = document.querySelector('[aria-hidden="false"]')
+		// getTabElement.addEventListener('click', aaa(), false)
+
+		/*===================
+
 初期化
 
 ===================*/
@@ -525,7 +544,7 @@ swiper用の記述
 ==================================================*/
 
 try {
-	const mySwiper = new Swiper('.swiper-container', {
+	let mySwiper = new Swiper('.swiper-container', {
 		// Optional parameters
 		// direction: 'vertical',
 		slidesPerView: 1,
@@ -588,3 +607,5 @@ const wpWpFormYubin = function() {
 }
 
 wpWpFormYubin()
+
+let getTestSelect = document.querySelector('[aria-hidden="false"]').clientHeight

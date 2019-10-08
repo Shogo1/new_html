@@ -8,10 +8,6 @@
 @import 'layout/_footer';
 @import 'layout/_header';
 
-@import 'page/_common';
-@import 'page/_index';
-@import 'page/_wp';
-
 @import 'component/_btn';
 @import 'component/_card';
 @import 'component/_contact';
@@ -27,8 +23,13 @@
 
 @import 'utility/_animation';
 @import 'utility/_color';
+@import 'utility/_height';
 @import 'utility/_helper';
 @import 'utility/_margin';
 @import 'utility/_micon';
 @import 'utility/_padding';
 @import 'utility/_width';
+
+@import 'page/_common';
+@import 'page/_index';
+@import 'page/_wp';

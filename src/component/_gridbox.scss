@@ -24,12 +24,12 @@ div.c-gridbox.c-grid-match
 			margin-bottom: 15px;
 		}
 	}
-}
-
-.c-gridBox.c-grid-small {
-	margin-left: -10px;
-	> * {
-		padding-left: 10px;
+	&.c-grid-small {
+		margin-left: -10px;
+		> * {
+			padding-left: 10px;
+			margin-bottom: 15px;
+		}
 	}
 }
 

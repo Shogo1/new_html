@@ -1,16 +1,78 @@
 .u-card {
+	width: 100%;
 	position: relative;
 	transition: box-shadow 0.1s ease-in;
 	&.u-card-body {
 		padding: 30px 30px;
 	}
+	.u-card-small {
+		padding: 15px 15px;
+	}
 	&.u-card-defalut {
 		background-color: #fff;
-		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+		&:hover {
+			box-shadow: 0 14px 25px rgba(0, 0, 0, 0.32);
+		}
 	}
 	&.u-card-primary {
 		background: #1e87f0;
 		color: #fff;
 		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+	}
+	&-body {
+		padding: 30px 30px;
+	}
+	&-media-top {
+		&-s {
+			height: 170px;
+			> .u-imgfit {
+				height: 100%;
+			}
+			& + .u-card-textarea {
+				display: flex;
+				flex-direction: column;
+				height: calc(100% - 170px);
+			}
+			@include mq(md, max) {
+				height: $media-top-md;
+				> .u-imgfit {
+					height: 100%;
+				}
+				& + .u-card-textarea {
+					display: flex;
+					flex-direction: column;
+					height: calc(100% - #{$media-top-md});
+				}
+			}
+		}
+		&-m {
+			height: 300px;
+			> .u-imgfit {
+				height: 100%;
+			}
+			& + .u-card-textarea {
+				display: flex;
+				flex-direction: column;
+				height: calc(100% - 300px);
+			}
+			@include mq(md, max) {
+				height: $media-top-md;
+				> .u-imgfit {
+					height: 100%;
+				}
+				& + .u-card-textarea {
+					display: flex;
+					flex-direction: column;
+					height: calc(100% - #{$media-top-md});
+				}
+			}
+		}
+		&-media-right {
+		}
+		&-media-bottom {
+		}
+		&-media-left {
+		}
 	}
 }

@@ -8,15 +8,15 @@ div.c-tabUI.js-tabUI>(ul.c-tabUI__tabList[role="tablist"][aria-label=""]>(li.c-t
 
 .c-tabUI {
 	//テスト用にpx指定しています。
-	width: 300px;
+	// width: 300px;
 	&__tabList {
 		display: flex;
 		margin: 0;
 		padding-left: 0;
 		&__item {
-			border-width: 1px 1px 0 1px;
-			border-style: solid;
-			border-color: dimgray;
+			// border-width: 1px 1px 0 1px;
+			// border-style: solid;
+			// border-color: dimgray;
 			margin-bottom: -1px;
 			&:nth-child(n + 2) {
 				margin-left: 5px;
@@ -25,7 +25,7 @@ div.c-tabUI.js-tabUI>(ul.c-tabUI__tabList[role="tablist"][aria-label=""]>(li.c-t
 				display: block;
 				position: relative;
 				margin: 0;
-				border-width: 0 0 1px 0;
+				border-width: 0 0 2px 0;
 				border-style: solid;
 				padding: 0.25em 0.5em;
 				width: 100%;
@@ -33,14 +33,16 @@ div.c-tabUI.js-tabUI>(ul.c-tabUI__tabList[role="tablist"][aria-label=""]>(li.c-t
 				font-family: inherit;
 				&[aria-selected='true'] {
 					//タブ - 選択状態
-					border-bottom-color: white;
+					border-bottom-color: navy;
 					background-color: white;
 					color: black;
 				}
 				&[aria-selected='false'] {
 					//タブ - 非選択状態
-					border-color: dimgray;
-					background-color: whitesmoke;
+					border: none;
+					// border-color: dimgray;
+					// background-color: whitesmoke;
+					background-color: white;
 					color: dimgray;
 					&:focus {
 						//タブ - 非選択状態 + フォーカス状態
@@ -51,14 +53,19 @@ div.c-tabUI.js-tabUI>(ul.c-tabUI__tabList[role="tablist"][aria-label=""]>(li.c-t
 		}
 	}
 	&__body {
-		border-width: 1px;
+		// border-width: 0 1px 1px;
 		border-style: solid;
 		border-color: dimgray;
 		background-color: white;
+		// position: relative;
 		&__tabPanel {
+			// position: absolute;
 			padding: 1em 0.5em;
 			&[aria-hidden='true'] {
 				display: none;
+				// visibility: hidden;
+				// pointer-events: none;
+				// opacity: 0;
 			}
 		}
 	}
