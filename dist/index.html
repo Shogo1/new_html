@@ -604,7 +604,18 @@
 				</div>
 				<div class="c-section">
 					<div class="c-container">
-						<button class="c-label c-btn c-btn--raised js-openModal">
+						<button
+							class="c-label c-btn c-btn--raised js-openModal"
+							data-target="modal01"
+							aria-expanded="false"
+						>
+							モーダル展開
+						</button>
+						<button
+							class="c-label c-btn c-btn--raised js-openModal"
+							data-target="modal02"
+							aria-expanded="false"
+						>
 							モーダル展開
 						</button>
 					</div>
@@ -663,7 +674,7 @@
 		</div>
 		<div class="c-modalWrapper js-modalWrap" aria-expanded="false">
 			<div class="c-modalOverlay js-modalOverlay"></div>
-			<div class="c-modal">
+			<div id="modal02" class="c-modal js-modalTarget">
 				<div class="c-modalBox-content">
 					<button
 						class="c-closeBtn js-closeModal"
@@ -674,7 +685,7 @@
 						<span></span>
 						<span></span>
 					</button>
-					<div>
+					<div class="u-margin-small-bottom--child">
 						<img src="img/sl1.jpeg" alt="" />
 						<p>
 							モダンブラウザをターゲットにしたWeb制作では、CSSにおけるブラウザの互換性の問題はIE6の頃に比べるとはるかに少なくなりました。無理なリセットやすべてをリセットする必要は全くありません。<br />

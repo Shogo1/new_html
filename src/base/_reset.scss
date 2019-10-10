@@ -178,6 +178,7 @@ img {
 	max-width: 100%;
 	height: auto;
 	vertical-align: bottom;
+	// line-height: 1;
 }
 
 li {
@@ -233,7 +234,7 @@ html {
 	font-size: 62.5%;
 }
 body {
-	line-height: 1;
+	line-height: 1.5;
 	font-size: 1.6rem;
 	// font-size: calc(1rem +);
 }

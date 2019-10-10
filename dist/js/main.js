@@ -243,6 +243,9 @@ const offCanvas = function() {
 		// stateは真偽値
 		const changeAriaExpanded = function(state) {
 			const value = state ? 'true' : 'false'
+			//3項演算子
+			//stateの値がtrueならvalueにtrueを
+			//逆にstateの値がfalseならvalueにfalseがセットされる
 			drawer.setAttribute('aria-expanded', value)
 			openButton.setAttribute('aria-expanded', value)
 			closeButton.setAttribute('aria-expanded', value)
@@ -251,8 +254,11 @@ const offCanvas = function() {
 		// stateは真偽値
 		const changeState = function(state) {
 			if (state === offCanvasOpen) {
+				//例えばtrue →　trueでステータスが変わらない状況
+				//コンソールにメッセージが出るだけで何も変わらない
 				console.log('2回以上連続で同じ状態に変更しようとしました')
 				return
+				//retunなので以下の処理は実行されない
 			}
 			changeAriaExpanded(state)
 			offCanvasOpen = state
@@ -279,44 +285,51 @@ const offCanvas = function() {
 
 		//開閉時のクラスの付け替え関連の関数
 		const activateScrollLock = function() {
+			//openButtonの要素がクリックされたら以下の関数を実行
 			addScrollbarWidth()
-			//OffCanvasクラスの追加
+			//rootElemnt(=htmlタグ)にOffCanvasクラスを追加
 			rootElement.classList.add(scrollLockModifier)
 		}
 
 		//開閉時のクラスの付け替え関連の関数
 		const deactivateScrollLock = function() {
 			removeScrollbarWidth()
-			//OffCanvasクラスの削除
+			//rootElemnt(=htmlタグ)からOffCanvasクラスを削除
 			rootElement.classList.remove(scrollLockModifier)
 		}
 
 		const openDrawer = function() {
+			//オフキャンバスが開いたら（openButtonの要素がクリックされたら）stateの値をtrueにセット
 			changeState(true)
 		}
 
 		const closeDrawer = function() {
+			//オフキャンバスが閉じたら（closeButtonの要素がクリックされたら）stateの値をfalseにセット
 			changeState(false)
 		}
 
 		const onClickOpenButton = function() {
+			//openButtonの要素がクリックされたら以下の関数を実行
 			activateScrollLock()
 			openDrawer()
 		}
 
 		//開閉時のクラスの付け替え関連の関数
 		const onTransitionendDrawer = function(event) {
+			//drawerの要素のcssトランジションが完了したら以下の関数を実行
 			if (event.target !== drawer || event.propertyName !== 'visibility') {
 				return
+				//イベントターゲットがdrawerでない、もしくはプロパティがvisibilityでないのならここで処理終了
 			}
 			if (!offCanvasOpen) {
-				// offCanvasが開いていたら実行
+				// 一つ目のif分がとおり、かつoffCanvasが開いていたら実行
 				// デフォルトがOffcanvasOpen = falseなので
 				deactivateScrollLock()
 			}
 		}
 
 		const onClickCloseButton = function() {
+			//closeButton,もしくはbackdropの要素がクリックされたら以下の関数を実行
 			closeDrawer()
 		}
 
@@ -335,13 +348,23 @@ modal　クラス追加
 
 ===================*/
 
+//Micromodal.js を使ってみること
+
 const modal = function() {
 	try {
-		const openButton = document.querySelector('.js-openModal')
+		const openButton = document.querySelector('button.js-openModal')
 		const modalBox = document.querySelector('.js-modalWrap')
 		const closeButton = modalBox.querySelector('.js-closeModal')
 		const backdrop = modalBox.querySelector('.js-modalOverlay')
 		const scrollbarFixTargets = document.querySelectorAll('.js-scrollbarFix')
+
+		// const openButton = function() {
+		// 	openButtons.forEach(function (target) {
+
+		// 	})
+		// }
+
+		console.log(openButton)
 
 		//開閉時のクラスの付け替え関連の変数
 		const rootElement = document.documentElement
@@ -362,6 +385,9 @@ const modal = function() {
 		// stateは真偽値
 		const changeAriaExpanded = function(state) {
 			const value = state ? 'true' : 'false'
+			//3項演算子
+			//stateの値がtrueならvalueにtrueを
+			//逆にstateの値がfalseならvalueにfalseがセットされる
 			modalBox.setAttribute('aria-expanded', value)
 			openButton.setAttribute('aria-expanded', value)
 			closeButton.setAttribute('aria-expanded', value)
@@ -370,8 +396,11 @@ const modal = function() {
 		// stateは真偽値
 		const changeState = function(state) {
 			if (state === modalOpen) {
+				//例えばtrue →　trueでステータスが変わらない状況
+				//コンソールにメッセージが出るだけで何も変わらない
 				console.log('2回以上連続で同じ状態に変更しようとしました')
 				return
+				//retunなので以下の処理は実行されない
 			}
 			changeAriaExpanded(state)
 			modalOpen = state
@@ -398,48 +427,59 @@ const modal = function() {
 
 		//開閉時のクラスの付け替え関連の関数
 		const activateScrollLock = function() {
+			//openButtonの要素がクリックされたら以下の関数を実行
 			addScrollbarWidth()
-			//OffCanvasクラスの追加
+			//rootElemnt(=htmlタグ)にOffCanvasクラスを追加
 			rootElement.classList.add(scrollLockModifier)
 		}
 
 		//開閉時のクラスの付け替え関連の関数
 		const deactivateScrollLock = function() {
+			//closeButtonの要素がクリックされたら以下の関数を実行
 			removeScrollbarWidth()
-			//OffCanvasクラスの削除
+			//rootElemnt(=htmlタグ)からOffCanvasクラスを削除
 			rootElement.classList.remove(scrollLockModifier)
 		}
 
 		const openModal = function() {
+			//モーダルが開いたら（openButtonの要素がクリックされたら）stateの値をtrueにセット
 			changeState(true)
 		}
 
 		const closeModal = function() {
+			//モーダルが閉じたら（closeButtonの要素がクリックされたら）stateの値をfalseにセット
 			changeState(false)
 		}
 
 		const onClickOpenButton = function() {
+			//openButtonの要素がクリックされたら以下の関数を実行
 			activateScrollLock()
 			openModal()
 		}
 
 		//開閉時のクラスの付け替え関連の関数
 		const onTransitionendModal = function(event) {
+			//モーダルの要素のcssトランジションが完了したら以下の関数を実行
 			if (event.target !== modalBox || event.propertyName !== 'visibility') {
 				return
+				//イベントターゲットがモーダルボックスでない、もしくはプロパティがvisibilityでないのならここで処理終了
 			}
 			if (!modalOpen) {
-				// offCanvasが開いていたら実行
-				// デフォルトがOffcanvasOpen = falseなので
+				// 一つ目のif分がとおり、かつモーダルが開いていたら実行
+				// デフォルトがmodalOpen = falseなので
 				deactivateScrollLock()
 			}
 		}
 
 		const onClickCloseButton = function() {
+			//closeButton,もしくはbackdropの要素がクリックされたら以下の関数を実行
 			closeModal()
 		}
 
 		openButton.addEventListener('click', onClickOpenButton, false)
+		// openButton.forEach(function(target) {
+		// 	target.addEventListenerr('click', onClickOpenButton, false)
+		// })
 		closeButton.addEventListener('click', onClickCloseButton, false)
 		backdrop.addEventListener('click', onClickCloseButton, false)
 		modalBox.addEventListener('transitionend', onTransitionendModal, false)
