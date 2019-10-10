@@ -216,36 +216,6 @@ offcanvas　クラス追加
 
 ===================*/
 
-// const closeBtn = function() {
-// 	const navBurgerMenu = document.querySelector('.c-navBurger')
-// 	// const closeBtn = document.querySelector('.c-closeBtn')
-// 	// const spOffcanvasOverlay = document.querySelector('.c-offcanvasWrapper')
-// 	// const mainWrapper = document.querySelector('.c-mainWrapper')
-// 	navBurgerMenu.addEventListener('click', function() {
-// 		if ($(this).hasClass('action')) {
-// 			navBurgerMenu.classList.remove('action')
-// 			// spOffcanvasOverlay.classList.remove('action')
-// 			// mainWrapper.classList.remove('action')
-// 			// closeBtn.classList.remove('action')
-// 		} else {
-// 			navBurgerMenu.classList.add('action')
-// 			// spOffcanvasOverlay.classList.add('action')
-// 			// mainWrapper.classList.add('action')
-// 			// closeBtn.classList.add('action')
-// 		}
-// 	})
-// 	spOffcanvasOverlay.addEventListener('click', function() {
-// 		if ($(this).hasClass('action')) {
-// 			navBurgerMenu.classList.remove('action')
-// 			// spOffcanvasOverlay.classList.remove('action')
-// 			// mainWrapper.classList.remove('action')
-// 			// closeBtn.classList.remove('action')
-// 		}
-// 	})
-// }
-
-// closeBtn()
-
 const offCanvas = function() {
 	try {
 		const openButton = document.querySelector('.js-openOffcanvas')
@@ -358,6 +328,125 @@ const offCanvas = function() {
 }
 
 offCanvas()
+
+/*===================
+
+modal　クラス追加
+
+===================*/
+
+const modal = function() {
+	try {
+		const openButton = document.querySelector('.js-openModal')
+		const modalBox = document.querySelector('.js-modalWrap')
+		const closeButton = modalBox.querySelector('.js-closeModal')
+		const backdrop = modalBox.querySelector('.js-modalOverlay')
+		const scrollbarFixTargets = document.querySelectorAll('.js-scrollbarFix')
+
+		//開閉時のクラスの付け替え関連の変数
+		const rootElement = document.documentElement
+		const scrollLockModifier = 'modalOpen'
+
+		// 現在の状態（開いていたらtrue）
+		let modalOpen = false
+
+		//headerがfixedして追従する場合の関数
+		// valueは文字列
+		const addScrollbarMargin = function(value) {
+			const targetsLength = scrollbarFixTargets.length
+			for (let i = 0; i < targetsLength; i++) {
+				scrollbarFixTargets[i].style.marginRight = value
+			}
+		}
+
+		// stateは真偽値
+		const changeAriaExpanded = function(state) {
+			const value = state ? 'true' : 'false'
+			modalBox.setAttribute('aria-expanded', value)
+			openButton.setAttribute('aria-expanded', value)
+			closeButton.setAttribute('aria-expanded', value)
+		}
+
+		// stateは真偽値
+		const changeState = function(state) {
+			if (state === modalOpen) {
+				console.log('2回以上連続で同じ状態に変更しようとしました')
+				return
+			}
+			changeAriaExpanded(state)
+			modalOpen = state
+		}
+
+		const addScrollbarWidth = function() {
+			//scrollバーの幅を取得　ウィンドウ幅 - html領域の幅
+			const scrollbarWidth = window.innerWidth - rootElement.clientWidth
+			//bodyのスタイルmargin-rightに取得した幅を追加
+			//addScrollbarMargin関数を使う場合は↓2行を追加
+			const value = scrollbarWidth + 'px'
+			addScrollbarMargin(value)
+			//addScrollbarMargin関数を使う場合は↓削除
+			// document.body.style.marginRight = scrollbarWidth + 'px'
+		}
+
+		const removeScrollbarWidth = function() {
+			//bodyのスタイルmargin-rightを削除
+			//addScrollbarMargin関数を使う場合は↓追加
+			addScrollbarMargin('')
+			//addScrollbarMargin関数を使う場合は↓削除
+			// document.body.style.marginRight = ''
+		}
+
+		//開閉時のクラスの付け替え関連の関数
+		const activateScrollLock = function() {
+			addScrollbarWidth()
+			//OffCanvasクラスの追加
+			rootElement.classList.add(scrollLockModifier)
+		}
+
+		//開閉時のクラスの付け替え関連の関数
+		const deactivateScrollLock = function() {
+			removeScrollbarWidth()
+			//OffCanvasクラスの削除
+			rootElement.classList.remove(scrollLockModifier)
+		}
+
+		const openModal = function() {
+			changeState(true)
+		}
+
+		const closeModal = function() {
+			changeState(false)
+		}
+
+		const onClickOpenButton = function() {
+			activateScrollLock()
+			openModal()
+		}
+
+		//開閉時のクラスの付け替え関連の関数
+		const onTransitionendModal = function(event) {
+			if (event.target !== modalBox || event.propertyName !== 'visibility') {
+				return
+			}
+			if (!modalOpen) {
+				// offCanvasが開いていたら実行
+				// デフォルトがOffcanvasOpen = falseなので
+				deactivateScrollLock()
+			}
+		}
+
+		const onClickCloseButton = function() {
+			closeModal()
+		}
+
+		openButton.addEventListener('click', onClickOpenButton, false)
+		closeButton.addEventListener('click', onClickCloseButton, false)
+		backdrop.addEventListener('click', onClickCloseButton, false)
+		modalBox.addEventListener('transitionend', onTransitionendModal, false)
+	} catch (error) {}
+}
+
+modal()
 
 /*=================================================
 
@@ -609,3 +698,39 @@ const wpWpFormYubin = function() {
 wpWpFormYubin()
 
 let getTestSelect = document.querySelector('[aria-hidden="false"]').clientHeight
+
+/*=================================================
+
+以下ゴミ箱
+
+==================================================*/
+
+// const closeBtn = function() {
+// 	const navBurgerMenu = document.querySelector('.c-navBurger')
+// 	// const closeBtn = document.querySelector('.c-closeBtn')
+// 	// const spOffcanvasOverlay = document.querySelector('.c-offcanvasWrapper')
+// 	// const mainWrapper = document.querySelector('.c-mainWrapper')
+// 	navBurgerMenu.addEventListener('click', function() {
+// 		if ($(this).hasClass('action')) {
+// 			navBurgerMenu.classList.remove('action')
+// 			// spOffcanvasOverlay.classList.remove('action')
+// 			// mainWrapper.classList.remove('action')
+// 			// closeBtn.classList.remove('action')
+// 		} else {
+// 			navBurgerMenu.classList.add('action')
+// 			// spOffcanvasOverlay.classList.add('action')
+// 			// mainWrapper.classList.add('action')
+// 			// closeBtn.classList.add('action')
+// 		}
+// 	})
+// 	spOffcanvasOverlay.addEventListener('click', function() {
+// 		if ($(this).hasClass('action')) {
+// 			navBurgerMenu.classList.remove('action')
+// 			// spOffcanvasOverlay.classList.remove('action')
+// 			// mainWrapper.classList.remove('action')
+// 			// closeBtn.classList.remove('action')
+// 		}
+// 	})
+// }
+
+// closeBtn()
