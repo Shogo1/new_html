@@ -1,0 +1,128 @@
+/*=================================================
+
+↓モーダルトリガー
+
+button.c-btn.js-openModal
+
+↓モーダル本体
+
+div.c-modalWrapper.js-modalWrap.[aria-expanded="false"]>div.c-modalOverlay.js-modalOverlay+div.c-modal.c-modalBox-content>(button.c-closeBtn.js-closeModal.[aria-controls="modalBox"][aria-expanded="false"]>span*3)+div
+
+==================================================*/
+
+$modalColor: #eeeeee;
+
+html {
+	overflow-y: scroll;
+}
+
+html.modalOpen {
+	overflow: hidden;
+}
+
+.c-modalWrapper {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	z-index: 1000;
+	width: 100%;
+	height: 100vh;
+	// pointer-events: none;
+	.c-modalOverlay {
+		position: fixed;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.55);
+	}
+	.c-modal {
+		background-color: $modalColor;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -60%);
+		position: absolute;
+		width: 80%;
+		padding: 1rem 2rem;
+		height: 80%;
+		//navのリストがあふれたときよう
+		overflow: auto;
+		/*スクロールバーの幅*/
+		&::-webkit-scrollbar {
+			width: 6px;
+		}
+		/*スクロールバーのレール*/
+		&::-webkit-scrollbar-track {
+			border-radius: 30px;
+			background: #eee;
+		}
+		/*スクロールバーのつまみ*/
+		&::-webkit-scrollbar-thumb {
+			border-radius: 30px;
+			// background: #81d4fa;
+			background: #999;
+		}
+		ul {
+			li {
+				pointer-events: auto;
+			}
+		}
+	}
+	&[aria-expanded] {
+		//aria-expanded属性が付与されている場合（falseかtrueかは関係ない）
+		transition-property: visibility;
+		transition-duration: 0.2s;
+		.c-modalOverlay {
+			transition-property: opacity;
+			transition-duration: 0.25s;
+			transition-timing-function: linear;
+		}
+		.c-modal {
+			transition-property: transform, overflow-y;
+			transition-duration: 0.25s;
+			transition-timing-function: ease;
+		}
+		.c-modalBox-content {
+			> * {
+				transition-property: opacity;
+				transition-duration: 0.25s;
+				transition-timing-function: linear;
+			}
+		}
+	}
+	&[aria-expanded='true'] {
+		//aria-expanded属性が付与され、かつその値がtrue（画面上に表示されている）の時
+		visibility: visible;
+		.c-modalOverlay {
+			opacity: 1;
+		}
+		.c-modal {
+			// overflow-y: scroll;
+			transform: translate(-50%, -50%);
+		}
+		.c-modalBox-content {
+			> * {
+				opacity: 1;
+			}
+		}
+	}
+	&[aria-expanded='false'] {
+		//aria-expanded属性が付与され、かつその値がfalse（画面上に表示されていない）の時
+		visibility: hidden;
+		.c-modalOverlay {
+			opacity: 0;
+		}
+		.c-modal {
+			// overflow-y: hidden;
+			transform: translate(-50%, -60%);
+		}
+		.c-modalBox-content {
+			> * {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+//以上が標準、以下オプション
