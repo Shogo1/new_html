@@ -30,12 +30,35 @@
 		}
 	}
 }
+.u-margin-xs-bottom {
+	margin-bottom: 5px;
+	&--child {
+		> * {
+			margin-bottom: 5px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
 
 .u-margin-large-bottom {
 	margin-bottom: 45px;
 	&--child {
 		> * {
 			margin-bottom: 45px;
+		}
+	}
+}
+
+.u-margin-small-right {
+	margin-right: 15px;
+	&--child {
+		> * {
+			margin-right: 15px;
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 	}
 }

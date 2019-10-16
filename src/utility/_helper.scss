@@ -52,6 +52,10 @@ flex
 	justify-content: space-between;
 }
 
+.u-flex-around {
+	justify-content: space-around;
+}
+
 .u-flex-middle {
 	align-items: center;
 }
@@ -118,6 +122,9 @@ text
 
 .u-fs-small {
 	font-size: calc(14px);
+	&-xs {
+		font-size: calc(10px);
+	}
 }
 
 .u-text-center {

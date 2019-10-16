@@ -92,26 +92,29 @@ $(function() {
 /*===================
 
 一定量スクロールしたら表示
-ページ下部まできたら非表示
+
 
 ===================*/
 
 $(function() {
-	var showFlag = false
-	var topBtn = $('.fadeInBox')
+	let showFlag = false
+	const topBtn = $('.fadeInBox')
+	const docH = $(document).innerHeight() //ページ全体の高さ
+	const winH = $(window).innerHeight() //ウィンドウの高さ
+	const bottom = docH - winH //ページの最下部位置
 	topBtn.css('bottom', '-130px')
-	var showFlag = false
+
 	//スクロールが100に達したらボタン表示
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > 100) {
 			if (showFlag == false) {
 				showFlag = true
-				topBtn.stop().animate({ bottom: '0px' }, 200)
+				topBtn.stop().animate({ bottom: '50px' }, 400)
 			}
 		} else {
 			if (showFlag) {
 				showFlag = false
-				topBtn.stop().animate({ bottom: '-130px' }, 200)
+				topBtn.stop().animate({ bottom: '-130px' }, 400)
 			}
 		}
 	})
@@ -342,11 +345,11 @@ const offCanvas = function() {
 
 offCanvas()
 
-/*===================
+/*=================================================
 
 modal　クラス追加
 
-===================*/
+==================================================*/
 
 //Micromodal.js を使ってみること
 
@@ -358,13 +361,51 @@ const modal = function() {
 		const backdrop = modalBox.querySelector('.js-modalOverlay')
 		const scrollbarFixTargets = document.querySelectorAll('.js-scrollbarFix')
 
-		// const openButton = function() {
-		// 	openButtons.forEach(function (target) {
+		/*================
 
-		// 	})
+		↓　テスト区間
+
+		==================*/
+
+		const openButtons = document.querySelectorAll('[data-target]')
+		// const openButtonTargets = Array.prototype.forEach.call(
+		// 	openButtons,
+		// 	function(el) {
+		// 		console.log(el)
+		// 	}
+		// )
+
+		// consle.log(openButtons)
+		const openButtonTargets = Array.prototype.forEach.call(
+			openButtons,
+			function(el) {
+				// let openButtonTarget = this.dataset.target.length
+				// console.log(openButtonTarget)
+				console.log(el)
+				// el.checked = true
+				// el.textContent
+			}
+		)
+
+		// const openButtonTargets = openButtonTargets().length
+
+		// const openButtonTest = function(value) {
+		// 	const openButtonTarget = openButtons.querySelector(['data-target'])
 		// }
-
+		// const openButtonTarget = openButtons.querySelectorAll(['data-target'])
+		// console.log(el)
 		console.log(openButton)
+		// console.log(openButtons)
+		// console.log(openButtonTarget)
+		// console.log(openButtonTargets)
+		// console.log(openButtonTest)
+		// openButtonTargets()
+
+		/*================
+
+		↑　テスト区間
+
+		==================*/
 
 		//開閉時のクラスの付け替え関連の変数
 		const rootElement = document.documentElement
@@ -487,6 +528,14 @@ const modal = function() {
 }
 
 modal()
+
+/*=================================================
+
+MicroModal用スクリプト
+
+==================================================*/
+
+// MicroModal.init()
 
 /*=================================================
 
