@@ -1,0 +1,47 @@
+/*=================================================
+
+パララックス
+
+==================================================*/
+$parallaxSpPaddingTop: 59.33%;
+$parallaxTabHeight: 468px;
+$parallaxSpImg: url(../img/sl1.jpeg);
+$parallaxPcImg: url(../img/sl2.jpeg);
+
+.c-parallaxImg {
+	width: 100%;
+	padding-top: $parallaxSpPaddingTop;
+	position: relative;
+	&:before {
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding-top: $parallaxSpPaddingTop;
+		position: fixed;
+		z-index: -1;
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: $parallaxSpImg;
+		// background: url() bottom center/cover no-repeat;
+	}
+	@include mq(md) {
+		padding-top: 0;
+		max-width: 1000px;
+		height: $parallaxTabHeight;
+		margin-right: auto;
+		margin-left: auto;
+		&:before {
+			left: 50%;
+			transform: translateX(-50%);
+			max-width: 1000px;
+			height: $parallaxTabHeight;
+			background-position: bottom center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-image: $parallaxPcImg;
+			// background: url() bottom center/cover no-repeat;
+		}
+	}
+}

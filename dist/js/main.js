@@ -99,22 +99,26 @@ $(function() {
 $(function() {
 	let showFlag = false
 	const topBtn = $('.fadeInBox')
-	const docH = $(document).innerHeight() //ページ全体の高さ
-	const winH = $(window).innerHeight() //ウィンドウの高さ
-	const bottom = docH - winH //ページの最下部位置
-	topBtn.css('bottom', '-130px')
+	// const docH = $(document).innerHeight() //ページ全体の高さ
+	// const winH = $(window).innerHeight() //ウィンドウの高さ
+	// const bottom = docH - winH //ページの最下部位置
+	const scrollCssBefore = { bottom: '-130px', opacity: '0' }
+	const scrollCssAfter = { bottom: '45px', opacity: '1' }
+	// topBtn.css('bottom','-130px')
+	topBtn.css(scrollCssBefore)
 
 	//スクロールが100に達したらボタン表示
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > 100) {
 			if (showFlag == false) {
 				showFlag = true
-				topBtn.stop().animate({ bottom: '50px' }, 400)
+				// topBtn.stop().animate({ bottom: '50px' }, 400)
+				topBtn.stop().animate(scrollCssAfter, 600)
 			}
 		} else {
 			if (showFlag) {
 				showFlag = false
-				topBtn.stop().animate({ bottom: '-130px' }, 400)
+				topBtn.stop().animate(scrollCssBefore, 600)
 			}
 		}
 	})
