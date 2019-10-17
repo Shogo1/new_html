@@ -372,6 +372,7 @@ const modal = function() {
 		==================*/
 
 		const openButtons = document.querySelectorAll('[data-target]')
+		// const openButtons = document.querySelectorAll('button.js-openModal')
 		// const openButtonTargets = Array.prototype.forEach.call(
 		// 	openButtons,
 		// 	function(el) {
@@ -383,11 +384,8 @@ const modal = function() {
 		const openButtonTargets = Array.prototype.forEach.call(
 			openButtons,
 			function(el) {
-				// let openButtonTarget = this.dataset.target.length
-				// console.log(openButtonTarget)
-				console.log(el)
-				// el.checked = true
-				// el.textContent
+				// console.log(el)
+				// const openBUtton = el
 			}
 		)
 
@@ -398,7 +396,7 @@ const modal = function() {
 		// }
 		// const openButtonTarget = openButtons.querySelectorAll(['data-target'])
 		// console.log(el)
-		console.log(openButton)
+		// console.log(openButton)
 		// console.log(openButtons)
 		// console.log(openButtonTarget)
 		// console.log(openButtonTargets)

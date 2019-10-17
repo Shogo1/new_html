@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>コンポーネント集</title>
+	</head>
+	<body class="l-body js-scrollbarFix">
+		<div class="c-loadingWrapper"></div>
+		<div class="c-mainWrapper u-fs-normal u-baseLineH">
+			<header class="c-header c-header-right js-scrollbarFix">
+				<div
+					class="c-header-container-vertical u-flex u-flex-de u-flex-middle u-flex-column"
+				>
+					<div class="u-margin-bottom">
+						<a class="u-text-decNone u-text-vertical" href="">Tsumagari Web</a>
+					</div>
+					<div class="">
+						<button
+							class="c-navBurger js-openOffcanvas"
+							aria-controls="drawer"
+							aria-expanded="false"
+						>
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</header>
+			<div class="c-mainContent u-margin-top-none"></div>
+			<div class="c-footer"></div>
+		</div>
+		<!--
+		<div class="c-floatNavWrapper u-block--md fadeInBox">
+			<nav class="c-floatNav c-floatNav-body c-floatNav-defalut">
+				<ul
+					class="u-flex u-flex-around u-fs-small-xs u-child-width-1-4 u-margin-small-right--child"
+				>
+					<li>
+						<a href="">
+							<div class="u-text-center">
+								<img
+									class="u-margin-xs-bottom"
+									src="img/navicon001.png"
+									alt=""
+									width="30"
+								/>
+								<p>TOP</p>
+							</div></a
+						>
+					</li>
+					<li>
+						<div class="u-text-center">
+							<a href="">
+								<div>
+									<img
+										class="u-margin-xs-bottom"
+										src="img/navicon002.png"
+										alt=""
+										width="30"
+									/>
+
+									<p>MENU</p>
+								</div></a
+							>
+						</div>
+					</li>
+					<li>
+						<div class="u-text-center">
+							<a href="">
+								<div>
+									<img
+										class="u-margin-xs-bottom"
+										src="img/navicon003.png"
+										alt=""
+										width="30"
+									/>
+
+									<p>ACSESS</p>
+								</div></a
+							>
+						</div>
+					</li>
+					<li>
+						<div class="u-text-center">
+							<a href="">
+								<div>
+									<img
+										class="u-margin-xs-bottom"
+										src="img/navicon004.png"
+										alt=""
+										width="30"
+									/>
+									<p>CONTACT</p>
+								</div></a
+							>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div> -->
+
+		<div
+			class="c-offcanvasWrapper c-offcanvasWrraper--optionRight js-offcanvasWrap"
+			aria-expanded="false"
+		>
+			<div class="c-offcanvasOverlay js-offCanvasOverlay"></div>
+			<div class="c-offcanvas">
+				<ul class="u-fs-large u-baseLineH ">
+					<li>
+						<button
+							class="c-closeBtn js-closeOffcanvas"
+							aria-controls="drawer"
+							aria-expanded="false"
+						>
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+					<li><a href="">アイテム１</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="c-modalWrapper js-modalWrap" aria-expanded="false">
+			<div class="c-modalOverlay js-modalOverlay"></div>
+			<div class="c-modal c-modalBox-content">
+				<button
+					class="c-closeBtn js-closeModal"
+					aria-controls="modalBox"
+					aria-expanded="false"
+				>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<div class="u-margin-small-bottom--child">
+					<p>
+						ブログを開始して、正確には10/7がその日でしたが、13年が経ちました！
+						ようやくコリス サーティーンになれました。
+						たくさんのビジター様、そしてスポンサー様に支えられ、深く感謝しております。
+						感謝の気持ちをこめて、13周年記念プレゼント企画 第1弾を実施します！
+						応募期間は、2019年10月16日までです。
+					</p>
+					<p>
+						モダンブラウザをターゲットにしたWeb制作では、CSSにおけるブラウザの互換性の問題はIE6の頃に比べるとはるかに少なくなりました。無理なリセットやすべてをリセットする必要は全くありません。
+						現在のWeb制作に合わせて制作された新しいCSSリセットを紹介します。
+						CSSの知見やテクニックも満載です！
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/main.js"></script>
+
+		<script>
+			MicroModal.init({
+				onClose: modal => console.info(`${modal.id} is hidden`),
+				onShow: modal => console.info(`${modal.id} is shown`)
+			})
+		</script>
+	</body>
+</html>

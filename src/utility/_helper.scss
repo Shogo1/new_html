@@ -40,6 +40,10 @@ flex
 	}
 }
 
+.u-flex-wrap {
+	flex-wrap: wrap;
+}
+
 .u-flex-column {
 	flex-direction: column;
 }
@@ -144,6 +148,12 @@ text
 
 .u-bold {
 	font-weight: bold;
+}
+
+.u-text-vertical {
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
 }
 
 /*==========================================

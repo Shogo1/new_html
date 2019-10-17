@@ -1,198 +1,45 @@
 .c-header {
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
 	// width: 100%;
 	// height: 50px;
+	// height: $HeaderHight;
 	z-index: 100;
 	background-color: #fff;
-}
-
-.headerNav--pc {
-	display: none;
-	@include mq(md) {
-		display: block;
+	&-top {
+		top: 0;
+		right: 0;
+		left: 0;
 	}
-}
-
-.headerNav--sp {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	z-index: 100;
-	> nav {
-		position: relative;
-		.c-headerList--sp {
-			position: absolute;
-			bottom: 0;
-			left: 2%;
-			width: 100%;
-			height: 100vh;
-			pointer-events: none;
-			li {
-				display: none;
-				position: absolute;
-				bottom: 50px;
-				right: 5%;
-				z-index: 5;
-				opacity: 0;
-				transition: all 1s ease-out;
-			}
+	&-right {
+		top: 0;
+		right: 0;
+	}
+	&-container {
+		padding-left: 40px;
+		padding-right: 40px;
+		margin: 0 auto;
+		max-width: 1840px;
+		height: $HeaderHight;
+		* {
+			height: 100%;
 		}
-		.c-headerList--sp.action {
-			position: absolute;
-			/* bottom:0; */
-			li {
-				display: block;
-				transition: all 1s ease-out;
-				opacity: 0;
-				pointer-events: auto;
-				&:first-child {
-					animation: spMenulist01 0.5s ease-out;
-					animation-fill-mode: forwards;
-					@keyframes spMenulist01 {
-						0% {
-							opacity: 0;
-							transform: scale(0.4, 0.4);
-						}
-						100% {
-							opacity: 1;
-							/* right:75%; */
-							right: 230px;
-						}
-					}
-				}
-				&:nth-child(2) {
-					animation: spMenulist02 0.5s 0.1s ease-out;
-					animation-fill-mode: forwards;
-					@keyframes spMenulist02 {
-						0% {
-							opacity: 0;
-							transform: scale(0.4, 0.4);
-						}
-						100% {
-							/* bottom:18%; */
-							/* right:58%;*/
-							bottom: 130px;
-							right: 180px;
-							opacity: 1;
-							transform: scale(1, 1);
-						}
-					}
-				}
-				&:nth-child(3) {
-					animation: spMenulist03 0.5s 0.2s ease-out;
-					animation-fill-mode: forwards;
-					@keyframes spMenulist03 {
-						0% {
-							opacity: 0;
-							transform: scale(0.4, 0.4);
-						}
-						100% {
-							/* bottom:32%; */
-							/* right:40%; */
-							bottom: 210px;
-							right: 130px;
-							opacity: 1;
-							transform: scale(1, 1);
-						}
-					}
-				}
-				&:nth-child(4) {
-					animation: spMenulist04 0.5s 0.3s ease-out;
-					animation-fill-mode: forwards;
-					@keyframes spMenulist04 {
-						0% {
-							opacity: 0;
-							transform: scale(0.4, 0.4);
-						}
-						100% {
-							/* bottom:46%; */
-							/* right:20%; */
-							bottom: 50px;
-							right: 130px;
-							opacity: 1;
-							transform: scale(1, 1);
-						}
-					}
-				}
-				&:last-child {
-					animation: spMenulist05 0.5s 0.4s ease-out;
-					animation-fill-mode: forwards;
-					@keyframes spMenulist05 {
-						0% {
-							opacity: 0;
-							transform: scale(0.4, 0.4);
-						}
-						100% {
-							/* bottom:60%; */
-							/* right:5%; */
-							bottom: 130px;
-							right: 80px;
-							opacity: 1;
-							transform: scale(1, 1);
-						}
-					}
-				}
-			}
-		}
-		.c-hunbergerNav {
-			width: 60px;
-			height: 60px;
-			position: absolute;
-			bottom: 50px;
-			right: 5%;
-			border-radius: 50%;
-			background-color: #303f9f;
-			z-index: 10;
-			color: #fff;
-			cursor: pointer;
-			> * {
-				height: 100%;
-			}
-			.i-menu,
-			.i-close {
-				position: absolute;
-			}
-			.i-close {
-				opacity: 0;
-			}
-			&.action {
-				.i-menu {
-					position: absolute;
-					animation: hunbergerRorate01 0.25s ease-in;
-					animation-fill-mode: forwards;
-					@keyframes hunbergerRorate01 {
-						0% {
-							opacity: 1;
-						}
-						100% {
-							opacity: 0;
-							transform: rotate(180deg);
-						}
-					}
-				}
-				.i-close {
-					position: absolute;
-					opacity: 0;
-					animation: hunbergerRorate02 0.25s 0.25s ease-in;
-					animation-fill-mode: forwards;
-					@keyframes hunbergerRorate02 {
-						0% {
-							transform: rotate(-180deg);
-						}
-						100% {
-							transform: rotate(0);
-							opacity: 1;
-						}
-					}
-				}
-			}
+		@include mq(md, max) {
+			padding-left: 20px;
+			padding-right: 0px;
 		}
 	}
-	@include mq(md) {
-		display: none;
+	&-container-vertical {
+		left: auto;
+		padding: 10px;
+		margin: 0 auto;
+		width: 70px;
+		height: $HeaderHightVertical;
+		* {
+			// height: 100%;
+		}
+		@include mq(md, max) {
+			// padding-left: 20px;
+			// padding-right: 0px;
+		}
 	}
 }

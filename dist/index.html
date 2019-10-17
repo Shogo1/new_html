@@ -15,8 +15,8 @@
 	<body class="l-body js-scrollbarFix">
 		<div class="c-loadingWrapper"></div>
 		<div class="c-mainWrapper u-fs-normal u-baseLineH">
-			<header class="c-header js-scrollbarFix">
-				<div class="c-containerHeader u-flex u-flex-middle">
+			<header class="c-header c-header-top js-scrollbarFix">
+				<div class="c-header-container u-flex u-flex-middle">
 					<div class="u-margin-right-auto">
 						<a class="u-text-decNone u-flex u-flex-middle" href=""
 							>Tsumagari Web</a
@@ -47,6 +47,9 @@
 				</div>
 			</header>
 			<div class="c-mainContent">
+				<div class="c-parallaxIMgWrapper">
+					<div class="c-parallaxImg"></div>
+				</div>
 				<div class="c-section">
 					<div class="c-container">
 						<section>
@@ -73,7 +76,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="c-seciton">
+				<div class="c-section">
 					<nav class="c-stickyNav js-sticky">
 						<ul
 							class="c-navbar-items c-stickyNav__list u-flex u-flex-middle u-flex-center "
@@ -201,11 +204,6 @@
 							</div>
 						</div>
 					</section>
-				</div>
-				<div class="c-section">
-					<div>
-						<div class="c-parallaxImg"></div>
-					</div>
 				</div>
 				<div class="c-section">
 					<section class="c-container">
@@ -609,7 +607,13 @@
 				</div>
 				<div class="c-section">
 					<div class="c-container">
-						<button class="c-btn c-label js-openModal">
+						<!-- <button class="c-btn c-label js-openModal">
+							モーダルボタン
+						</button> -->
+						<button class="c-btn c-label js-openModal" data-target="modal1">
+							モーダルボタン
+						</button>
+						<button class="c-btn c-label js-openModal" data-target="modal2">
 							モーダルボタン
 						</button>
 					</div>
@@ -617,7 +621,7 @@
 			</div>
 			<div class="c-footer"></div>
 		</div>
-
+		<!--
 		<div class="c-floatNavWrapper u-block--md fadeInBox">
 			<nav class="c-floatNav c-floatNav-body c-floatNav-defalut">
 				<ul
@@ -685,7 +689,7 @@
 					</li>
 				</ul>
 			</nav>
-		</div>
+		</div> -->
 
 		<div
 			class="c-offcanvasWrapper c-offcanvasWrraper--optionRight js-offcanvasWrap"
@@ -772,7 +776,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-		<!-- <script src="js/micromodal.js"></script> -->
+		<script src="js/app.js"></script>
 		<script src="js/main.js"></script>
 
 		<script>

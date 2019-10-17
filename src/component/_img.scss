@@ -1,6 +1,7 @@
 /*=================================================
 
-パララックス
+パララックス topヒーローイメージに使うならおｋ
+画面途中に使うには要検討
 
 ==================================================*/
 $parallaxSpPaddingTop: 59.33%;
@@ -12,10 +13,13 @@ $parallaxPcImg: url(../img/sl2.jpeg);
 	width: 100%;
 	padding-top: $parallaxSpPaddingTop;
 	position: relative;
+	background-color: rgba(0, 0, 0, 0);
 	&:before {
 		content: '';
 		top: 0;
 		left: 0;
+		margin-top: $HeaderHight;
+		display: block;
 		width: 100%;
 		padding-top: $parallaxSpPaddingTop;
 		position: fixed;
