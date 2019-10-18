@@ -788,7 +788,6 @@ const wpWpFormYubin = function() {
 
 wpWpFormYubin()
 
-let getTestSelect = document.querySelector('[aria-hidden="false"]').clientHeight
 
 /*=================================================
 

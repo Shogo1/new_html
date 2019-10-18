@@ -17,7 +17,7 @@ JavaScriptを使用して該当ボタンをクリックすると
 左からではなく上や右から出したい場合は.c-headerWrapper
 にオプションクラス.c-headerWrapper-option○○を付与する。
 
-div.c-offcanvasWrapper.js-offcanvasWrap.[aria-expanded="false"]>div.c-offcanvasOverlay.js-offCanvasOverlay+div.c-offcanvas>ul>(li>button.c-closeBtn.js-closeOffcanvas.[aria-controls="drawer"][aria-expanded="false"]>span*3)+(li*5>a)
+div.c-offcanvasWrapper.js-offcanvasWrap[aria-expanded="false"]>div.c-offcanvasOverlay.js-offCanvasOverlay+div.c-offcanvas>ul>(li>button.c-closeBtn.js-closeOffcanvas.[aria-controls="drawer"][aria-expanded="false"]>span*3)+(li*5>a)
 
 ==================================================*/
 

@@ -113,11 +113,6 @@
 					width: 50%;
 				}
 			}
-			@include mq(sm) {
-				> * {
-					width: 100%;
-				}
-			}
 		}
 		&-lg {
 			@include mq(lg) {
