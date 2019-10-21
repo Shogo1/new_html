@@ -5,47 +5,75 @@
 
 ***labelにforを使う際はinputに同名のidを振ること
 
-<label>
+<label class="u-checkBox">
 <input type="checkbox>
 <span>ここにチェックボックス名<span>
 </label>
 
-label>input:checkbox>span{name}
+label.u-checkBox>input:checkbox>span{name}
 
 ============================================*/
-input[type='checkbox'] {
-	opacity: 0;
-	-webkit-appearance: none;
-	appearance: none;
-	position: absolute;
-	// width: 1em;
-	// height: 1em;
-	+ span {
-		// display: flex;
-		// align-items: center;
-		&::before {
-			position: relative;
-			top: 0.1em;
-			display: inline-block;
-			content: '';
-			width: 1em;
-			height: 1em;
-			border: 2px solid #ccc;
-			border-radius: 5px;
-			margin-right: 0.5rem;
+label.u-checkBox {
+	input[type='checkbox'] {
+		opacity: 0;
+		-webkit-appearance: none;
+		appearance: none;
+		position: absolute;
+		display: inline-block;
+		// cursor: pointer;
+		// width: 1em;
+		// height: 1em;
+		+ span {
+			// display: flex;
+			// align-items: center;
+			cursor: pointer;
+			&::before {
+				position: relative;
+				// top: 0.1em;
+				top: 0.17em;
+				display: inline-block;
+				content: '';
+				width: 1em;
+				height: 1em;
+				border: 2px solid #ccc;
+				border-radius: 5px;
+				margin-right: 0.5rem;
+			}
+		}
+		&:checked {
+			+ span::before {
+				content: '';
+				background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpolyline fill='none' stroke='%230bd' stroke-width='3' points='2,7.3 7.3,12.7 18,2 '/%3E%3C/svg%3E");
+				background-repeat: no-repeat;
+				background-position: 0 2px;
+			}
+		}
+		&:focus {
+			+ span::before {
+				border-color: #0bd;
+			}
 		}
 	}
-	&:checked {
-		+ span::before {
-			content: '';
-			background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpolyline fill='none' stroke='%230bd' stroke-width='3' points='2,7.3 7.3,12.7 18,2 '/%3E%3C/svg%3E");
-			background-repeat: no-repeat;
-			background-position: 0 2px;
+}
+
+label.u-textBox {
+	input[type='text'][data-type='text'] {
+		border: 2px solid #ccc;
+		padding: 0.3em;
+		width: 100%;
+		&:focus {
+			border: 2px solid #0bd;
 		}
 	}
-	&:focus {
-		+ span::before {
-			border-color: #0bd;
+	@include mq(md) {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0.75em;
+		input[type='text'][data-type='text'] {
+			max-width: 200px;
+		}
+		> p {
+			margin-right: 0.5em;
 		}
 	}
 }

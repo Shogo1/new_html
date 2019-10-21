@@ -7,5 +7,7 @@
 		}
 	],
 	"easysass.targetDir": "dist/css/",
-	"easysass.excludeRegex": "^_+"
+	"easysass.excludeRegex": "^_+",
+	"autoprefixer.browsers": ["> 1%", "last 2 versions", "ie 11"],
+	"autoprefixer.grid": "autoplace"
 }
