@@ -23,18 +23,143 @@
 	}
 	&-2 {
 		width: 50%;
+		&-xm {
+			@include mq(xm) {
+				width: 50%;
+			}
+		}
+		&-sm {
+			@include mq(sm) {
+				width: 50%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 50%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 50%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 50%;
+			}
+		}
 	}
 	&-3 {
 		width: 33.33%;
+		&-xm {
+			@include mq(xm) {
+				width: 33.33%;
+			}
+		}
+		&-sm {
+			@include mq(sm) {
+				width: 33.33%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 33.33%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 33.33%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 33.33%;
+			}
+		}
 	}
 	&-4 {
 		width: 25%;
+		&-xm {
+			@include mq(xm) {
+				width: 25%;
+			}
+		}
+		&-sm {
+			@include mq(sm) {
+				width: 25%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 25%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 25%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 25%;
+			}
+		}
 	}
 	&-5 {
 		width: 20%;
+		&-xm {
+			@include mq(xm) {
+				width: 20%;
+			}
+		}
+		&-sm {
+			@include mq(sm) {
+				width: 20%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 20%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 20%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 20%;
+			}
+		}
 	}
 	&-6 {
 		width: 16.66%;
+		&-xm {
+			@include mq(xm) {
+				width: 16.66%;
+			}
+		}
+		&-sm {
+			@include mq(sm) {
+				width: 16.66%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 16.66%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 16.66%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 16.66%;
+			}
+		}
 	}
 }
 .u-child-width-expand {
@@ -303,32 +428,3 @@
 // 		}
 // 	}
 // }
-
-.u-child-width-1-4 > * {
-	width: 25%;
-}
-
-.u-child-width-1-4m > * {
-	width: 25%;
-	@include mq(md, max) {
-		width: 100%;
-	}
-}
-
-.u-child-width-1-2m > * {
-	width: 50%;
-	@include mq(md, max) {
-		width: 100%;
-	}
-}
-
-.u-child-width-1-3 > * {
-	width: 33.33%;
-}
-
-.u-child-width-1-3m > * {
-	width: 33.33%;
-	@include mq(md, max) {
-		width: 100%;
-	}
-}

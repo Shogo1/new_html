@@ -37,9 +37,10 @@
 	}
 }
 
-.detail {
+.c-spaBox-content {
 	/* 画面全体を覆うように左上に配置 */
-	position: absolute;
+	// position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	left: 0;
@@ -114,26 +115,26 @@
 		color: black;
 	}
 }
-.detail.show {
+.c-spaBox-content.show {
 	/* 表示状態へ変更する */
 	visibility: visible;
 }
 
-.detail.show h2 {
+.c-spaBox-content.show h2 {
 	/* 見出しの出現 */
 	transition: all 0.75s;
 	transition-delay: 200ms;
 	transform: translate(0, 0);
 	opacity: 1;
 }
-.detail.show .desc {
+.c-spaBox-content .desc {
 	/* 文章の出現 */
 	transition: all 0.75s;
 	transition-delay: 350ms;
 	transform: translate(0, 0);
 	opacity: 1;
 }
-.detail.show .ui {
+.c-spaBox-content .ui {
 	/* Closeボタンの出現 */
 	transition: all 0.75s;
 	transition-delay: 500ms;
@@ -141,7 +142,7 @@
 	opacity: 1;
 }
 
-.detail.show li {
+.c-spaBox-content.show li {
 	/* サムネイルの出現 */
 	transition: all 0.75s;
 	transform: translate(0, 0);

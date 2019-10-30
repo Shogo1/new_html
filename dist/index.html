@@ -11,6 +11,10 @@
 		<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		<title>コンポーネント集</title>
+		<!-- <script src="js/ofi.js"></script>
+		<script>
+			objectFitImages()
+		</script> -->
 	</head>
 	<body class="l-body js-scrollbarFix">
 		<div class="c-loadingWrapper"></div>
@@ -210,7 +214,7 @@
 					<section class="c-container">
 						<h2 class="u-bold">GridBox04</h2>
 						<div
-							class="c-gridBox c-grid-match u-child-width-1-3-md u-child-width-1-2-sm c-grid-small"
+							class="c-gridBox c-grid-match u-child-width-1-3-md u-child-width-1-2-sm u-child-width-1-1 c-grid-small"
 						>
 							<div>
 								<a class="u-flex" href=""
@@ -364,7 +368,7 @@
 							GridBox5（要素の入れ替えは共通コンポーネントありません）
 						</h2>
 						<div
-							class="u-flex c-gridBox c-grid-match u-child-width-1-3-md u-child-width-1-2-sm  c-grid-small"
+							class="u-flex c-gridBox c-grid-match u-child-width-1-3-md u-child-width-1-2-sm u-child-width-1-1 c-grid-small"
 						>
 							<div class="u-flex-order-1">
 								<a class="u-flex" href=""
@@ -615,49 +619,69 @@
 							GridLayout（display:grid;使用）
 						</h2>
 						<div class="c-gridLayout c-gridLayout_pk">
-							<a href="" class="c-gridLayout-main01 u-card u-card-defalut">
-								<div class="u-card-media-top-s">
-									<img class="u-imgfit" src="img/sl1.jpeg" alt="" />
-								</div>
-								<div
-									class="u-card-textarea u-card-small u-margin-small-bottom--child"
-								>
-									<h3>Title</h3>
-									<p>test text</p>
-									<div class="u-margin-top-auto">share btn</div>
-								</div>
-							</a>
-							<a href="" class="c-gridLayout-main02 u-card u-card-defalut">
-								<div class="u-card-media-top-s">
-									<img class="u-imgfit" src="img/sl2.jpeg" alt="" />
-								</div>
-								<div
-									class="u-card-textarea u-card-small u-margin-small-bottom--child"
-								>
-									<h3>Title</h3>
-									<p>test text</p>
-									<div class="u-margin-top-auto">share btn</div>
-								</div>
-							</a>
-							<a href="" class="c-gridLayout-main03 u-card u-card-defalut">
-								<div class="u-card-media-top-m">
-									<img class="u-imgfit" src="img/sl3.jpeg" alt="" />
-								</div>
-								<div
-									class="u-card-textarea u-card-small u-margin-small-bottom--child"
-								>
-									<h3>Title</h3>
-									<p>test text</p>
-									<div class="u-margin-top-auto">share btn</div>
-								</div>
-							</a>
-							<a href="" class="c-gridLayout-sub01 u-card u-card-defalut"></a>
-							<a href="" class="c-gridLayout-sub02 u-card u-card-defalut"></a>
-							<a href="" class="c-gridLayout-sub03 u-card u-card-defalut"></a>
-							<a href="" class="c-gridLayout-sub04 u-card u-card-defalut"></a>
-							<a href="" class="c-gridLayout-sub05 u-card u-card-defalut"></a>
-							<a href="" class="c-gridLayout-sub06 u-card u-card-defalut"></a>
-							<a href="" class="c-gridLayout-sub07 u-card u-card-defalut"></a>
+							<div class="c-gridLayout-main01 u-card u-card-defalut">
+								<a href="" class="">
+									<div class="u-card-media-top-s">
+										<img class="u-imgfit" src="img/sl1.jpeg" alt="" />
+									</div>
+									<div
+										class="u-card-textarea u-card-small u-margin-small-bottom--child"
+									>
+										<h3>Title</h3>
+										<p>test text</p>
+										<div class="u-margin-top-auto">share btn</div>
+									</div>
+								</a>
+							</div>
+							<div class="c-gridLayout-main02 u-card u-card-defalut">
+								<a href="" class="">
+									<div class="u-card-media-top-s">
+										<img class="u-imgfit" src="img/sl2.jpeg" alt="" />
+									</div>
+									<div
+										class="u-card-textarea u-card-small u-margin-small-bottom--child"
+									>
+										<h3>Title</h3>
+										<p>test text</p>
+										<div class="u-margin-top-auto">share btn</div>
+									</div>
+								</a>
+							</div>
+							<div class="c-gridLayout-main03 u-card u-card-defalut">
+								<a href="" class="">
+									<div class="u-card-media-top-m">
+										<img class="u-imgfit" src="img/sl3.jpeg" alt="" />
+									</div>
+									<div
+										class="u-card-textarea u-card-small u-margin-small-bottom--child"
+									>
+										<h3>Title</h3>
+										<p>test text</p>
+										<div class="u-margin-top-auto">share btn</div>
+									</div>
+								</a>
+							</div>
+							<div class="c-gridLayout-sub01 u-card u-card-defalut">
+								<a href="" class=""></a>
+							</div>
+							<div class="c-gridLayout-sub02 u-card u-card-defalut">
+								<a href="" class=""></a>
+							</div>
+							<div class="c-gridLayout-sub03 u-card u-card-defalut">
+								<a href="" class=""></a>
+							</div>
+							<div class="c-gridLayout-sub04 u-card u-card-defalut">
+								<a href="" class=""></a>
+							</div>
+							<div class="c-gridLayout-sub05 u-card u-card-defalut">
+								<a href="" class=""></a>
+							</div>
+							<div class="c-gridLayout-sub06 u-card u-card-defalut">
+								<a href="" class=""></a>
+							</div>
+							<div class="c-gridLayout-sub07 u-card u-card-defalut">
+								<a href="" class=""></a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -784,7 +808,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="c-section">
+				<!-- <div class="c-section">
 					<div class="c-container">
 						<div class="">
 							<div class="link link-1">
@@ -798,27 +822,8 @@
 								</button>
 							</div>
 						</div>
-						<div>
-							<div class="detail detail-1">
-								<h2>About</h2>
-								<div class="desc">
-									<p class="dummy_100"></p>
-									<p class="dummy_100"></p>
-									<p class="dummy_100"></p>
-									<p class="dummy_100"></p>
-									<p class="dummy_100"></p>
-									<p class="dummy_100"></p>
-									<p class="dummy_100"></p>
-									<p class="dummy_100"></p>
-									<p class="dummy_80"></p>
-								</div>
-								<div class="ui">
-									<button class="close">Close</button>
-								</div>
-							</div>
-						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="c-footer">
 				<svg
@@ -987,15 +992,38 @@
 			</div>
 		</div>
 
+		<div class="c-spaWrapper js-spaWrap" aria-expanded="false">
+			<div class="c-spaOverlay js-spaOverlay"></div>
+			<div class="c-spaBox-content">
+				<div class="c-spaBox-content c-spaBox-content-1">
+					<h2>About</h2>
+					<div class="desc u-margin-small-bottom--child">
+						<p class="dummy_100"></p>
+						<p class="dummy_100"></p>
+						<p class="dummy_100"></p>
+						<p class="dummy_100"></p>
+						<p class="dummy_100"></p>
+						<p class="dummy_100"></p>
+						<p class="dummy_100"></p>
+						<p class="dummy_100"></p>
+						<p class="dummy_80"></p>
+					</div>
+					<div class="ui">
+						<button class="close">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 		<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
+
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/main.js"></script>
-
+		<script src="js/fitie.js"></script>
 		<script>
 			MicroModal.init({
 				onClose: modal => console.info(`${modal.id} is hidden`),

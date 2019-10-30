@@ -8,6 +8,116 @@ div.c-gridLayout.c-gridLayout_pk>div
 
 ==================================================*/
 
+.c-gridBox {
+	display: grid;
+}
+
+/*=================================================
+
+mixinの関係でgridBoxのautoprefixerが上手く作動しません。
+gulp環境化では問題ないですが、vscodeなどのautoprefixerを
+使用する場合は、メディアクエリ分を以下のように別途作って
+IE用の記述をautoprefixerを使って作成してください。
+
+
+// .c-gridLayoutTest {
+// 	display: -ms-grid;
+// 	display: grid;
+// 	max-width: 1000px;
+// 	// ↓テスト時は高さ適当に記入
+// 	// height: 664px;
+// 	// height: 1500px;
+// 	margin: 0 auto;
+// 	&.c-test {
+// 		grid-gap: 10px;
+// 		gap: 10px;
+// 		-ms-grid-rows: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr
+// 			10px 1fr;
+// 		-ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+// 		grid-template:
+// 			'main01 main01  sub03' 1fr
+// 			'main01 main01  sub04' 1fr
+// 			'sub01  main02 main02' 1fr
+// 			'sub02  main02 main02' 1fr
+// 			'main03 main03 main03' 1fr
+// 			'main03 main03 main03' 1fr
+// 			'main03 main03 main03' 1fr
+// 			'sub05 sub06 sub07' 1fr/
+// 			1fr 1fr 1fr;
+
+// 		.c-gridLayoutTest {
+// 			&-main01 {
+// 			}
+// 			&.c-gridLayout_pk > &-main01 {
+// 				-ms-grid-row: 1;
+// 				-ms-grid-row-span: 3;
+// 				-ms-grid-column: 1;
+// 				-ms-grid-column-span: 3;
+// 			}
+// 			&-main02 {
+// 			}
+// 			&.c-gridLayout_pk > &-main02 {
+// 				-ms-grid-row: 5;
+// 				-ms-grid-row-span: 3;
+// 				-ms-grid-column: 3;
+// 				-ms-grid-column-span: 3;
+// 			}
+// 			&-main03 {
+// 			}
+// 			&.c-gridLayout_pk > &-main03 {
+// 				-ms-grid-row: 1;
+// 				-ms-grid-row-span: 5;
+// 				-ms-grid-column: 7;
+// 				-ms-grid-column-span: 5;
+// 			}
+// 			&-sub01 {
+// 			}
+// 			&.c-gridLayout_pk > &-sub01 {
+// 				-ms-grid-row: 5;
+// 				-ms-grid-column: 1;
+// 			}
+// 			&-sub02 {
+// 			}
+// 			&.c-gridLayout_pk > &-sub02 {
+// 				-ms-grid-row: 7;
+// 				-ms-grid-column: 1;
+// 			}
+// 			&-sub03 {
+// 			}
+// 			&.c-gridLayout_pk > &-sub03 {
+// 				-ms-grid-row: 1;
+// 				-ms-grid-column: 5;
+// 			}
+// 			&-sub04 {
+// 			}
+// 			&.c-gridLayout_pk > &-sub04 {
+// 				-ms-grid-row: 3;
+// 				-ms-grid-column: 5;
+// 			}
+// 			&-sub05 {
+// 			}
+// 			&.c-gridLayout_pk > &-sub05 {
+// 				-ms-grid-row: 7;
+// 				-ms-grid-column: 7;
+// 			}
+// 			&-sub06 {
+// 			}
+// 			&.c-gridLayout_pk > &-sub06 {
+// 				-ms-grid-row: 7;
+// 				-ms-grid-column: 9;
+// 			}
+// 			&-sub07 {
+// 			}
+// 			&.c-gridLayout_pk > &-sub07 {
+// 				-ms-grid-row: 7;
+// 				-ms-grid-column: 11;
+// 			}
+// 		}
+// 	}
+// }
+
+==================================================*/
+
 .c-gridLayout {
 	display: -ms-grid;
 	display: grid;
@@ -20,7 +130,7 @@ div.c-gridLayout.c-gridLayout_pk>div
 	}
 	&.c-gridLayout_pk {
 		//ポケモンsun&moon風gridLayout
-		// grid-gap: 10px;
+		grid-gap: 10px;
 		gap: 10px;
 		-ms-grid-rows: 1fr 10px 1fr 10px 1fr 10px 1fr;
 		-ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
@@ -31,6 +141,9 @@ div.c-gridLayout.c-gridLayout_pk>div
 			'sub02 main02 main02 sub05  sub06  sub07' 1fr /
 			1fr 1fr 1fr 1fr 1fr 1fr;
 		@include mq(md, max) {
+			-ms-grid-rows: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr
+				10px 1fr;
+			-ms-grid-columns: 1fr 10px 1fr 10px 1fr;
 			grid-template:
 				'main01 main01  sub03' 1fr
 				'main01 main01  sub04' 1fr
@@ -50,6 +163,11 @@ div.c-gridLayout.c-gridLayout_pk>div
 				-ms-grid-column-span: 3;
 				grid-area: main01;
 				@include mq(md, max) {
+					-ms-grid-row: 1;
+					-ms-grid-row-span: 3;
+					-ms-grid-column: 1;
+					-ms-grid-column-span: 3;
+					grid-area: main01;
 				}
 			}
 			&-main02 {
@@ -59,6 +177,11 @@ div.c-gridLayout.c-gridLayout_pk>div
 				-ms-grid-column-span: 3;
 				grid-area: main02;
 				@include mq(md, max) {
+					-ms-grid-row: 5;
+					-ms-grid-row-span: 3;
+					-ms-grid-column: 3;
+					-ms-grid-column-span: 3;
+					grid-area: main02;
 				}
 			}
 			&-main03 {
@@ -68,6 +191,11 @@ div.c-gridLayout.c-gridLayout_pk>div
 				-ms-grid-column-span: 5;
 				grid-area: main03;
 				@include mq(md, max) {
+					-ms-grid-row: 9;
+					-ms-grid-row-span: 5;
+					-ms-grid-column: 1;
+					-ms-grid-column-span: 5;
+					grid-area: main03;
 				}
 			}
 			&-sub01 {
@@ -77,6 +205,9 @@ div.c-gridLayout.c-gridLayout_pk>div
 
 				background-color: palegreen;
 				@include mq(md, max) {
+					-ms-grid-row: 5;
+					-ms-grid-column: 1;
+					grid-area: sub01;
 				}
 			}
 			&-sub02 {
@@ -86,6 +217,9 @@ div.c-gridLayout.c-gridLayout_pk>div
 
 				background-color: rosybrown;
 				@include mq(md, max) {
+					-ms-grid-row: 7;
+					-ms-grid-column: 1;
+					grid-area: sub02;
 				}
 			}
 			&-sub03 {
@@ -95,6 +229,9 @@ div.c-gridLayout.c-gridLayout_pk>div
 
 				background-color: lightslategray;
 				@include mq(md, max) {
+					-ms-grid-row: 1;
+					-ms-grid-column: 5;
+					grid-area: sub03;
 				}
 			}
 			&-sub04 {
@@ -104,6 +241,9 @@ div.c-gridLayout.c-gridLayout_pk>div
 
 				background-color: red;
 				@include mq(md, max) {
+					-ms-grid-row: 3;
+					-ms-grid-column: 5;
+					grid-area: sub04;
 				}
 			}
 			&-sub05 {
@@ -113,6 +253,9 @@ div.c-gridLayout.c-gridLayout_pk>div
 
 				background-color: blueviolet;
 				@include mq(md, max) {
+					-ms-grid-row: 15;
+					-ms-grid-column: 1;
+					grid-area: sub05;
 				}
 			}
 			&-sub06 {
@@ -122,6 +265,9 @@ div.c-gridLayout.c-gridLayout_pk>div
 
 				background-color: coral;
 				@include mq(md, max) {
+					-ms-grid-row: 15;
+					-ms-grid-column: 3;
+					grid-area: sub06;
 				}
 			}
 			&-sub07 {
@@ -131,6 +277,9 @@ div.c-gridLayout.c-gridLayout_pk>div
 
 				background-color: steelblue;
 				@include mq(md, max) {
+					-ms-grid-row: 15;
+					-ms-grid-column: 5;
+					grid-area: sub07;
 				}
 			}
 		}

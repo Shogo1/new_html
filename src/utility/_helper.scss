@@ -198,7 +198,8 @@ img
 	height: 100%;
 	width: 100%;
 	//↓IE11対策 要object-fit-images.js
-	font-family: 'object-fit:cover;';
+	// font-family: 'object-fit:cover;';
+	font-family: 'object-fit: cover; object-position: center top;';
 }
 
 /*==========================================

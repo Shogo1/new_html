@@ -770,7 +770,7 @@ object-fitのIE対策
 
 ==================================================*/
 
-objectFitImages()
+// objectFitImages('img.u-imgfit')
 
 /*=================================================
 
@@ -810,7 +810,7 @@ const spaAnimation = function() {
 				link.classList.add('show')
 
 				// 遷移先画面のshowクラスを追加
-				const detail = document.querySelector(`.detail-${target}`)
+				const detail = document.querySelector(`.c-spaBox-content-${target}`)
 				detail.classList.add('show')
 			})
 		}
@@ -826,7 +826,7 @@ const spaAnimation = function() {
 				}
 
 				// 遷移先画面のshowクラスを除去
-				const details = document.querySelectorAll('.detail')
+				const details = document.querySelectorAll('.c-spaBox-content')
 				for (const detail of details) {
 					detail.classList.remove('show')
 				}
