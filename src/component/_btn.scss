@@ -62,10 +62,10 @@ div.u-block--md>button.c-navBurger>span*3
 
 label
 
-
 ==================================================*/
 
-.c-label {
+.c-label,
+%c-label {
 	display: inline-block;
 	padding: 5px 10px;
 	background: #1e87f0;
@@ -79,6 +79,11 @@ label
 	&.c-label--denger {
 		background: #f0506e;
 	}
+}
+
+.c-label-denger {
+	@extend %c-label;
+	background: #f0506e;
 }
 
 /*=================================================
@@ -119,7 +124,8 @@ button.c-closeBtn>span*3
 	}
 }
 
-.c-btn {
+.c-btn,
+%c-btn {
 	display: inline-block;
 	text-decoration: none;
 	text-align: center;
@@ -127,7 +133,51 @@ button.c-closeBtn>span*3
 	cursor: pointer;
 }
 
-.c-btn--raised {
+.c-btn-01 {
+	@extend %c-btn;
+	width: 240px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.c-btn-02 {
+	@extend %c-btn;
+	width: 70px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	color: #fff;
+	font-size: 1.4rem;
+}
+
+.c-btn--web {
+	@extend %c-btn;
+	background-color: #303f9f;
+}
+
+.c-btn--dtp {
+	@extend %c-btn;
+	background-color: #339f30;
+}
+
+.c-btn--web--ec {
+	@extend %c-btn;
+	background-color: #00796b;
+}
+.c-btn--blog--tec {
+	@extend %c-btn;
+	background-color: #455a64;
+}
+.c-btn--blog--news {
+	@extend %c-btn;
+	background-color: #fbc02d;
+}
+.c-btn--blog--diary {
+	@extend %c-btn;
+	background-color: #e64a19;
+}
+
+.c-btn-raised {
+	@extend %c-btn;
 	background-color: $PrimaryBackColor;
 	color: #fff;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
@@ -141,103 +191,67 @@ button.c-closeBtn>span*3
 	}
 }
 
-.c-btn--header > li > a {
-	color: $mainColor;
-	// width: 100px;
-	padding: 0 10px;
-	display: block;
-	// line-height: 50px;
-	/* font-weight:bold; */
-	transition: 0.2s ease-out;
-	text-align: center;
-	background-color: #fff;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	&:hover {
-		background-color: #d1d9ff;
-	}
-}
-
-.c-btn--spheader > a {
-	color: #fff;
-	/* max-width:150px; */
-	padding: 12px 0 20px;
-	/* width:100%; */
-	width: 80px;
-	height: 80px;
-	display: block;
-	font-size: 10px;
-	font-weight: bold;
-	transition: 0.2s ease-out;
-	background-color: #303f9f;
-	border-radius: 50%;
-	text-decoration: none;
-	&:hover {
-		background-color: $PrimaryBackColorHover;
-	}
-}
-
-.c-btn--01 {
-	width: 240px;
-	padding-top: 12px;
-	padding-bottom: 12px;
-}
-
-.c-btn--02 {
-	width: 70px;
-	padding-top: 6px;
-	padding-bottom: 6px;
-	color: #fff;
-	font-size: 1.4rem;
-}
-
-.c-btn--web {
-	background-color: #303f9f;
-}
-
-.c-btn--dtp {
-	background-color: #339f30;
-}
-
-.c-btn--web--ec {
-	background-color: #00796b;
-}
-.c-btn--blog--tec {
-	background-color: #455a64;
-}
-.c-btn--blog--news {
-	background-color: #fbc02d;
-}
-.c-btn--blog--diary {
-	background-color: #e64a19;
-}
-
-.c-btnList {
-	a {
-		display: inline-block;
-		text-decoration: none;
-		text-align: center;
-		line-height: 1;
-		font-size: 1.2rem;
-		text-align: center;
-		width: 100%;
-		max-width: 140px;
-		padding-top: 14px;
-		padding-bottom: 14px;
-		background-color: $PrimaryBackColor;
-		color: #fff;
-		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
-			0 3px 1px -2px rgba(0, 0, 0, 0.2);
-		-webkit-tap-highlight-color: transparent;
-		transition: 0.2s ease-out;
-		@include mq(md) {
-			font-size: 1.6rem;
-		}
-		&:hover {
-			box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14),
-				0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
-			background-color: $PrimaryBackColorHover;
+ul.c-headerBtn {
+	> li {
+		> a {
+			color: $mainColor;
+			// width: 100px;
+			padding: 0 10px;
+			display: block;
+			// line-height: 50px;
+			/* font-weight:bold; */
+			transition: 0.2s ease-out;
+			text-align: center;
+			background-color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:hover {
+				background-color: #d1d9ff;
+			}
 		}
 	}
 }
+
+// .c-btn--raised {
+// 	background-color: $PrimaryBackColor;
+// 	color: #fff;
+// 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+// 		0 3px 1px -2px rgba(0, 0, 0, 0.2);
+// 	-webkit-tap-highlight-color: transparent;
+// 	transition: 0.2s ease-out;
+// 	&:hover {
+// 		box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
+// 			0 3px 1px -1px rgba(0, 0, 0, 0.2);
+// 		background-color: $PrimaryBackColorHover;
+// 	}
+// }
+
+// .c-btnList {
+// 	a {
+// 		display: inline-block;
+// 		text-decoration: none;
+// 		text-align: center;
+// 		line-height: 1;
+// 		font-size: 1.2rem;
+// 		text-align: center;
+// 		width: 100%;
+// 		max-width: 140px;
+// 		padding-top: 14px;
+// 		padding-bottom: 14px;
+// 		background-color: $PrimaryBackColor;
+// 		color: #fff;
+// 		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+// 			0 3px 1px -2px rgba(0, 0, 0, 0.2);
+// 		-webkit-tap-highlight-color: transparent;
+// 		transition: 0.2s ease-out;
+// 		@include mq(md) {
+// 			font-size: 1.6rem;
+// 		}
+// 		&:hover {
+// 			box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14),
+// 				0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+// 			background-color: $PrimaryBackColorHover;
+// 		}
+// 	}
+// }

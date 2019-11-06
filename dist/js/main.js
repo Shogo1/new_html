@@ -93,7 +93,6 @@ $(function() {
 
 一定量スクロールしたら表示
 
-
 ===================*/
 
 $(function() {
@@ -123,6 +122,38 @@ $(function() {
 		}
 	})
 })
+
+/*=================================================
+
+スクロールしたら背景の画像が微妙に動くスクリプト
+
+==================================================*/
+
+//div.c-section>div.u-bgmove>img.u-bgmove-01
+
+//いったん凍結します
+
+// $(function() {
+// 	$(window).scroll(function() {
+// 		$('.u-bgmove').each(function() {
+// 			var imgPos = $(this).offset().top
+// 			var scroll = $(window).scrollTop()
+// 			var windowHeight = $(window).height()
+// 			var test = imgPos - windowHeight
+// 			if (scroll > imgPos - windowHeight) {
+// 				$('.u-bgmove-01').css({
+// 					top: this.clientHeight - windowHeight * 1.8 + (scroll / 15) * -1
+// 				})
+// 				$('.u-bgmove-02').css({
+// 					top: this.clientHeight - windowHeight * 1.3 + (scroll / 15) * -1
+// 				})
+// 				$('.u-bgmove-03').css({
+// 					top: this.clientHeight - windowHeight * 0.8 + (scroll / 15) * -1
+// 				})
+// 			}
+// 		})
+// 	})
+// })
 
 /*=================================================
 
@@ -236,9 +267,10 @@ const offCanvas = function() {
 		const scrollLockModifier = 'offCanvasOpen'
 
 		// 現在の状態（開いていたらtrue）
+		// 最初は閉じているのでfalse
 		let offCanvasOpen = false
 
-		//headerがfixedして追従する場合の関数
+		// headerがfixedして追従する場合の関数
 		// valueは文字列
 		const addScrollbarMargin = function(value) {
 			const targetsLength = scrollbarFixTargets.length
@@ -371,7 +403,23 @@ const modal = function() {
 
 		==================*/
 
-		const openButtons = document.querySelectorAll('button[data-target]')
+		// const openButtons = document.querySelectorAll('button.js-openModal')
+		// for (const openButtonTest of openButton) {
+		// 	openButtonTest.addEventListener('click', event => {
+		// 		// クリックされた要素
+		// 		const element = event.currentTarget
+		// 		// 対象のIDをdata-target属性から取得
+		// 		const target = element.dataset.target
+
+		// 		// 遷移リンクのshowクラスを追加
+		// 		const link = document.querySelector(`.modal-${target}`)
+		// 		link.classList.add('show')
+
+		// 		// 遷移先画面のshowクラスを追加
+		// 		const detail = document.querySelector(`.c-modal-content-${target}`)
+		// 		detail.classList.add('show')
+		// 	})
+		// }
 		// const openButtons = document.querySelectorAll('button.js-openModal')
 		// const openButtonTargets = Array.prototype.forEach.call(
 		// 	openButtons,
@@ -381,27 +429,13 @@ const modal = function() {
 		// )
 
 		// consle.log(openButtons)
-		const openButtonTargets = Array.prototype.forEach.call(
-			openButtons,
-			function(el) {
-				// console.log(el)
-				// const openBUtton = el
-			}
-		)
-
-		// const openButtonTargets = openButtonTargets().length
-
-		// const openButtonTest = function(value) {
-		// 	const openButtonTarget = openButtons.querySelector(['data-target'])
-		// }
-		// const openButtonTarget = openButtons.querySelectorAll(['data-target'])
-		// console.log(el)
-		// console.log(openButton)
-		// console.log(openButtons)
-		// console.log(openButtonTarget)
-		// console.log(openButtonTargets)
-		// console.log(openButtonTest)
-		// openButtonTargets()
+		// const openButtonTargets = Array.prototype.forEach.call(
+		// 	openButtons,
+		// 	function(el) {
+		// 		// console.log(el)
+		// 		// const openBUtton = el
+		// 	}
+		// )
 
 		/*================
 
@@ -872,3 +906,21 @@ spaAnimation()
 // }
 
 // closeBtn()
+
+const targets = document.querySelectorAll('#verticalMenu-nav li')
+for (let i = 0; i < targets.length; i++) {
+	targets[i].addEventListener(
+		'click',
+		function() {
+			//クリックされたら定数 targetActiveを探す
+			const targetActive = document.querySelector('#verticalMenu-nav li.active')
+			//探したtargetActiveから.activeを消す
+			targetActive.classList.remove('active')
+			if (targets[i].classList.contains('active') == false) {
+				//クリックした要素に.activeがなければ.activeを付与する
+				targets[i].classList.add('active')
+			}
+		},
+		false
+	)
+}

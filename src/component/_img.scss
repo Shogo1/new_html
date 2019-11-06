@@ -24,7 +24,7 @@ $parallaxPcImg: url(../img/sl2.jpeg);
 		padding-top: $parallaxSpPaddingTop;
 		position: fixed;
 		z-index: -1;
-		background-position: bottom center;
+		background-position: top center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-image: $parallaxSpImg;

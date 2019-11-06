@@ -9,3 +9,67 @@
 		order: 3 !important;
 	}
 }
+
+.u-pointImgWidth {
+	width: 67%;
+	position: relative;
+	// text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: -60px;
+	// margin-bottom: -70px;
+	> img {
+	}
+}
+.u-card-color-Red {
+	background-color: #b12028 !important;
+	color: #fff;
+	border-radius: 10px;
+	@include mq(sm, max) {
+		min-height: 342px;
+	}
+}
+
+.u-cardTitle {
+	font-size: 30px;
+	font-style: italic;
+}
+
+.u-office {
+	border: 5px solid #f4a400;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	&-img {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.p01 {
+		font-size: calc(1.8rem + ((1vw - 3.75px) * 1.6949));
+		background-color: #f4a400;
+		color: #fff;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		@include mq(lg) {
+			font-size: 2.9rem;
+		}
+	}
+	.p02 {
+		font-size: calc(2rem + ((1vw - 3.75px) * 1.5408));
+		padding: 1rem 0;
+		@include mq(lg) {
+			font-size: 3rem;
+		}
+	}
+}
+
+.c-btn--green {
+	background-color: #009900;
+	color: #fff;
+	font-size: calc(1.5rem + ((1vw - 3.75px) * 3.8521));
+	padding: 1rem;
+	width: 85%;
+	border-radius: 5px;
+	@include mq(lg) {
+		font-size: 4rem;
+	}
+}

@@ -251,3 +251,20 @@ h5,
 h6 {
 	font-weight: normal;
 }
+
+/*=================================
+↓↓ add 20191101 コードハイライト用
+いらないなら削除
+===================================*/
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	padding: 1em !important;
+	color: #333;
+	background: #f8f8f8;
+}
+
+pre {
+	margin-bottom: 0 !important;
+}

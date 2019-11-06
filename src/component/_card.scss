@@ -13,13 +13,17 @@ div.u-card.u-card-defalut>div.u-card-media-top-s+div.u-card-body
 	width: 100%;
 	position: relative;
 	transition: box-shadow 0.1s ease-in;
-	&.u-card-body {
-		padding: 30px 30px;
+	&-body {
+		padding: 30px;
 	}
-	.u-card-small {
-		padding: 15px 15px;
+	&-small {
+		padding: 15px;
 	}
-	&.u-card-defalut {
+	&-large {
+		padding: 45px;
+	}
+	&.u-card-defalut,
+	&%u-card-defalut {
 		background-color: #fff;
 		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
 		&:hover {
@@ -27,15 +31,14 @@ div.u-card.u-card-defalut>div.u-card-media-top-s+div.u-card-body
 		}
 	}
 	&.u-card-primary {
+		@extend %u-card-defalut;
 		background: #1e87f0;
 		color: #fff;
-		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-	}
-	&-body {
-		padding: 30px 30px;
 	}
 	&-media-top {
 		&-s {
+			position: relative;
+			overflow: hidden;
 			height: 170px;
 			> .u-imgfit {
 				height: 100%;
@@ -58,6 +61,8 @@ div.u-card.u-card-defalut>div.u-card-media-top-s+div.u-card-body
 			}
 		}
 		&-m {
+			position: relative;
+			overflow: hidden;
 			height: 300px;
 			> .u-imgfit {
 				height: 100%;

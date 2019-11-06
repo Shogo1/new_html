@@ -12,6 +12,7 @@ position
 	position: absolute;
 }
 
+//画面幅に合わせてボックスの縦横が1:1の比率で変化する
 .u-width-height-1-1 {
 	position: relative;
 	width: 100%;
@@ -39,35 +40,10 @@ flex
 	display: flex;
 }
 
-// @each $flex in $flexs {
-// 	$i: index($flexs,$flex);
-// 	@if $i < 7{
-// 		$flexsNum: ""
-// 	}
-// }
-
 @for $i from 1 through 6 {
 	.u-flex-order-#{$i} {
 		order: $i;
 		/* style */
-	}
-}
-// &-2 {
-// 	order: 2;
-// 	&-md {
-// 		@include mq(md, max);
-// 		//好きな数に変更
-// 		order: 2;
-// 	}
-// }
-
-.u-flex-order {
-	&-3 {
-		order: 3;
-		&-md {
-			@include mq(md, max);
-			// order: 2;
-		}
 	}
 }
 
@@ -138,6 +114,21 @@ list
 
 text
 
+[リキッドなfont-sizeについて]
+
+ある幅間（375px → 1024px）において文字サイズを流動的に
+変更したい際は以下のような設定を行うとうまくいく
+
+font-size: calc(1.5rem + ((1vw - 3.75px) * 3.8521));
+
+-解説-
+
+font-size: calc(XXrem + ((1vw - YYpx) * ZZ));
+
+XX : 最小の文字サイズ（rem換算）
+YY : 設定最小幅 / 100
+ZZ : 100 * （最大文字サイズ - 最小文字サイズ）/ （設定最大幅 - 設定最小幅
+
 ============================================*/
 
 .u-text-decNone {
@@ -165,20 +156,17 @@ text
 .u-text-center {
 	text-align: center;
 }
-.u-text-bold {
-	font-weight: bold;
-}
 
-.u-text-light {
+.u-light {
 	font-weight: 300;
-}
-
-.u-baseLineH {
-	line-height: 1.5;
 }
 
 .u-bold {
 	font-weight: bold;
+}
+
+.u-baseLineH {
+	line-height: 1.5;
 }
 
 .u-text-vertical {
@@ -199,7 +187,17 @@ img
 	width: 100%;
 	//↓IE11対策 要object-fit-images.js
 	// font-family: 'object-fit:cover;';
-	font-family: 'object-fit: cover; object-position: center top;';
+	// font-family: 'object-fit: cover; object-position: center top;';
+}
+
+//fitie.js(fit ie)を使用する際は以下のコードでIEでもobject-fitが適用される
+
+object-fit {
+	> .u-imgfit {
+		@extend .u-imgfit;
+		position: absolute;
+		right: 0;
+	}
 }
 
 /*==========================================
@@ -226,6 +224,12 @@ display
 */
 
 .u-none {
+	&--sm {
+		display: none;
+		@include mq(sm) {
+			display: block;
+		}
+	}
 	&--md {
 		display: none;
 		@include mq(md) {
@@ -240,6 +244,12 @@ display
 	}
 }
 .u-block {
+	&--sm {
+		display: block;
+		@include mq(sm) {
+			display: none;
+		}
+	}
 	&--md {
 		display: block;
 		@include mq(md) {

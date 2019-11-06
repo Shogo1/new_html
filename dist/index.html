@@ -15,6 +15,14 @@
 		<script>
 			objectFitImages()
 		</script> -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css"
+		/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+		<script>
+			hljs.initHighlightingOnLoad()
+		</script>
 	</head>
 	<body class="l-body js-scrollbarFix">
 		<div class="c-loadingWrapper"></div>
@@ -27,7 +35,7 @@
 						>
 					</div>
 					<nav class="u-none--md">
-						<ul class="u-flex c-btn--header">
+						<ul class="u-flex c-headerBtn">
 							<li><a href="">SERVICE</a></li>
 							<li><a href="">WORKS</a></li>
 							<li><a href="">VOICE</a></li>
@@ -82,44 +90,58 @@
 					</div>
 				</div>
 				<div class="c-section">
-					<nav class="c-stickyNav js-sticky">
-						<ul
-							class="c-navbar-items c-stickyNav__list u-flex u-flex-middle u-flex-center "
-						>
-							<li><a href="">Itme01</a></li>
-							<li><a href="">Item02</a></li>
-							<li><a href="">Item03</a></li>
-							<li><a href="">Item04</a></li>
-							<li><a href="">Item05</a></li>
-						</ul>
+					<div class="c-container u-margin-bottom u-margin-small-bottom-child">
+						<div class="u-margin-small-bottom-child">
+							<h2 class="u-bold u-fs-large-xl">スティッキーナビ</h2>
+							<p>スクロールした後にトップに張り付くスティッキーナビの実装</p>
+							<h3 class="u-bold u-fs-large">#使い方</h3>
+							<p>スティッキーナビを使うには以下のコードを貼り付けてください</p>
+						</div>
+						<!-- <pre>
+						<code class="html">&lt;div class=&quot;c-stickyNav js-sticky&quot;&gt;&lt;/div&gt;</code>
+						</pre> -->
+						<p>
+							class="c-stikyNav
+							js-sticky"が付与された要素がスティッキーナビになります。その他カラーやホバー時の装飾を施す際は、そのクラスを別に付与してください。
+						</p>
+					</div>
+
+					<nav class="c-stickyNav js-sticky ">
+						<div class="c-header-container">
+							<ul
+								class="c-stickyNav__list c-btn--header u-flex u-flex-middle u-flex-center u-child-height-1-1"
+							>
+								<li><a href="">Itme01</a></li>
+								<li><a href="">Item02</a></li>
+								<li><a href="">Item03</a></li>
+								<li><a href="">Item04</a></li>
+								<li><a href="">Item05</a></li>
+							</ul>
+						</div>
 					</nav>
 				</div>
 				<div class="c-section">
-					<section class="c-container">
-						<h2 class="u-bold">GridBox01</h2>
-						<div class="c-gridBox u-child-width-1-4">
-							<div>
-								<div class="u-testBox"></div>
-							</div>
-							<div>
-								<div class="u-testBox"></div>
-							</div>
-							<div>
-								<div class="u-testBox"></div>
-							</div>
-							<div>
-								<div class="u-testBox"></div>
-							</div>
-							<div>
-								<div class="u-testBox"></div>
-							</div>
+					<section
+						class="c-container u-margin-bottom u-margin-small-bottom-child"
+					>
+						<div class="u-margin-small-bottom-child">
+							<h2 class="u-bold u-fs-large-xl">GridBox</h2>
+							<p>flexBoxを使用したグリッドレイアウトボックスです。</p>
+							<h3 class="u-bold u-fs-large">#使い方</h3>
+							<p>
+								flexBoxを使用したグリッドレイアウトボックスを使用するには以下のコードを貼り付けてください
+							</p>
+							<!-- <pre>
+								<code class="html">&lt;div class=&quot;c-gridBox&quot;&gt;<br>  &lt;div&gt;&lt;/div&gt;<br>  &lt;div&gt;&lt;/div&gt;<br>&lt;/div&gt;</code>
+							</pre> -->
+							<p>
+								class="c-gridBoxy"が付与された要素がグリッドレイアウトの親要素になります。その下の子要素が各グリッドボックスのカラムになります。グリッド幅は親要素に対して６分割まで対応しています。
+							</p>
+							<p>
+								幅を設定するには各子要素に個別に「.u-width-*」クラス（詳細はwidthコンポーネント要素で説明）を設定するか、「.c-gridBox」が付与された親要素に「.u-child-width-*」クラスを付与します。
+							</p>
 						</div>
-					</section>
-				</div>
-				<div class="c-section">
-					<section class="c-container">
-						<h2 class="u-bold">GridBox02</h2>
-						<div class="c-gridBox c-grid-small">
+						<div class="c-gridBox-small">
 							<div class="u-width-1-3">
 								<div class="u-testBox"></div>
 							</div>
@@ -150,7 +172,7 @@
 				<div class="c-section">
 					<section class="c-container">
 						<h2 class="u-bold">GridBox03</h2>
-						<div class="c-gridBox c-grid-match c-grid-small">
+						<div class="c-gridBox-small c-grid-match">
 							<div>
 								<div
 									class="u-card u-card-body u-card-primary u-flex u-flex-middle"
@@ -214,7 +236,7 @@
 					<section class="c-container">
 						<h2 class="u-bold">GridBox04</h2>
 						<div
-							class="c-gridBox c-grid-match u-child-width-1-3-md u-child-width-1-2-sm u-child-width-1-1 c-grid-small"
+							class="c-gridBox-small c-grid-match u-child-width-1-3-md u-child-width-1-2-sm u-child-width-1-1"
 						>
 							<div>
 								<a class="u-flex" href=""
@@ -223,7 +245,7 @@
 											<img class="u-imgfit" src="img/sl1.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom--child"
+											class="u-card-textarea u-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -239,7 +261,7 @@
 											<img class="u-imgfit" src="img/sl2.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom--child"
+											class="u-card-textarea u-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -250,7 +272,7 @@
 							</div>
 							<div>
 								<div
-									class="u-flex u-flex-column u-child-height-1-1 u-margin-small-bottom--child"
+									class="u-flex u-flex-column u-child-height-1-1 u-margin-small-bottom-child"
 								>
 									<a href="" class="u-flex">
 										<div class="u-card u-card-defalut">
@@ -258,7 +280,7 @@
 												<img class="u-imgfit" src="img/sl3.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom--child"
+												class="u-card-textarea u-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -275,7 +297,7 @@
 												<img class="u-imgfit" src="img/sl4.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom--child"
+												class="u-card-textarea u-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -290,7 +312,7 @@
 							</div>
 							<div>
 								<div
-									class="u-flex u-flex-column u-child-height-1-1 u-margin-small-bottom--child"
+									class="u-flex u-flex-column u-child-height-1-1 u-margin-small-bottom-child"
 								>
 									<a href="" class="u-flex">
 										<div class="u-card u-card-defalut">
@@ -298,7 +320,7 @@
 												<img class="u-imgfit" src="img/sl5.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom--child"
+												class="u-card-textarea u-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -314,7 +336,7 @@
 												<img class="u-imgfit" src="img/sl6.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom--child"
+												class="u-card-textarea u-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -334,7 +356,7 @@
 											<img class="u-imgfit" src="img/sl7.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom--child"
+											class="u-card-textarea u-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -350,7 +372,7 @@
 											<img class="u-imgfit" src="img/sl8.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom--child"
+											class="u-card-textarea u-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -368,7 +390,7 @@
 							GridBox5（要素の入れ替えは共通コンポーネントありません）
 						</h2>
 						<div
-							class="u-flex c-gridBox c-grid-match u-child-width-1-3-md u-child-width-1-2-sm u-child-width-1-1 c-grid-small"
+							class="u-flex c-gridBox-small c-grid-match u-child-width-1-3-md u-child-width-1-2-sm u-child-width-1-1"
 						>
 							<div class="u-flex-order-1">
 								<a class="u-flex" href=""
@@ -377,7 +399,7 @@
 											<img class="u-imgfit" src="img/sl1.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom--child"
+											class="u-card-textarea u-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -393,7 +415,7 @@
 											<img class="u-imgfit" src="img/sl2.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom--child"
+											class="u-card-textarea u-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -404,7 +426,7 @@
 							</div>
 							<div class="u-flex-order-3">
 								<div
-									class="u-flex u-flex-column u-child-height-1-1 u-margin-small-bottom--child"
+									class="u-flex u-flex-column u-child-height-1-1 u-margin-small-bottom-child"
 								>
 									<a href="" class="u-flex">
 										<div class="u-card u-card-defalut">
@@ -412,7 +434,7 @@
 												<img class="u-imgfit" src="img/sl3.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom--child"
+												class="u-card-textarea u-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -429,7 +451,7 @@
 												<img class="u-imgfit" src="img/sl4.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom--child"
+												class="u-card-textarea u-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -444,7 +466,7 @@
 							</div>
 							<div class="u-flex-order-4">
 								<div
-									class="u-flex u-flex-column u-child-height-1-1 u-margin-small-bottom--child"
+									class="u-flex u-flex-column u-child-height-1-1 u-margin-small-bottom-child"
 								>
 									<a href="" class="u-flex">
 										<div class="u-card u-card-defalut">
@@ -452,7 +474,7 @@
 												<img class="u-imgfit" src="img/sl5.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom--child"
+												class="u-card-textarea u-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -468,7 +490,7 @@
 												<img class="u-imgfit" src="img/sl6.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom--child"
+												class="u-card-textarea u-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -488,7 +510,7 @@
 											<img class="u-imgfit" src="img/sl7.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom--child"
+											class="u-card-textarea u-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -504,7 +526,7 @@
 											<img class="u-imgfit" src="img/sl8.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom--child"
+											class="u-card-textarea u-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -517,7 +539,7 @@
 					</section>
 				</div>
 				<div class="c-section">
-					<div class="c-container u-margin-small-bottom--child">
+					<div class="c-container u-margin-small-bottom-child">
 						<h2 class="u-bold">
 							Tab UI components
 						</h2>
@@ -614,7 +636,7 @@
 					</div>
 				</div>
 				<div class="c-section">
-					<div class="c-container u-margin-small-bottom--child">
+					<div class="c-container u-margin-small-bottom-child">
 						<h2 class="u-bold">
 							GridLayout（display:grid;使用）
 						</h2>
@@ -625,7 +647,7 @@
 										<img class="u-imgfit" src="img/sl1.jpeg" alt="" />
 									</div>
 									<div
-										class="u-card-textarea u-card-small u-margin-small-bottom--child"
+										class="u-card-textarea u-card-small u-margin-small-bottom-child"
 									>
 										<h3>Title</h3>
 										<p>test text</p>
@@ -639,7 +661,7 @@
 										<img class="u-imgfit" src="img/sl2.jpeg" alt="" />
 									</div>
 									<div
-										class="u-card-textarea u-card-small u-margin-small-bottom--child"
+										class="u-card-textarea u-card-small u-margin-small-bottom-child"
 									>
 										<h3>Title</h3>
 										<p>test text</p>
@@ -653,7 +675,7 @@
 										<img class="u-imgfit" src="img/sl3.jpeg" alt="" />
 									</div>
 									<div
-										class="u-card-textarea u-card-small u-margin-small-bottom--child"
+										class="u-card-textarea u-card-small u-margin-small-bottom-child"
 									>
 										<h3>Title</h3>
 										<p>test text</p>
@@ -699,11 +721,11 @@
 					</div>
 				</div>
 				<div class="c-section">
-					<div class="c-container u-margin-small-bottom--child">
+					<div class="c-container u-margin-small-bottom-child">
 						<h2 class="u-bold">
 							Form Components
 						</h2>
-						<form class="u-margin-small-bottom--child" action="">
+						<form class="u-margin-small-bottom-child" action="">
 							<div class="">
 								<div>
 									<label class="u-checkBox" for="ex"
@@ -750,7 +772,7 @@
 									>
 								</div>
 							</div>
-							<div class="u-margin-small-bottom--child">
+							<div class="u-margin-small-bottom-child">
 								<div>
 									<label class="u-textBox" for="">
 										<p>お名前</p>
@@ -767,47 +789,29 @@
 						</form>
 					</div>
 				</div>
+
+
 				<div class="c-section">
-					<div class="c-container">
-						<div
-							class="c-gridBox u-child-width-1-1 u-child-width-1-3-sm c-grid-small u-margin-circle"
-						>
-							<div>
-								<div class="u-width-height-1-1">
-									<div class="u-width-height-1-1-content">
-										<div
-											class="u-flex u-flex-center u-flex-middle u-height-1-1 u-circleBoder-00 u-circleBoder-00-duble"
-										>
-											<p>aaaaaaaaaa</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="u-width-height-1-1">
-									<div class="u-width-height-1-1-content">
-										<div
-											class="u-flex u-flex-center u-flex-middle u-height-1-1 u-circleBoder-01 u-circleBoder-01-duble"
-										>
-											<p>aaaaaaaaaa</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="u-width-height-1-1">
-									<div class="u-width-height-1-1-content">
-										<div
-											class="u-flex u-flex-center u-flex-middle u-height-1-1 u-circleBoder-02 u-circleBoder-02-duble"
-										>
-											<p>aaaaaaaaaa</p>
-										</div>
-									</div>
-								</div>
-							</div>
+					<div class="c-container u-relative" style="height: 500px;">
+						<div class="verticalMenu-container">
+							<ul id="verticalMenu-nav">
+								<li class="active">Home</li>
+								<li>Services</li>
+								<li>Contact</li>
+								<li>Product</li>
+								<li>404 page</li>
+								<li>Awesome page</li>
+							</ul>
 						</div>
 					</div>
 				</div>
+				<!-- <div class="c-section">
+					<div class="u-bgmove">
+						<img class="u-bgmove-01" src="img/bgmove01.png" alt="">
+						<img class="u-bgmove-02" src="img/bgmove02.png" alt="">
+						<img class="u-bgmove-03" src="img/bgmove03.png" alt="">
+					</div>
+				</div> -->
 				<!-- <div class="c-section">
 					<div class="c-container">
 						<div class="">
@@ -847,7 +851,7 @@
 		<div class="c-floatNavWrapper u-block--md fadeInBox">
 			<nav class="c-floatNav c-floatNav-body c-floatNav-defalut">
 				<ul
-					class="u-flex u-flex-around u-fs-small-xs u-child-width-1-4 u-margin-small-right--child"
+					class="u-flex u-flex-around u-fs-small-xs u-child-width-1-4 u-margin-small-right-child"
 				>
 					<li>
 						<a href="">
@@ -975,7 +979,7 @@
 					<span></span>
 					<span></span>
 				</button>
-				<div class="u-margin-small-bottom--child">
+				<div class="u-margin-small-bottom-child">
 					<p>
 						ブログを開始して、正確には10/7がその日でしたが、13年が経ちました！
 						ようやくコリス サーティーンになれました。
@@ -997,7 +1001,7 @@
 			<div class="c-spaBox-content">
 				<div class="c-spaBox-content c-spaBox-content-1">
 					<h2>About</h2>
-					<div class="desc u-margin-small-bottom--child">
+					<div class="desc u-margin-small-bottom-child">
 						<p class="dummy_100"></p>
 						<p class="dummy_100"></p>
 						<p class="dummy_100"></p>
