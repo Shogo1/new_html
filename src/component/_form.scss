@@ -5,15 +5,15 @@
 
 ***labelにforを使う際はinputに同名のidを振ること
 
-<label class="u-checkBox">
+<label class="c-checkBox">
 <input type="checkbox>
 <span>ここにチェックボックス名<span>
 </label>
 
-label.u-checkBox>input:checkbox>span{name}
+label.c-checkBox>input:checkbox>span{name}
 
 ============================================*/
-label.u-checkBox {
+label.c-checkBox {
 	input[type='checkbox'] {
 		opacity: 0;
 		-webkit-appearance: none;
@@ -56,7 +56,7 @@ label.u-checkBox {
 	}
 }
 
-label.u-checkBox {
+label.c-checkBox {
 	input[type='radio'] {
 		opacity: 0;
 		-webkit-appearance: none;

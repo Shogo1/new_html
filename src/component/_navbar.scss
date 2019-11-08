@@ -1,15 +1,33 @@
-.c-navbar {
-	padding: 1rem 2rem;
-	&-items {
-		> * {
-			padding: 0.5rem 0.75rem;
+.c-navBar {
+	height: $HeaderHight;
+	display: flex;
+	*:not(img) {
+		height: 100%;
+	}
+}
+
+.c-navBtn {
+	> li {
+		> a {
+			color: $mainColor;
+			padding: 0 10px;
+			display: block;
+			transition: 0.2s ease-out;
+			text-align: center;
+			background-color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:hover {
+				background-color: #d1d9ff;
+			}
 		}
 	}
 }
 
 /*=================================================
 
-nav.c-stickyNav.js-sticky>ul.u-flex.u-flex-middle>li*3
+nav.c-stickyNav.js-sticky>ul.c-navBar.c-navBtn>li*3
 
 スティッキーナビができるよ
 

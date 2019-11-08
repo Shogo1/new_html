@@ -12,69 +12,6 @@ position
 	position: absolute;
 }
 
-//画面幅に合わせてボックスの縦横が1:1の比率で変化する
-.u-width-height-1-1 {
-	position: relative;
-	width: 100%;
-	&:before {
-		content: '';
-		display: block;
-		padding-top: 100%;
-	}
-	&-content {
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-	}
-}
-
-/*==========================================
-
-flex
-
-============================================*/
-
-.u-flex {
-	display: flex;
-}
-
-@for $i from 1 through 6 {
-	.u-flex-order-#{$i} {
-		order: $i;
-		/* style */
-	}
-}
-
-.u-flex-wrap {
-	flex-wrap: wrap;
-}
-
-.u-flex-column {
-	flex-direction: column;
-}
-
-.u-flex-center {
-	justify-content: center;
-}
-
-.u-flex-between {
-	justify-content: space-between;
-}
-
-.u-flex-around {
-	justify-content: space-around;
-}
-
-.u-flex-middle {
-	align-items: center;
-}
-
-.u-flexItem-bottom {
-	align-self: flex-end;
-}
-
 /*==========================================
 
 list

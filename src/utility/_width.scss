@@ -9,10 +9,28 @@
 .u-width-expand {
 	flex: 1;
 	min-width: 1px;
+	&-sm {
+		@include mq(sm) {
+			flex: 1;
+			min-width: 1px;
+		}
+	}
 	&-md {
-		@include mq(md, max) {
-			flex: none;
-			min-width: auto;
+		@include mq(md) {
+			flex: 1;
+			min-width: 1px;
+		}
+	}
+	&-lg {
+		@include mq(lg) {
+			flex: 1;
+			min-width: 1px;
+		}
+	}
+	&-xl {
+		@include mq(xl) {
+			flex: 1;
+			min-width: 1px;
 		}
 	}
 }
@@ -53,27 +71,27 @@
 		width: 33.33%;
 		&-xm {
 			@include mq(xm) {
-				width: 33.33%;
+				width: 33.3333%;
 			}
 		}
 		&-sm {
 			@include mq(sm) {
-				width: 33.33%;
+				width: 33.3333%;
 			}
 		}
 		&-md {
 			@include mq(md) {
-				width: 33.33%;
+				width: 33.3333%;
 			}
 		}
 		&-lg {
 			@include mq(lg) {
-				width: 33.33%;
+				width: 33.3333%;
 			}
 		}
 		&-xl {
 			@include mq(xl) {
-				width: 33.33%;
+				width: 33.3333%;
 			}
 		}
 	}
@@ -137,31 +155,264 @@
 		width: 16.66%;
 		&-xm {
 			@include mq(xm) {
-				width: 16.66%;
+				width: 16.6666%;
 			}
 		}
 		&-sm {
 			@include mq(sm) {
-				width: 16.66%;
+				width: 16.6666%;
 			}
 		}
 		&-md {
 			@include mq(md) {
-				width: 16.66%;
+				width: 16.6666%;
 			}
 		}
 		&-lg {
 			@include mq(lg) {
-				width: 16.66%;
+				width: 16.6666%;
 			}
 		}
 		&-xl {
 			@include mq(xl) {
-				width: 16.66%;
+				width: 16.6666%;
 			}
 		}
 	}
 }
+
+.u-width-2 {
+	&-3 {
+		&-sm {
+			@include mq(sm) {
+				width: 66.6666%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 66.6666%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 66.6666%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 66.6666%;
+			}
+		}
+	}
+	&-4 {
+		&-sm {
+			@include mq(sm) {
+				width: 50%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 50%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 50%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 50%;
+			}
+		}
+	}
+	&-5 {
+		&-sm {
+			@include mq(sm) {
+				width: 40%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 40%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 40%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 40%;
+			}
+		}
+	}
+	&-6 {
+		&-sm {
+			@include mq(sm) {
+				width: 33.3333%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 33.3333%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 33.3333%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 33.3333%;
+			}
+		}
+	}
+}
+
+.u-width-3 {
+	&-4 {
+		&-sm {
+			@include mq(sm) {
+				width: 75%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 75%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 75%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 75%;
+			}
+		}
+	}
+	&-5 {
+		&-sm {
+			@include mq(sm) {
+				width: 60%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 60%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 60%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 60%;
+			}
+		}
+	}
+	&-6 {
+		&-sm {
+			@include mq(sm) {
+				width: 50%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 50%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 50%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 50%;
+			}
+		}
+	}
+}
+
+.u-width-4 {
+	&-5 {
+		&-sm {
+			@include mq(sm) {
+				width: 80%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 80%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 80%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 80%;
+			}
+		}
+	}
+	&-6 {
+		&-sm {
+			@include mq(sm) {
+				width: 66.6666%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 66.6666%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 66.6666%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 66.6666%;
+			}
+		}
+	}
+}
+
+.u-width-5 {
+	&-6 {
+		&-sm {
+			@include mq(sm) {
+				width: 83.3333%;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				width: 83.3333%;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				width: 83.3333%;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				width: 83.3333%;
+			}
+		}
+	}
+}
+
 .u-child-width-expand {
 	//グリッドボックスでミキシング幅を使う場合、一列で収まるよう各ボックスの幅を持たせてください
 	> :not([class^='u-width']) {
@@ -169,6 +420,50 @@
 		min-width: 1px;
 		@include mq(md, max) {
 			width: 100%;
+		}
+	}
+	&-sm {
+		@include mq(sm) {
+			> :not([class^='u-width']) {
+				flex: 1;
+				min-width: 1px;
+				@include mq(md, max) {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&-md {
+		@include mq(md) {
+			> :not([class^='u-width']) {
+				flex: 1;
+				min-width: 1px;
+				@include mq(md, max) {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&-lg {
+		@include mq(lg) {
+			> :not([class^='u-width']) {
+				flex: 1;
+				min-width: 1px;
+				@include mq(md, max) {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&-xl {
+		@include mq(xl) {
+			> :not([class^='u-width']) {
+				flex: 1;
+				min-width: 1px;
+				@include mq(md, max) {
+					width: 100%;
+				}
+			}
 		}
 	}
 }
@@ -418,6 +713,24 @@
 				}
 			}
 		}
+	}
+}
+
+//画面幅に合わせてボックスの縦横が1:1の比率で変化する
+.u-width-height-1-1 {
+	position: relative;
+	width: 100%;
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 100%;
+	}
+	&-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
 	}
 }
 

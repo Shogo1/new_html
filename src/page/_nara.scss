@@ -1,0 +1,225 @@
+/*=================================================
+
+Nara
+
+==================================================*/
+
+.u-margin-right-0 {
+	@include mq(lg) {
+		margin-right: 0;
+	}
+}
+
+.c-container--nara {
+	padding-left: 5%;
+	padding-right: 5%;
+	max-width: calc(1000px + 10%);
+	margin: 0 auto;
+	@include mq(lg) {
+		max-width: none;
+		padding-left: 5.7%;
+		padding-right: 5.7%;
+	}
+}
+
+.c-mainVisualWrap {
+	position: relative;
+	@include mq(lg) {
+		padding-top: 55.7vw;
+	}
+}
+
+.c-mainVisual {
+	width: 100%;
+	height: 97.6vw;
+	background-image: url(../img/nara/mv_sp.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-color: #efefef;
+	@include mq(lg) {
+		background-image: url(../img/nara/mv_visual.jpg);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 74.3%;
+		margin-left: 20%;
+		margin-right: 5.7%;
+		height: 55.7vw;
+	}
+	&__logo {
+		position: absolute;
+		width: 16vw;
+		top: 8.9vw;
+		left: 5.1vw;
+		> img {
+			filter: drop-shadow(0 0 2px white);
+		}
+		@include mq(lg) {
+			position: absolute;
+			left: 5.7vw;
+			top: 5.6vw;
+			width: 8.6%;
+		}
+	}
+	&__catch {
+		position: absolute;
+		z-index: 2;
+		left: 5.1vw;
+		top: 106vw;
+		top: 73.5vw;
+		width: 36.3vw;
+		@include mq(lg) {
+			left: 10.4%;
+			top: 33.1vw;
+			width: 16vw;
+		}
+	}
+}
+
+.c-readContent {
+	@include mq(lg) {
+		margin-left: 3.7vw;
+		margin-right: 2vw;
+	}
+	&__readBox {
+		font-size: 1.1rem;
+		line-height: 1.88;
+		letter-spacing: 0.075em;
+		@include mq(lg) {
+			font-size: 1.7rem;
+			margin-bottom: 1.2vw;
+		}
+	}
+	&__imgBox {
+		@include mq(lg) {
+			text-align: right;
+			> div {
+				// margin-right: 2em;
+				> img {
+					width: 25.7vw;
+					max-width: 360px;
+				}
+			}
+		}
+	}
+}
+
+.c-subVisual {
+	width: 100%;
+	padding-top: 52.4%;
+	background-image: url(../img/nara/main.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-color: #efefef;
+	@include mq(lg) {
+		position: absolute;
+		min-width: 720px;
+		width: 69.3%;
+		padding-top: 36.8164%;
+		max-width: none;
+		top: 10vw;
+		// z-index: 0;
+	}
+}
+
+.c-landScapeWrap {
+	position: relative;
+	background-color: #fff7e8;
+	@include mq(lg) {
+		background-color: transparent;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			background-color: #fff7e8;
+			top: 0;
+			right: 0;
+			width: 50%;
+			height: 100%;
+			z-index: -1;
+		}
+	}
+}
+
+.c-landScape {
+	// position: absolute;
+	top: -3.3vw;
+	left: 0;
+	margin-top: -3vw;
+	padding: 6vw;
+	background-color: #fff;
+	@include mq(lg) {
+		left: auto;
+		right: 0;
+		z-index: 5;
+		width: 40%;
+		padding: 3vw;
+		min-height: 33.8vw;
+		background: #fff;
+		margin-top: 15vw;
+		margin-left: auto;
+	}
+	&:before {
+		content: '';
+		background-color: #ffc765;
+		position: absolute;
+		width: 96px;
+		height: 5px;
+		top: -5px;
+	}
+	&:after {
+		@include mq(md) {
+			// content: '';
+			// display: block;
+			// position: absolute;
+			// background-color: #fff7e8;
+			// top: 0;
+			// right: 0;
+			// width: 50%;
+			// height: calc(100% + 5vw);
+			// z-index: -1;
+		}
+	}
+	&__read {
+		margin-bottom: 4vw;
+		font-size: 1.1rem;
+		letter-spacing: 0.075em;
+		margin-right: 7px;
+	}
+	&__title {
+		position: relative;
+		margin-bottom: 4vw;
+		letter-spacing: 0.075em;
+		padding-bottom: 4vw;
+		font-size: 2.1rem;
+		&:before {
+			position: absolute;
+			content: '';
+			height: 1px;
+			width: 2.1rem;
+			background-color: #000;
+			left: 0;
+			bottom: 0;
+		}
+	}
+	&__catch {
+		margin-bottom: 4vw;
+		line-height: 1.75;
+		font-size: 1.3rem;
+	}
+	&__lists {
+		> li {
+			padding: 2px 0 2px 14px;
+			margin-bottom: 4vw;
+			font-size: 1.3rem;
+			> a {
+				color: #4d3417;
+				font-weight: bold;
+				text-decoration: none;
+				outline: none;
+			}
+		}
+	}
+}

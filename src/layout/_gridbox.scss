@@ -2,20 +2,25 @@
 
 content関連
 
-div.c-gridbox.c-grid-match
+div.l-gridbox.l-grid-match
 	div
 
-.c-grid-matchは並べたい要素の高さをマッチしたいときに使用
+.l-grid-matchは並べたい要素の高さをマッチしたいときに使用
 ==================================================*/
 
-.c-gridBox,
-%c-gridBox {
-	display: flex;
-	flex-wrap: wrap;
-	margin-right: 0;
-	padding: 0;
-	list-style: none;
-	margin-left: -30px;
+@mixin l-gridBox($margin-left: -30px, $isBlock: false) {
+	@if ($isBlock) {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: 0;
+		padding: 0;
+		list-style: none;
+	}
+	margin-left: $margin-left;
+}
+
+.l-gridBox {
+	@include l-gridBox($isBlock: true);
 	> * {
 		margin-bottom: 30px;
 		padding-left: 30px;
@@ -23,18 +28,16 @@ div.c-gridbox.c-grid-match
 			margin-bottom: 15px;
 		}
 	}
-	&-small {
-		@extend %c-gridBox;
-		margin-left: -10px;
+	&--small {
+		@include l-gridBox($margin-left: -10px);
 		> * {
 			padding-left: 10px;
 			margin-bottom: 15px;
 		}
 	}
-	&-small-point {
-		@extend %c-gridBox;
+	&--small-point {
+		@include l-gridBox($margin-left: -10px);
 		//特別仕様を組みこむ場合はクラス名を変えてこのように記述する
-		margin-left: -10px;
 		> * {
 			padding-left: 10px;
 			margin-bottom: 80px;
@@ -45,7 +48,7 @@ div.c-gridbox.c-grid-match
 	}
 }
 
-.c-grid-match {
+.l-grid-match {
 	> * {
 		display: flex;
 		flex-wrap: wrap;

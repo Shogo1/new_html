@@ -1,18 +1,33 @@
 /*=================================================
 
 ↓デフォルト
-div.u-card.u-card-body.u-card-defalut
+div.c-card.c-card-body.c-card-defalut
 
 ↓画像付き
-div.u-card.u-card-defalut>div.u-card-media-top-s+div.u-card-body
+div.c-card.c-card-defalut>div.c-card-media-top-s+div.c-card-body
 
 
 ==================================================*/
 
-.u-card {
+@mixin c-card($background-color: #fff) {
 	width: 100%;
 	position: relative;
 	transition: box-shadow 0.1s ease-in;
+	background-color: $background-color;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+	&:hover {
+		box-shadow: 0 14px 25px rgba(0, 0, 0, 0.32);
+	}
+}
+
+// @mixin c-card() {
+// 	width: 100%;
+// 	position: relative;
+// 	transition: box-shadow 0.1s ease-in;
+// }
+
+.c-card {
+	@include c-card;
 	&-body {
 		padding: 30px;
 	}
@@ -22,20 +37,19 @@ div.u-card.u-card-defalut>div.u-card-media-top-s+div.u-card-body
 	&-large {
 		padding: 45px;
 	}
-	&.u-card-defalut,
-	&%u-card-defalut {
-		background-color: #fff;
-		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
-		&:hover {
-			box-shadow: 0 14px 25px rgba(0, 0, 0, 0.32);
-		}
+	// &.c-card-defalut,
+	// &%c-card-defalut {
+	// 	background-color: #fff;
+	// 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+	// 	&:hover {
+	// 		box-shadow: 0 14px 25px rgba(0, 0, 0, 0.32);
+	// 	}
+	// }
+	&.c-card--primary {
+		// @extend %c-card-defalut;
+		@include c-card($background-color: #1e87f0);
 	}
-	&.u-card-primary {
-		@extend %u-card-defalut;
-		background: #1e87f0;
-		color: #fff;
-	}
-	&-media-top {
+	&__media-top {
 		&-s {
 			position: relative;
 			overflow: hidden;
@@ -43,7 +57,7 @@ div.u-card.u-card-defalut>div.u-card-media-top-s+div.u-card-body
 			> .u-imgfit {
 				height: 100%;
 			}
-			& + .u-card-textarea {
+			& + .c-card-textarea {
 				display: flex;
 				flex-direction: column;
 				height: calc(100% - 170px);
@@ -53,7 +67,7 @@ div.u-card.u-card-defalut>div.u-card-media-top-s+div.u-card-body
 				> .u-imgfit {
 					height: 100%;
 				}
-				& + .u-card-textarea {
+				& + .c-card-textarea {
 					display: flex;
 					flex-direction: column;
 					height: calc(100% - #{$media-top-md});
@@ -67,7 +81,7 @@ div.u-card.u-card-defalut>div.u-card-media-top-s+div.u-card-body
 			> .u-imgfit {
 				height: 100%;
 			}
-			& + .u-card-textarea {
+			& + .c-card-textarea {
 				display: flex;
 				flex-direction: column;
 				height: calc(100% - 300px);
@@ -77,18 +91,18 @@ div.u-card.u-card-defalut>div.u-card-media-top-s+div.u-card-body
 				> .u-imgfit {
 					height: 100%;
 				}
-				& + .u-card-textarea {
+				& + .c-card-textarea {
 					display: flex;
 					flex-direction: column;
 					height: calc(100% - #{$media-top-md});
 				}
 			}
 		}
-		&-media-right {
+		&__media-right {
 		}
-		&-media-bottom {
+		&__media-bottom {
 		}
-		&-media-left {
+		&__media-left {
 		}
 	}
 }

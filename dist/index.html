@@ -28,14 +28,14 @@
 		<div class="c-loadingWrapper"></div>
 		<div class="c-mainWrapper u-fs-normal u-baseLineH">
 			<header class="c-header c-header-top js-scrollbarFix">
-				<div class="c-header-container u-flex u-flex-middle">
+				<div class="c-header__container c-navBar u-flex u-flex-middle">
 					<div class="u-margin-right-auto">
 						<a class="u-text-decNone u-flex u-flex-middle" href=""
 							>Tsumagari Web</a
 						>
 					</div>
 					<nav class="u-none--md">
-						<ul class="u-flex c-headerBtn">
+						<ul class="u-flex c-navBtn">
 							<li><a href="">SERVICE</a></li>
 							<li><a href="">WORKS</a></li>
 							<li><a href="">VOICE</a></li>
@@ -107,9 +107,9 @@
 					</div>
 
 					<nav class="c-stickyNav js-sticky ">
-						<div class="c-header-container">
+						<div class="c-container">
 							<ul
-								class="c-stickyNav__list c-btn--header u-flex u-flex-middle u-flex-center u-child-height-1-1"
+								class="c-stickyNav__list c-navBar c-navBtn  u-child-height-1-1"
 							>
 								<li><a href="">Itme01</a></li>
 								<li><a href="">Item02</a></li>
@@ -132,16 +132,16 @@
 								flexBoxを使用したグリッドレイアウトボックスを使用するには以下のコードを貼り付けてください
 							</p>
 							<!-- <pre>
-								<code class="html">&lt;div class=&quot;c-gridBox&quot;&gt;<br>  &lt;div&gt;&lt;/div&gt;<br>  &lt;div&gt;&lt;/div&gt;<br>&lt;/div&gt;</code>
+								<code class="html">&lt;div class=&quot;l-gridBox&quot;&gt;<br>  &lt;div&gt;&lt;/div&gt;<br>  &lt;div&gt;&lt;/div&gt;<br>&lt;/div&gt;</code>
 							</pre> -->
 							<p>
-								class="c-gridBoxy"が付与された要素がグリッドレイアウトの親要素になります。その下の子要素が各グリッドボックスのカラムになります。グリッド幅は親要素に対して６分割まで対応しています。
+								class="l-gridBoxy"が付与された要素がグリッドレイアウトの親要素になります。その下の子要素が各グリッドボックスのカラムになります。グリッド幅は親要素に対して６分割まで対応しています。
 							</p>
 							<p>
-								幅を設定するには各子要素に個別に「.u-width-*」クラス（詳細はwidthコンポーネント要素で説明）を設定するか、「.c-gridBox」が付与された親要素に「.u-child-width-*」クラスを付与します。
+								幅を設定するには各子要素に個別に「.u-width-*」クラス（詳細はwidthコンポーネント要素で説明）を設定するか、「.l-gridBox」が付与された親要素に「.u-child-width-*」クラスを付与します。
 							</p>
 						</div>
-						<div class="c-gridBox-small">
+						<div class="l-gridBox l-gridBox--small">
 							<div class="u-width-1-3">
 								<div class="u-testBox"></div>
 							</div>
@@ -172,10 +172,10 @@
 				<div class="c-section">
 					<section class="c-container">
 						<h2 class="u-bold">GridBox03</h2>
-						<div class="c-gridBox-small c-grid-match">
+						<div class="l-gridBox l-gridBox--small l-grid-match">
 							<div>
 								<div
-									class="u-card u-card-body u-card-primary u-flex u-flex-middle"
+									class="c-card c-card-body c-card-primary u-flex u-flex-middle"
 								>
 									<p>
 										一番背が高いボックスに合わせて、他のボックスの高さが変わる
@@ -183,51 +183,51 @@
 								</div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary">
+								<div class="c-card c-card-body c-card-primary">
 									<p>aaaaaaaaaa</p>
 									<p>aaaaaaaaaa</p>
 								</div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary"></div>
+								<div class="c-card c-card-body c-card-primary"></div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary"></div>
+								<div class="c-card c-card-body c-card-primary"></div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary"></div>
+								<div class="c-card c-card-body c-card-primary"></div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary">
+								<div class="c-card c-card-body c-card-primary">
 									<p>aaaaaaaaaa</p>
 								</div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary"></div>
+								<div class="c-card c-card-body c-card-primary"></div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary"></div>
+								<div class="c-card c-card-body c-card-primary"></div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary"></div>
+								<div class="c-card c-card-body c-card-primary"></div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary"></div>
+								<div class="c-card c-card-body c-card-primary"></div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary"></div>
+								<div class="c-card c-card-body c-card-primary"></div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary"></div>
+								<div class="c-card c-card-body c-card-primary"></div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary"></div>
+								<div class="c-card c-card-body c-card-primary"></div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary"></div>
+								<div class="c-card c-card-body c-card-primary"></div>
 							</div>
 							<div>
-								<div class="u-card u-card-body u-card-primary"></div>
+								<div class="c-card c-card-body c-card-primary"></div>
 							</div>
 						</div>
 					</section>
@@ -236,16 +236,16 @@
 					<section class="c-container">
 						<h2 class="u-bold">GridBox04</h2>
 						<div
-							class="c-gridBox-small c-grid-match u-child-width-1-3-md u-child-width-1-2-sm u-child-width-1-1"
+							class="l-gridBox l-gridBox--small l-grid-match u-child-width-1-3-md u-child-width-1-2-sm u-child-width-1-1"
 						>
 							<div>
 								<a class="u-flex" href=""
-									><div class="u-card u-card-defalut">
-										<div class="u-card-media-top-m">
+									><div class="c-card c-card-defalut">
+										<div class="c-card__media-top-m">
 											<img class="u-imgfit" src="img/sl1.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom-child"
+											class="c-card-textarea c-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -256,12 +256,12 @@
 							</div>
 							<div>
 								<a class="u-flex" href="">
-									<div class="u-card u-card-defalut">
-										<div class="u-card-media-top-m">
+									<div class="c-card c-card-defalut">
+										<div class="c-card__media-top-m">
 											<img class="u-imgfit" src="img/sl2.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom-child"
+											class="c-card-textarea c-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -275,12 +275,12 @@
 									class="u-flex u-flex-column u-child-height-1-1 u-margin-small-bottom-child"
 								>
 									<a href="" class="u-flex">
-										<div class="u-card u-card-defalut">
-											<div class="u-card-media-top-s">
+										<div class="c-card c-card-defalut">
+											<div class="c-card__media-top-s">
 												<img class="u-imgfit" src="img/sl3.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom-child"
+												class="c-card-textarea c-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -292,12 +292,12 @@
 										</div>
 									</a>
 									<a href="" class="u-flex">
-										<div class="u-card u-card-defalut">
-											<div class="u-card-media-top-s">
+										<div class="c-card c-card-defalut">
+											<div class="c-card__media-top-s">
 												<img class="u-imgfit" src="img/sl4.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom-child"
+												class="c-card-textarea c-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -315,12 +315,12 @@
 									class="u-flex u-flex-column u-child-height-1-1 u-margin-small-bottom-child"
 								>
 									<a href="" class="u-flex">
-										<div class="u-card u-card-defalut">
-											<div class="u-card-media-top-s">
+										<div class="c-card c-card-defalut">
+											<div class="c-card__media-top-s">
 												<img class="u-imgfit" src="img/sl5.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom-child"
+												class="c-card-textarea c-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -331,12 +331,12 @@
 											</div>
 										</div> </a
 									><a href="" class="u-flex">
-										<div class="u-card u-card-defalut">
-											<div class="u-card-media-top-s">
+										<div class="c-card c-card-defalut">
+											<div class="c-card__media-top-s">
 												<img class="u-imgfit" src="img/sl6.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom-child"
+												class="c-card-textarea c-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -351,12 +351,12 @@
 							</div>
 							<div>
 								<a class="u-flex" href="">
-									<div class="u-card u-card-defalut">
-										<div class="u-card-media-top-m">
+									<div class="c-card c-card-defalut">
+										<div class="c-card__media-top-m">
 											<img class="u-imgfit" src="img/sl7.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom-child"
+											class="c-card-textarea c-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -367,12 +367,12 @@
 							</div>
 							<div>
 								<a class="u-flex" href="">
-									<div class="u-card u-card-defalut">
-										<div class="u-card-media-top-m">
+									<div class="c-card c-card-defalut">
+										<div class="c-card__media-top-m">
 											<img class="u-imgfit" src="img/sl8.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom-child"
+											class="c-card-textarea c-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -390,16 +390,16 @@
 							GridBox5（要素の入れ替えは共通コンポーネントありません）
 						</h2>
 						<div
-							class="u-flex c-gridBox-small c-grid-match u-child-width-1-3-md u-child-width-1-2-sm u-child-width-1-1"
+							class="u-flex l-gridBox l-gridBox--small l-grid-match u-child-width-1-3-md u-child-width-1-2-sm u-child-width-1-1"
 						>
 							<div class="u-flex-order-1">
 								<a class="u-flex" href=""
-									><div class="u-card u-card-defalut">
-										<div class="u-card-media-top-m">
+									><div class="c-card c-card-defalut">
+										<div class="c-card__media-top-m">
 											<img class="u-imgfit" src="img/sl1.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom-child"
+											class="c-card-textarea c-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -410,12 +410,12 @@
 							</div>
 							<div class="u-flex-order-2">
 								<a class="u-flex" href="">
-									<div class="u-card u-card-defalut">
-										<div class="u-card-media-top-m">
+									<div class="c-card c-card-defalut">
+										<div class="c-card__media-top-m">
 											<img class="u-imgfit" src="img/sl2.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom-child"
+											class="c-card-textarea c-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -429,12 +429,12 @@
 									class="u-flex u-flex-column u-child-height-1-1 u-margin-small-bottom-child"
 								>
 									<a href="" class="u-flex">
-										<div class="u-card u-card-defalut">
-											<div class="u-card-media-top-s">
+										<div class="c-card c-card-defalut">
+											<div class="c-card__media-top-s">
 												<img class="u-imgfit" src="img/sl3.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom-child"
+												class="c-card-textarea c-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -446,12 +446,12 @@
 										</div>
 									</a>
 									<a href="" class="u-flex">
-										<div class="u-card u-card-defalut">
-											<div class="u-card-media-top-s">
+										<div class="c-card c-card-defalut">
+											<div class="c-card__media-top-s">
 												<img class="u-imgfit" src="img/sl4.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom-child"
+												class="c-card-textarea c-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -469,12 +469,12 @@
 									class="u-flex u-flex-column u-child-height-1-1 u-margin-small-bottom-child"
 								>
 									<a href="" class="u-flex">
-										<div class="u-card u-card-defalut">
-											<div class="u-card-media-top-s">
+										<div class="c-card c-card-defalut">
+											<div class="c-card__media-top-s">
 												<img class="u-imgfit" src="img/sl5.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom-child"
+												class="c-card-textarea c-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -485,12 +485,12 @@
 											</div>
 										</div> </a
 									><a href="" class="u-flex">
-										<div class="u-card u-card-defalut">
-											<div class="u-card-media-top-s">
+										<div class="c-card c-card-defalut">
+											<div class="c-card__media-top-s">
 												<img class="u-imgfit" src="img/sl6.jpeg" alt="" />
 											</div>
 											<div
-												class="u-card-textarea u-card-small u-margin-small-bottom-child"
+												class="c-card-textarea c-card-small u-margin-small-bottom-child"
 											>
 												<h3>Title</h3>
 												<p>
@@ -505,12 +505,12 @@
 							</div>
 							<div class="u-flex-order-5">
 								<a class="u-flex" href="">
-									<div class="u-card u-card-defalut">
-										<div class="u-card-media-top-m">
+									<div class="c-card c-card-defalut">
+										<div class="c-card__media-top-m">
 											<img class="u-imgfit" src="img/sl7.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom-child"
+											class="c-card-textarea c-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -521,12 +521,12 @@
 							</div>
 							<div class="u-flex-order-6">
 								<a class="u-flex" href="">
-									<div class="u-card u-card-defalut">
-										<div class="u-card-media-top-m">
+									<div class="c-card c-card-defalut">
+										<div class="c-card__media-top-m">
 											<img class="u-imgfit" src="img/sl8.jpeg" alt="" />
 										</div>
 										<div
-											class="u-card-textarea u-card-small u-margin-small-bottom-child"
+											class="c-card-textarea c-card-small u-margin-small-bottom-child"
 										>
 											<h3>Title</h3>
 											<p>test text</p>
@@ -640,14 +640,14 @@
 						<h2 class="u-bold">
 							GridLayout（display:grid;使用）
 						</h2>
-						<div class="c-gridLayout c-gridLayout_pk">
-							<div class="c-gridLayout-main01 u-card u-card-defalut">
+						<div class="l-gridLayout l-gridLayout_pk">
+							<div class="l-gridLayout-main01 c-card c-card-defalut">
 								<a href="" class="">
-									<div class="u-card-media-top-s">
+									<div class="c-card__media-top-s">
 										<img class="u-imgfit" src="img/sl1.jpeg" alt="" />
 									</div>
 									<div
-										class="u-card-textarea u-card-small u-margin-small-bottom-child"
+										class="c-card-textarea c-card-small u-margin-small-bottom-child"
 									>
 										<h3>Title</h3>
 										<p>test text</p>
@@ -655,13 +655,13 @@
 									</div>
 								</a>
 							</div>
-							<div class="c-gridLayout-main02 u-card u-card-defalut">
+							<div class="l-gridLayout-main02 c-card c-card-defalut">
 								<a href="" class="">
-									<div class="u-card-media-top-s">
+									<div class="c-card__media-top-s">
 										<img class="u-imgfit" src="img/sl2.jpeg" alt="" />
 									</div>
 									<div
-										class="u-card-textarea u-card-small u-margin-small-bottom-child"
+										class="c-card-textarea c-card-small u-margin-small-bottom-child"
 									>
 										<h3>Title</h3>
 										<p>test text</p>
@@ -669,13 +669,13 @@
 									</div>
 								</a>
 							</div>
-							<div class="c-gridLayout-main03 u-card u-card-defalut">
+							<div class="l-gridLayout-main03 c-card c-card-defalut">
 								<a href="" class="">
-									<div class="u-card-media-top-m">
+									<div class="c-card__media-top-m">
 										<img class="u-imgfit" src="img/sl3.jpeg" alt="" />
 									</div>
 									<div
-										class="u-card-textarea u-card-small u-margin-small-bottom-child"
+										class="c-card-textarea c-card-small u-margin-small-bottom-child"
 									>
 										<h3>Title</h3>
 										<p>test text</p>
@@ -683,25 +683,25 @@
 									</div>
 								</a>
 							</div>
-							<div class="c-gridLayout-sub01 u-card u-card-defalut">
+							<div class="l-gridLayout-sub01 c-card c-card-defalut">
 								<a href="" class=""></a>
 							</div>
-							<div class="c-gridLayout-sub02 u-card u-card-defalut">
+							<div class="l-gridLayout-sub02 c-card c-card-defalut">
 								<a href="" class=""></a>
 							</div>
-							<div class="c-gridLayout-sub03 u-card u-card-defalut">
+							<div class="l-gridLayout-sub03 c-card c-card-defalut">
 								<a href="" class=""></a>
 							</div>
-							<div class="c-gridLayout-sub04 u-card u-card-defalut">
+							<div class="l-gridLayout-sub04 c-card c-card-defalut">
 								<a href="" class=""></a>
 							</div>
-							<div class="c-gridLayout-sub05 u-card u-card-defalut">
+							<div class="l-gridLayout-sub05 c-card c-card-defalut">
 								<a href="" class=""></a>
 							</div>
-							<div class="c-gridLayout-sub06 u-card u-card-defalut">
+							<div class="l-gridLayout-sub06 c-card c-card-defalut">
 								<a href="" class=""></a>
 							</div>
-							<div class="c-gridLayout-sub07 u-card u-card-defalut">
+							<div class="l-gridLayout-sub07 c-card c-card-defalut">
 								<a href="" class=""></a>
 							</div>
 						</div>
@@ -728,21 +728,21 @@
 						<form class="u-margin-small-bottom-child" action="">
 							<div class="">
 								<div>
-									<label class="u-checkBox" for="ex"
+									<label class="c-checkBox" for="ex"
 										><input type="checkbox" name="" id="ex" /><span
 											>Check01</span
 										></label
 									>
 								</div>
 								<div>
-									<label class="u-checkBox" for="ex2"
+									<label class="c-checkBox" for="ex2"
 										><input type="checkbox" name="" id="ex2" /><span
 											>Check02</span
 										></label
 									>
 								</div>
 								<div>
-									<label class="u-checkBox" for="ex3"
+									<label class="c-checkBox" for="ex3"
 										><input type="checkbox" name="" id="ex3" /><span
 											>Check03</span
 										></label
@@ -751,21 +751,21 @@
 							</div>
 							<div class="">
 								<div>
-									<label class="u-checkBox" for="ex4"
+									<label class="c-checkBox" for="ex4"
 										><input type="radio" name="radio01" id="ex4" /><span
 											>Check01</span
 										></label
 									>
 								</div>
 								<div>
-									<label class="u-checkBox" for="ex5"
+									<label class="c-checkBox" for="ex5"
 										><input type="radio" name="radio01" id="ex5" /><span
 											>Check02</span
 										></label
 									>
 								</div>
 								<div>
-									<label class="u-checkBox" for="ex6"
+									<label class="c-checkBox" for="ex6"
 										><input type="radio" name="radio01" id="ex6" /><span
 											>Check03</span
 										></label
@@ -805,29 +805,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div class="c-section">
-					<div class="u-bgmove">
-						<img class="u-bgmove-01" src="img/bgmove01.png" alt="">
-						<img class="u-bgmove-02" src="img/bgmove02.png" alt="">
-						<img class="u-bgmove-03" src="img/bgmove03.png" alt="">
-					</div>
-				</div> -->
-				<!-- <div class="c-section">
-					<div class="c-container">
-						<div class="">
-							<div class="link link-1">
-								<button class="open u-text-White " data-target="1">
-									About
-								</button>
-							</div>
-							<div class="link link-2">
-								<button class="u-text-White open" data-target="2">
-									Work
-								</button>
-							</div>
-						</div>
-					</div>
-				</div> -->
 			</div>
 			<div class="c-footer">
 				<svg
@@ -847,76 +824,6 @@
 				</svg>
 			</div>
 		</div>
-		<!--
-		<div class="c-floatNavWrapper u-block--md fadeInBox">
-			<nav class="c-floatNav c-floatNav-body c-floatNav-defalut">
-				<ul
-					class="u-flex u-flex-around u-fs-small-xs u-child-width-1-4 u-margin-small-right-child"
-				>
-					<li>
-						<a href="">
-							<div class="u-text-center">
-								<img
-									class="u-margin-xs-bottom"
-									src="img/navicon001.png"
-									alt=""
-									width="30"
-								/>
-								<p>TOP</p>
-							</div></a
-						>
-					</li>
-					<li>
-						<div class="u-text-center">
-							<a href="">
-								<div>
-									<img
-										class="u-margin-xs-bottom"
-										src="img/navicon002.png"
-										alt=""
-										width="30"
-									/>
-
-									<p>MENU</p>
-								</div></a
-							>
-						</div>
-					</li>
-					<li>
-						<div class="u-text-center">
-							<a href="">
-								<div>
-									<img
-										class="u-margin-xs-bottom"
-										src="img/navicon003.png"
-										alt=""
-										width="30"
-									/>
-
-									<p>ACSESS</p>
-								</div></a
-							>
-						</div>
-					</li>
-					<li>
-						<div class="u-text-center">
-							<a href="">
-								<div>
-									<img
-										class="u-margin-xs-bottom"
-										src="img/navicon004.png"
-										alt=""
-										width="30"
-									/>
-									<p>CONTACT</p>
-								</div></a
-							>
-						</div>
-					</li>
-				</ul>
-			</nav>
-		</div> -->
-
 		<div
 			class="c-offcanvasWrapper c-offcanvasWrraper--optionRight js-offcanvasWrap"
 			aria-expanded="false"
@@ -966,7 +873,6 @@
 				</ul>
 			</div>
 		</div>
-
 		<div class="c-modalWrapper js-modalWrap" aria-expanded="false">
 			<div class="c-modalOverlay js-modalOverlay"></div>
 			<div class="c-modal c-modalBox-content">
@@ -1028,11 +934,6 @@
 		<script src="js/app.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/fitie.js"></script>
-		<script>
-			MicroModal.init({
-				onClose: modal => console.info(`${modal.id} is hidden`),
-				onShow: modal => console.info(`${modal.id} is shown`)
-			})
-		</script>
+
 	</body>
 </html>

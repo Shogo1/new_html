@@ -1,0 +1,185 @@
+/*==========================================
+
+flex
+
+		&-sm {
+			@include mq(sm) {
+			}
+		}
+		&-md {
+			@include mq(md) {
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+			}
+		}
+
+============================================*/
+
+.u-flex {
+	display: flex;
+}
+
+@for $i from 1 through 6 {
+	.u-flex-order-#{$i} {
+		order: $i;
+		/* style */
+	}
+}
+
+.u-flex {
+	&-left {
+		justify-content: flex-start;
+		&-sm {
+			@include mq(sm) {
+				justify-content: flex-start;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				justify-content: flex-start;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				justify-content: flex-start;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				justify-content: flex-start;
+			}
+		}
+	}
+	&-center {
+		justify-content: center;
+		&-sm {
+			@include mq(sm) {
+				justify-content: center;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				justify-content: center;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				justify-content: center;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				justify-content: center;
+			}
+		}
+	}
+	&-right {
+		justify-content: flex-end;
+		&-sm {
+			@include mq(sm) {
+				justify-content: flex-end;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				justify-content: flex-end;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				justify-content: flex-end;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				justify-content: flex-end;
+			}
+		}
+	}
+	&-between {
+		justify-content: space-between;
+		&-sm {
+			@include mq(sm) {
+				justify-content: space-between;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				justify-content: space-between;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				justify-content: space-between;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				justify-content: space-between;
+			}
+		}
+	}
+	&-around {
+		justify-content: space-around;
+		&-sm {
+			@include mq(sm) {
+				justify-content: space-around;
+			}
+		}
+		&-md {
+			@include mq(md) {
+				justify-content: space-around;
+			}
+		}
+		&-lg {
+			@include mq(lg) {
+				justify-content: space-around;
+			}
+		}
+		&-xl {
+			@include mq(xl) {
+				justify-content: space-around;
+			}
+		}
+	}
+}
+
+.u-flex {
+	&-stretch {
+		align-items: stretch;
+	}
+	&-top {
+		align-items: flex-start;
+	}
+	&-middle {
+		align-items: center;
+	}
+	&-bottom {
+		align-items: flex-end;
+	}
+}
+
+.u-flex {
+	&-row {
+		flex-direction: row;
+		&-reverse {
+			flex-direction: row-reverse;
+		}
+	}
+	&-column {
+		flex-direction: column;
+		&-reverse {
+			flex-direction: column-reverse;
+		}
+	}
+}
+
+.u-flex-wrap {
+	flex-wrap: wrap;
+}

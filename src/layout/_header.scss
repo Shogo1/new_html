@@ -1,8 +1,5 @@
 .c-header {
 	position: fixed;
-	// width: 100%;
-	// height: 50px;
-	// height: $HeaderHight;
 	z-index: 100;
 	background-color: #fff;
 	&-top {
@@ -14,13 +11,13 @@
 		top: 0;
 		right: 0;
 	}
-	&-container {
+	&__container {
 		padding-left: 40px;
 		padding-right: 40px;
 		margin: 0 auto;
 		max-width: 1840px;
-		height: $HeaderHight;
-		* {
+		// height: $HeaderHight;
+		*:not(img) {
 			height: 100%;
 		}
 		@include mq(md, max) {

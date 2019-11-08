@@ -4,11 +4,11 @@ gridLayout
 
 基本的に
 
-div.c-gridLayout.c-gridLayout_pk>div
+div.l-gridLayout.l-gridLayout_pk>div
 
 ==================================================*/
 
-.c-gridlayout {
+.l-gridlayout {
 	display: grid;
 }
 
@@ -20,7 +20,7 @@ gulp環境化では問題ないですが、vscodeなどのautoprefixerを
 IE用の記述をautoprefixerを使って作成してください。
 
 
-// .c-gridLayoutTest {
+// .l-gridLayoutTest {
 // 	display: -ms-grid;
 // 	display: grid;
 // 	max-width: 1000px;
@@ -45,10 +45,10 @@ IE用の記述をautoprefixerを使って作成してください。
 // 			'sub05 sub06 sub07' 1fr/
 // 			1fr 1fr 1fr;
 
-// 		.c-gridLayoutTest {
+// 		.l-gridLayoutTest {
 // 			&-main01 {
 // 			}
-// 			&.c-gridLayout_pk > &-main01 {
+// 			&.l-gridLayout_pk > &-main01 {
 // 				-ms-grid-row: 1;
 // 				-ms-grid-row-span: 3;
 // 				-ms-grid-column: 1;
@@ -56,7 +56,7 @@ IE用の記述をautoprefixerを使って作成してください。
 // 			}
 // 			&-main02 {
 // 			}
-// 			&.c-gridLayout_pk > &-main02 {
+// 			&.l-gridLayout_pk > &-main02 {
 // 				-ms-grid-row: 5;
 // 				-ms-grid-row-span: 3;
 // 				-ms-grid-column: 3;
@@ -64,7 +64,7 @@ IE用の記述をautoprefixerを使って作成してください。
 // 			}
 // 			&-main03 {
 // 			}
-// 			&.c-gridLayout_pk > &-main03 {
+// 			&.l-gridLayout_pk > &-main03 {
 // 				-ms-grid-row: 1;
 // 				-ms-grid-row-span: 5;
 // 				-ms-grid-column: 7;
@@ -72,43 +72,43 @@ IE用の記述をautoprefixerを使って作成してください。
 // 			}
 // 			&-sub01 {
 // 			}
-// 			&.c-gridLayout_pk > &-sub01 {
+// 			&.l-gridLayout_pk > &-sub01 {
 // 				-ms-grid-row: 5;
 // 				-ms-grid-column: 1;
 // 			}
 // 			&-sub02 {
 // 			}
-// 			&.c-gridLayout_pk > &-sub02 {
+// 			&.l-gridLayout_pk > &-sub02 {
 // 				-ms-grid-row: 7;
 // 				-ms-grid-column: 1;
 // 			}
 // 			&-sub03 {
 // 			}
-// 			&.c-gridLayout_pk > &-sub03 {
+// 			&.l-gridLayout_pk > &-sub03 {
 // 				-ms-grid-row: 1;
 // 				-ms-grid-column: 5;
 // 			}
 // 			&-sub04 {
 // 			}
-// 			&.c-gridLayout_pk > &-sub04 {
+// 			&.l-gridLayout_pk > &-sub04 {
 // 				-ms-grid-row: 3;
 // 				-ms-grid-column: 5;
 // 			}
 // 			&-sub05 {
 // 			}
-// 			&.c-gridLayout_pk > &-sub05 {
+// 			&.l-gridLayout_pk > &-sub05 {
 // 				-ms-grid-row: 7;
 // 				-ms-grid-column: 7;
 // 			}
 // 			&-sub06 {
 // 			}
-// 			&.c-gridLayout_pk > &-sub06 {
+// 			&.l-gridLayout_pk > &-sub06 {
 // 				-ms-grid-row: 7;
 // 				-ms-grid-column: 9;
 // 			}
 // 			&-sub07 {
 // 			}
-// 			&.c-gridLayout_pk > &-sub07 {
+// 			&.l-gridLayout_pk > &-sub07 {
 // 				-ms-grid-row: 7;
 // 				-ms-grid-column: 11;
 // 			}
@@ -118,7 +118,7 @@ IE用の記述をautoprefixerを使って作成してください。
 
 ==================================================*/
 
-.c-gridLayout {
+.l-gridLayout {
 	display: -ms-grid;
 	display: grid;
 	max-width: 1000px;
@@ -128,7 +128,7 @@ IE用の記述をautoprefixerを使って作成してください。
 	margin: 0 auto;
 	@include mq(md) {
 	}
-	&.c-gridLayout_pk {
+	&.l-gridLayout_pk {
 		//ポケモンsun&moon風gridLayout
 		grid-gap: 10px;
 		gap: 10px;
@@ -155,7 +155,7 @@ IE用の記述をautoprefixerを使って作成してください。
 				'sub05 sub06 sub07' 1fr/
 				1fr 1fr 1fr;
 		}
-		.c-gridLayout {
+		.l-gridLayout {
 			&-main01 {
 				-ms-grid-row: 1;
 				-ms-grid-row-span: 3;
