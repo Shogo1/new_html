@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>WordPress Gutenberg　調査</title>
+	</head>
+	<body class="l-body">
+		<div class="c-loadingWrapper"></div>
+		<div class="c-mainWrapper">
+						<header class="c-header c-header-top js-scrollbarFix">
+				<div class="c-header__container c-navBar u-flex u-flex-middle">
+					<div class="u-margin-right-auto">
+						<a class="u-text-decNone u-flex u-flex-middle" href=""
+							> Gutenberg　調査</a
+						>
+					</div>
+					<nav class="u-none--md">
+						<ul class="u-flex c-navBtn">
+							<li><a href="">SERVICE</a></li>
+							<li><a href="">WORKS</a></li>
+							<li><a href="">VOICE</a></li>
+							<li><a href="">MESSAGE</a></li>
+							<li><a href="">CONSULTANTS</a></li>
+							<li><a href="">NEWS</a></li>
+							<li><a href="">COMPANY</a></li>
+						</ul>
+					</nav>
+					<div class="u-block--md">
+						<button
+							class="c-navBurger js-openOffcanvas"
+							aria-controls="drawer"
+							aria-expanded="false"
+						>
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</header>
+			<div class="l-mainContent">
+				<div class="c-section">
+					<div class="c-container">
+																<section class="u-margin-small-bottom-child">
+							<h2 class="u-bold  u-title">更新内容</h2>
+							<!-- <ol class="u-olList">
+								<li><a href="#jump2_1">イベント情報</a></li>
+								<li><a href="#jump2_2">ショップニュース</a></li>
+							</ol> -->
+							<div id="jump2" class="u-margin-small-bottom-child box">
+								<h3 class="u-bold u-title">イベント情報</h3>
+								<p class="">
+									トップスライダーとイベント情報の更新を行う作業。大阪の営業より原稿とサイトに掲載する画像が送られてくるので、それを元に更新作業を行う。<span
+										class="u-text-denger"
+										>大きな注意点として、スライダー・イベント情報ともに掲載順をイベント終了日の若い順にする必要がある</span
+									>。そのため、すでにあるスライダーやイベント情報の日時と調整しながら更新作業を行う必要がある。スライダーとイベント情報、どちらも順番が正しいものになっているか、クライアントに作業終了の連絡をする前に入念に確認をすること。
+								</p>
+								<ul class="u-margin-bottom-child">
+									<li>
+										<div class="u-margin-small-bottom-child">
+
+											<h4 id="jump2_1" class="u-bold u-fs-large">トップスライダー</h4>
+											<div class="u-text-center">
+												<img src="img/slide001.png" alt="" />
+											</div>
+											<p>
+												トップ画面に表示されているスライダー画像は管理画面のメニューにある「slider」投稿から編集することができる。設定するのは「タイトル」「アイキャッチ画像」「Post
+												Expirator」「URLの設定」の4項目。「Post
+												Expirator」は投稿有効期限、「アイキャッチ画像」はスライダーに表示される画像、「URLの設定」は画像をクリックした際のリンク先になるので、それぞれ間違えないよう注意すること。「タイトル」については管理画面上にしか出ないが、適当な名前を付けると後で管理が面倒になるので、基本的には原稿に書かれているタイトルをそのまま流用すること。
+											</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="u-margin-small-bottom-child">
+
+											<h4 id="jump2_2" class="u-bold u-fs-large">イベント情報</h4>
+											<div class="u-text-center">
+												<img src="img/event001.png" alt="" />
+											</div>
+											<p>
+												トップ画面に表示されているスライダー画像は管理画面のメニューにある「イベントニュース」投稿から編集することができる。設定するのは「タイトル」「本文」「作成者」「アイキャッチ画像」「Post　Expirator」の4項目。「タイトル」は記事タイトル、「本文」はイベント内容、「Post　Expirator」は投稿有効期限、「アイキャッチ画像」は一覧に表示される画像になるので、それぞれ間違えないよう注意すること。「作成者」については管理画面上にしか出ないが、適当な名前を付けると後で管理が面倒になるので、基本的には原稿に書かれているタイトルをそのまま流用すること。
+											</p>
+										</div>
+									</li>
+								</ul>
+								<p></p>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+			<div class="l-footer"></div>
+		</div>
+		<div class="c-offcanvasWrapper"></div>
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/fitie.js"></script>
+</html>

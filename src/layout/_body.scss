@@ -29,10 +29,11 @@ off-canvasの記述はここ
 .t-test {
 }
 
-.c-mainWrapper {
-	// margin-top: 50px;
-}
+// .c-mainWrapper {
+// 	margin-top: $HeaderHight;
+// }
 
-.c-mainContent {
-	margin-top: 50px;
+
+.l-mainContent{
+	margin-top: $HeaderHight;
 }
