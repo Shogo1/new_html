@@ -1,35 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Document</title>
-		<link
-			href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
-		<link rel="stylesheet" href="css/style.css" />
-		<title>サクラマチ　熊本</title>
-	</head>
-	<body class="l-body">
-		<div class="c-loadingWrapper"></div>
-		<div class="c-mainWrapper">
-			<div class="l-header"></div>
-			<div class="l-mainContent"></div>
-			<div class="l-footer"></div>
-		</div>
-		<div class="c-offcanvasWrapper"></div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>サクラマチ　熊本</title>
+  </head>
+  <body class="l-body">
+    <div class="c-loadingWrapper"></div>
+    <div class="c-mainWrapper">
+      <header class="l-header l-header--top js-scrollbarFix">
+        <div class="l-header__container c-navBar u-flex u-flex-middle">
+          <div class="u-margin-right-auto">
+            <a class="u-text-decNone u-flex u-flex-middle" href=""
+              >Tsumagari Web</a
+            >
+          </div>
+          <nav class="u-none--md">
+            <ul class="u-flex c-navBtn">
+              <li><a href="">SERVICE</a></li>
+              <li><a href="">WORKS</a></li>
+              <li><a href="">VOICE</a></li>
+              <li><a href="">MESSAGE</a></li>
+              <li><a href="">CONSULTANTS</a></li>
+              <li><a href="">NEWS</a></li>
+              <li><a href="">COMPANY</a></li>
+            </ul>
+          </nav>
+          <div class="u-block--md">
+            <button
+              class="c-navBurger js-openOffcanvas"
+              aria-controls="drawer"
+              aria-expanded="false"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="l-mainContent">
+        <div class="c-container c-container--sakura">
+          <div class="l-gridBox l-gridBox--small l-grid-match">
+            <div class="u-width-3-5-md u-width-1-1">
+              <div class="c-card c-card-defalut">
+                <div>
+                  <img class="u-imgfit" src="img/sl9.jpeg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="u-width-2-5-md u-width-1-1">
+              <div class="u-flex u-flex-right u-flex-middle">
+                <div>
+                  <h1 class="u-margin-bottom">WebDesign</h1>
+                  <ul class="u-sackuraMenu u-margin-small-bottom-child">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Photo</a></li>
+                    <li><a href="">Web</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="l-footer"></div>
+    </div>
+    <div class="c-offcanvasWrapper"></div>
+  </body>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/fitie.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/fitie.js"></script>
 </html>

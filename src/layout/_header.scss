@@ -1,13 +1,13 @@
-.c-header {
+.l-header {
 	position: fixed;
 	z-index: 100;
 	background-color: #fff;
-	&-top {
+	&--top {
 		top: 0;
 		right: 0;
 		left: 0;
 	}
-	&-right {
+	&--right {
 		top: 0;
 		right: 0;
 	}
@@ -25,7 +25,7 @@
 			padding-right: 0px;
 		}
 	}
-	&-container-vertical {
+	&__container-vertical {
 		left: auto;
 		padding: 10px;
 		margin: 0 auto;
