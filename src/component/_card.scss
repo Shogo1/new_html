@@ -10,14 +10,14 @@ div.c-card.c-card-defalut>div.c-card-media-top-s+div.c-card-body
 ==================================================*/
 
 @mixin c-card($background-color: #fff) {
-	width: 100%;
-	position: relative;
-	transition: box-shadow 0.1s ease-in;
-	background-color: $background-color;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
-	&:hover {
-		box-shadow: 0 14px 25px rgba(0, 0, 0, 0.32);
-	}
+  width: 100%;
+  position: relative;
+  transition: box-shadow 0.1s ease-in;
+  background-color: $background-color;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+  &:hover {
+    box-shadow: 0 14px 25px rgba(0, 0, 0, 0.32);
+  }
 }
 
 // @mixin c-card() {
@@ -27,82 +27,82 @@ div.c-card.c-card-defalut>div.c-card-media-top-s+div.c-card-body
 // }
 
 .c-card {
-	@include c-card;
-	&-body {
-		padding: 30px;
-	}
-	&-small {
-		padding: 15px;
-	}
-	&-large {
-		padding: 45px;
-	}
-	// &.c-card-defalut,
-	// &%c-card-defalut {
-	// 	background-color: #fff;
-	// 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
-	// 	&:hover {
-	// 		box-shadow: 0 14px 25px rgba(0, 0, 0, 0.32);
-	// 	}
-	// }
-	&.c-card--primary {
-		// @extend %c-card-defalut;
-		@include c-card($background-color: #1e87f0);
-	}
-	&__media-top {
-		&-s {
-			position: relative;
-			overflow: hidden;
-			height: 170px;
-			> .u-imgfit {
-				height: 100%;
-			}
-			& + .c-card-textarea {
-				display: flex;
-				flex-direction: column;
-				height: calc(100% - 170px);
-			}
-			@include mq(md, max) {
-				height: $media-top-md;
-				> .u-imgfit {
-					height: 100%;
-				}
-				& + .c-card-textarea {
-					display: flex;
-					flex-direction: column;
-					height: calc(100% - #{$media-top-md});
-				}
-			}
-		}
-		&-m {
-			position: relative;
-			overflow: hidden;
-			height: 300px;
-			> .u-imgfit {
-				height: 100%;
-			}
-			& + .c-card-textarea {
-				display: flex;
-				flex-direction: column;
-				height: calc(100% - 300px);
-			}
-			@include mq(md, max) {
-				height: $media-top-md;
-				> .u-imgfit {
-					height: 100%;
-				}
-				& + .c-card-textarea {
-					display: flex;
-					flex-direction: column;
-					height: calc(100% - #{$media-top-md});
-				}
-			}
-		}
-		&__media-right {
-		}
-		&__media-bottom {
-		}
-		&__media-left {
-		}
-	}
+  @include c-card;
+  &-body {
+    padding: 30px;
+  }
+  &-small {
+    padding: 15px;
+  }
+  &-large {
+    padding: 45px;
+  }
+  // &.c-card-defalut,
+  // &%c-card-defalut {
+  // 	background-color: #fff;
+  // 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+  // 	&:hover {
+  // 		box-shadow: 0 14px 25px rgba(0, 0, 0, 0.32);
+  // 	}
+  // }
+  &.c-card--primary {
+    // @extend %c-card-defalut;
+    @include c-card($background-color: #1e87f0);
+  }
+  &__media-top {
+    &-s {
+      position: relative;
+      overflow: hidden;
+      height: 170px;
+      > .u-imgfit {
+        height: 100%;
+      }
+      & + .c-card-textarea {
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 170px);
+      }
+      @include mq(md, max) {
+        height: $media-top-md;
+        > .u-imgfit {
+          height: 100%;
+        }
+        & + .c-card-textarea {
+          display: flex;
+          flex-direction: column;
+          height: calc(100% - #{$media-top-md});
+        }
+      }
+    }
+    &-m {
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+      > .u-imgfit {
+        height: 100%;
+      }
+      & + .c-card-textarea {
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 300px);
+      }
+      @include mq(md, max) {
+        height: $media-top-md;
+        > .u-imgfit {
+          height: 100%;
+        }
+        & + .c-card-textarea {
+          display: flex;
+          flex-direction: column;
+          height: calc(100% - #{$media-top-md});
+        }
+      }
+    }
+    &__media-right {
+    }
+    &__media-bottom {
+    }
+    &__media-left {
+    }
+  }
 }

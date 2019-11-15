@@ -5,11 +5,11 @@ position
 ============================================*/
 
 .u-relative {
-	position: relative;
+  position: relative;
 }
 
 .u-absolute {
-	position: absolute;
+  position: absolute;
 }
 
 /*==========================================
@@ -19,32 +19,32 @@ list
 ============================================*/
 
 .u-olList[class] {
-	padding-left: 1.5em;
-	> * {
-		list-style: decimal;
-		margin-bottom: 5px;
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
+  padding-left: 1.5em;
+  > * {
+    list-style: decimal;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .u-ulList[class] {
-	padding-left: 1.5em;
-	> * {
-		list-style: disc;
-		margin-bottom: 5px;
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
+  padding-left: 1.5em;
+  > * {
+    list-style: disc;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .u-listIndent {
-	> * {
-		padding-left: 1em;
-		text-indent: -1.3em;
-	}
+  > * {
+    padding-left: 1em;
+    text-indent: -1.3em;
+  }
 }
 
 /*==========================================
@@ -69,47 +69,51 @@ ZZ : 100 * （最大文字サイズ - 最小文字サイズ）/ （設定最大�
 ============================================*/
 
 .u-text-decNone {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .u-fs-large {
-	font-size: calc(18px);
-	&-xl {
-		font-size: calc(24px);
-	}
+  font-size: calc(18px);
+  &-xl {
+    font-size: calc(24px);
+  }
 }
 
 .u-fs-normal {
-	font-size: calc(16px);
+  font-size: calc(16px);
 }
 
 .u-fs-small {
-	font-size: calc(14px);
-	&-xs {
-		font-size: calc(10px);
-	}
+  font-size: calc(14px);
+  &-xs {
+    font-size: calc(10px);
+  }
 }
 
 .u-text-center {
-	text-align: center;
+  text-align: center;
+}
+
+.u-text-right {
+  text-align: right;
 }
 
 .u-light {
-	font-weight: 300;
+  font-weight: 300;
 }
 
 .u-bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .u-baseLineH {
-	line-height: 1.5;
+  line-height: 1.5;
 }
 
 .u-text-vertical {
-	-webkit-writing-mode: vertical-rl;
-	-ms-writing-mode: tb-rl;
-	writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
 }
 
 /*==========================================
@@ -119,22 +123,22 @@ img
 ============================================*/
 
 .u-imgfit {
-	object-fit: cover;
-	height: 100%;
-	width: 100%;
-	//↓IE11対策 要object-fit-images.js
-	// font-family: 'object-fit:cover;';
-	// font-family: 'object-fit: cover; object-position: center top;';
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  //↓IE11対策 要object-fit-images.js
+  // font-family: 'object-fit:cover;';
+  // font-family: 'object-fit: cover; object-position: center top;';
 }
 
 //fitie.js(fit ie)を使用する際は以下のコードでIEでもobject-fitが適用される
 
 object-fit {
-	> .u-imgfit {
-		@extend .u-imgfit;
-		position: absolute;
-		right: 0;
-	}
+  > .u-imgfit {
+    @extend .u-imgfit;
+    position: absolute;
+    right: 0;
+  }
 }
 
 /*==========================================
@@ -144,7 +148,7 @@ display
 ============================================*/
 
 .u-block {
-	display: block;
+  display: block;
 }
 
 /*==========================================
@@ -161,44 +165,44 @@ display
 */
 
 .u-none {
-	&--sm {
-		display: none;
-		@include mq(sm) {
-			display: block;
-		}
-	}
-	&--md {
-		display: none;
-		@include mq(md) {
-			display: block;
-		}
-	}
-	&--lg {
-		display: none;
-		@include mq(lg) {
-			display: block;
-		}
-	}
+  &--sm {
+    display: none;
+    @include mq(sm) {
+      display: block;
+    }
+  }
+  &--md {
+    display: none;
+    @include mq(md) {
+      display: block;
+    }
+  }
+  &--lg {
+    display: none;
+    @include mq(lg) {
+      display: block;
+    }
+  }
 }
 .u-block {
-	&--sm {
-		display: block;
-		@include mq(sm) {
-			display: none;
-		}
-	}
-	&--md {
-		display: block;
-		@include mq(md) {
-			display: none;
-		}
-	}
-	&--lg {
-		display: block;
-		@include mq(lg) {
-			display: none;
-		}
-	}
+  &--sm {
+    display: block;
+    @include mq(sm) {
+      display: none;
+    }
+  }
+  &--md {
+    display: block;
+    @include mq(md) {
+      display: none;
+    }
+  }
+  &--lg {
+    display: block;
+    @include mq(lg) {
+      display: none;
+    }
+  }
 }
 
 /*==========================================
@@ -208,13 +212,13 @@ test
 ============================================*/
 
 .u-testBox {
-	background-color: navy;
-	color: #ddd;
-	// height: 50px;
-	padding: 50px 20px;
-	&:before,
-	&:after {
-		content: '';
-		display: table;
-	}
+  background-color: navy;
+  color: #ddd;
+  // height: 50px;
+  padding: 50px 20px;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
 }

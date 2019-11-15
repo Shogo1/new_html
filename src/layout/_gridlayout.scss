@@ -9,7 +9,7 @@ div.l-gridLayout.l-gridLayout_pk>div
 ==================================================*/
 
 .l-gridlayout {
-	display: grid;
+  display: grid;
 }
 
 /*=================================================
@@ -119,169 +119,169 @@ IE用の記述をautoprefixerを使って作成してください。
 ==================================================*/
 
 .l-gridLayout {
-	display: -ms-grid;
-	display: grid;
-	max-width: 1000px;
-	// ↓テスト時は高さ適当に記入
-	// height: 664px;
-	// height: 1500px;
-	margin: 0 auto;
-	@include mq(md) {
-	}
-	&.l-gridLayout_pk {
-		//ポケモンsun&moon風gridLayout
-		grid-gap: 10px;
-		gap: 10px;
-		-ms-grid-rows: 1fr 10px 1fr 10px 1fr 10px 1fr;
-		-ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
-		grid-template:
-			'main01 main01 sub03 main03 main03 main03' 1fr
-			'main01 main01 sub04 main03 main03 main03' 1fr
-			'sub01 main02 main02 main03 main03 main03' 1fr
-			'sub02 main02 main02 sub05  sub06  sub07' 1fr /
-			1fr 1fr 1fr 1fr 1fr 1fr;
-		@include mq(md, max) {
-			-ms-grid-rows: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr
-				10px 1fr;
-			-ms-grid-columns: 1fr 10px 1fr 10px 1fr;
-			grid-template:
-				'main01 main01  sub03' 1fr
-				'main01 main01  sub04' 1fr
-				'sub01  main02 main02' 1fr
-				'sub02  main02 main02' 1fr
-				'main03 main03 main03' 1fr
-				'main03 main03 main03' 1fr
-				'main03 main03 main03' 1fr
-				'sub05 sub06 sub07' 1fr/
-				1fr 1fr 1fr;
-		}
-		.l-gridLayout {
-			&-main01 {
-				-ms-grid-row: 1;
-				-ms-grid-row-span: 3;
-				-ms-grid-column: 1;
-				-ms-grid-column-span: 3;
-				grid-area: main01;
-				@include mq(md, max) {
-					-ms-grid-row: 1;
-					-ms-grid-row-span: 3;
-					-ms-grid-column: 1;
-					-ms-grid-column-span: 3;
-					grid-area: main01;
-				}
-			}
-			&-main02 {
-				-ms-grid-row: 5;
-				-ms-grid-row-span: 3;
-				-ms-grid-column: 3;
-				-ms-grid-column-span: 3;
-				grid-area: main02;
-				@include mq(md, max) {
-					-ms-grid-row: 5;
-					-ms-grid-row-span: 3;
-					-ms-grid-column: 3;
-					-ms-grid-column-span: 3;
-					grid-area: main02;
-				}
-			}
-			&-main03 {
-				-ms-grid-row: 1;
-				-ms-grid-row-span: 5;
-				-ms-grid-column: 7;
-				-ms-grid-column-span: 5;
-				grid-area: main03;
-				@include mq(md, max) {
-					-ms-grid-row: 9;
-					-ms-grid-row-span: 5;
-					-ms-grid-column: 1;
-					-ms-grid-column-span: 5;
-					grid-area: main03;
-				}
-			}
-			&-sub01 {
-				-ms-grid-row: 5;
-				-ms-grid-column: 1;
-				grid-area: sub01;
+  display: -ms-grid;
+  display: grid;
+  max-width: 1000px;
+  // ↓テスト時は高さ適当に記入
+  // height: 664px;
+  // height: 1500px;
+  margin: 0 auto;
+  @include mq(md) {
+  }
+  &.l-gridLayout_pk {
+    //ポケモンsun&moon風gridLayout
+    grid-gap: 10px;
+    gap: 10px;
+    -ms-grid-rows: 1fr 10px 1fr 10px 1fr 10px 1fr;
+    -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
+    grid-template:
+      "main01 main01 sub03 main03 main03 main03" 1fr
+      "main01 main01 sub04 main03 main03 main03" 1fr
+      "sub01 main02 main02 main03 main03 main03" 1fr
+      "sub02 main02 main02 sub05  sub06  sub07" 1fr /
+      1fr 1fr 1fr 1fr 1fr 1fr;
+    @include mq(md, max) {
+      -ms-grid-rows: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr
+        10px 1fr;
+      -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+      grid-template:
+        "main01 main01  sub03" 1fr
+        "main01 main01  sub04" 1fr
+        "sub01  main02 main02" 1fr
+        "sub02  main02 main02" 1fr
+        "main03 main03 main03" 1fr
+        "main03 main03 main03" 1fr
+        "main03 main03 main03" 1fr
+        "sub05 sub06 sub07" 1fr/
+        1fr 1fr 1fr;
+    }
+    .l-gridLayout {
+      &-main01 {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+        grid-area: main01;
+        @include mq(md, max) {
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 3;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 3;
+          grid-area: main01;
+        }
+      }
+      &-main02 {
+        -ms-grid-row: 5;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 3;
+        grid-area: main02;
+        @include mq(md, max) {
+          -ms-grid-row: 5;
+          -ms-grid-row-span: 3;
+          -ms-grid-column: 3;
+          -ms-grid-column-span: 3;
+          grid-area: main02;
+        }
+      }
+      &-main03 {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 5;
+        -ms-grid-column: 7;
+        -ms-grid-column-span: 5;
+        grid-area: main03;
+        @include mq(md, max) {
+          -ms-grid-row: 9;
+          -ms-grid-row-span: 5;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 5;
+          grid-area: main03;
+        }
+      }
+      &-sub01 {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+        grid-area: sub01;
 
-				background-color: palegreen;
-				@include mq(md, max) {
-					-ms-grid-row: 5;
-					-ms-grid-column: 1;
-					grid-area: sub01;
-				}
-			}
-			&-sub02 {
-				-ms-grid-row: 7;
-				-ms-grid-column: 1;
-				grid-area: sub02;
+        background-color: palegreen;
+        @include mq(md, max) {
+          -ms-grid-row: 5;
+          -ms-grid-column: 1;
+          grid-area: sub01;
+        }
+      }
+      &-sub02 {
+        -ms-grid-row: 7;
+        -ms-grid-column: 1;
+        grid-area: sub02;
 
-				background-color: rosybrown;
-				@include mq(md, max) {
-					-ms-grid-row: 7;
-					-ms-grid-column: 1;
-					grid-area: sub02;
-				}
-			}
-			&-sub03 {
-				-ms-grid-row: 1;
-				-ms-grid-column: 5;
-				grid-area: sub03;
+        background-color: rosybrown;
+        @include mq(md, max) {
+          -ms-grid-row: 7;
+          -ms-grid-column: 1;
+          grid-area: sub02;
+        }
+      }
+      &-sub03 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 5;
+        grid-area: sub03;
 
-				background-color: lightslategray;
-				@include mq(md, max) {
-					-ms-grid-row: 1;
-					-ms-grid-column: 5;
-					grid-area: sub03;
-				}
-			}
-			&-sub04 {
-				-ms-grid-row: 3;
-				-ms-grid-column: 5;
-				grid-area: sub04;
+        background-color: lightslategray;
+        @include mq(md, max) {
+          -ms-grid-row: 1;
+          -ms-grid-column: 5;
+          grid-area: sub03;
+        }
+      }
+      &-sub04 {
+        -ms-grid-row: 3;
+        -ms-grid-column: 5;
+        grid-area: sub04;
 
-				background-color: red;
-				@include mq(md, max) {
-					-ms-grid-row: 3;
-					-ms-grid-column: 5;
-					grid-area: sub04;
-				}
-			}
-			&-sub05 {
-				-ms-grid-row: 7;
-				-ms-grid-column: 7;
-				grid-area: sub05;
+        background-color: red;
+        @include mq(md, max) {
+          -ms-grid-row: 3;
+          -ms-grid-column: 5;
+          grid-area: sub04;
+        }
+      }
+      &-sub05 {
+        -ms-grid-row: 7;
+        -ms-grid-column: 7;
+        grid-area: sub05;
 
-				background-color: blueviolet;
-				@include mq(md, max) {
-					-ms-grid-row: 15;
-					-ms-grid-column: 1;
-					grid-area: sub05;
-				}
-			}
-			&-sub06 {
-				-ms-grid-row: 7;
-				-ms-grid-column: 9;
-				grid-area: sub06;
+        background-color: blueviolet;
+        @include mq(md, max) {
+          -ms-grid-row: 15;
+          -ms-grid-column: 1;
+          grid-area: sub05;
+        }
+      }
+      &-sub06 {
+        -ms-grid-row: 7;
+        -ms-grid-column: 9;
+        grid-area: sub06;
 
-				background-color: coral;
-				@include mq(md, max) {
-					-ms-grid-row: 15;
-					-ms-grid-column: 3;
-					grid-area: sub06;
-				}
-			}
-			&-sub07 {
-				-ms-grid-row: 7;
-				-ms-grid-column: 11;
-				grid-area: sub07;
+        background-color: coral;
+        @include mq(md, max) {
+          -ms-grid-row: 15;
+          -ms-grid-column: 3;
+          grid-area: sub06;
+        }
+      }
+      &-sub07 {
+        -ms-grid-row: 7;
+        -ms-grid-column: 11;
+        grid-area: sub07;
 
-				background-color: steelblue;
-				@include mq(md, max) {
-					-ms-grid-row: 15;
-					-ms-grid-column: 5;
-					grid-area: sub07;
-				}
-			}
-		}
-	}
+        background-color: steelblue;
+        @include mq(md, max) {
+          -ms-grid-row: 15;
+          -ms-grid-column: 5;
+          grid-area: sub07;
+        }
+      }
+    }
+  }
 }
